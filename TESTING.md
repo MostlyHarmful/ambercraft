@@ -27,6 +27,16 @@ structures and gameplay systems behave correctly.
 
 ## Known issues
 
+### Ecological overlap and broken hollow-log placement — configured
+
+Quark's hollow-log module is disabled after its fallen hollow logs generated
+detached on ocean surfaces in the CachyOS visual test. Quark's crab is disabled
+in favor of the Friends & Foes crab, avoiding two nearly equivalent beach mobs.
+Alex's Mobs fly spawn weight is set to zero because the creature did not add
+enough atmosphere or gameplay to justify its entity population. Confirm all
+three changes in a fresh world; existing entities or generated blocks are not
+removed retroactively.
+
 ### IDAS optional integrations — resolved
 
 IDAS 1.13.0 contains data for structures that require optional mods we have
@@ -85,7 +95,7 @@ final validation emitted none of the previous village or IDAS tag warnings.
 
 ### Progression prototype — data validation passed
 
-LootJS 2.13.1 and the Living World KubeJS scripts registered two custom clue
+LootJS 2.13.1 and the Ambercraft KubeJS scripts registered two custom clue
 components. KubeJS loaded the scripts with zero errors and accepted all three
 prototype recipes with zero failures. The server reached `Done (15.052s)`.
 
@@ -177,7 +187,7 @@ considering broader Every Compat filtering or removing Chipped.
 The first synchronized client launch generated the new Mowzie's Mobs config and
 logged many default-value corrections. It also reported missing models for the
 diamond and Black Pink Grottol variants. The client still completed its resource
-reload, and neither custom Living World item produced a missing-model warning.
+reload, and neither custom Ambercraft item produced a missing-model warning.
 Recheck the Mowzie warnings on the second launch and inspect Grottols in game.
 
 ## Next test gate

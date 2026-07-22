@@ -1,0 +1,9 @@
+# Ambercraft deliberately disables the hollow-log module because fallen hollow
+# logs have generated detached on ocean surfaces with the current terrain stack.
+# The Quark crab is also disabled to avoid duplicating Friends & Foes' crab.
+
+[building]
+	"Hollow Logs" = false
+
+[mobs]
+	Crabs = false

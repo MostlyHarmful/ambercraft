@@ -1,6 +1,6 @@
 # Progression prototype
 
-This is the first playable campaign slice for Living World. It is intentionally
+This is the first playable campaign slice for Ambercraft. It is intentionally
 small enough to test before writing a large KubeJS ruleset.
 
 ## Campaign spine

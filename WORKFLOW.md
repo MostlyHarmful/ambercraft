@@ -1,6 +1,6 @@
 # Cross-machine development and testing
 
-This repository is the single source of truth for Living World. The Mac where
+This repository is the single source of truth for Ambercraft. The Mac where
 the pack is authored does not need to be the fastest Minecraft machine. The
 CachyOS desktop is the client and local-load test machine, and the Pterodactyl
 instance is the authoritative dedicated-server test machine.
@@ -105,4 +105,3 @@ The Codex task can remain on this Mac. For each remote test, return:
 That is enough to continue diagnosis and make the next canonical change here.
 Do not paste account tokens, Pterodactyl API keys, public IP addresses, or the
 contents of `server.properties` into reports.
-

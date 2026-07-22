@@ -1,6 +1,14 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/alexsmobs.toml"
+hash = "d06c4f65653f92c4f5f3a907089f99c1cc47de93bde258449c11b259b4f60102"
+
+[[files]]
+file = "config/quark-common.toml"
+hash = "ced373f72d9db7375c7df64abfa667ec798f20bccd8833f494ba9a6d21096715"
+
+[[files]]
 file = "kubejs/client_scripts/jei_declutter.js"
 hash = "0ccaae288bd9d080e9344af6c0c1d0597ac60c028ed123b9b41aa9a10e9c1a4e"
 

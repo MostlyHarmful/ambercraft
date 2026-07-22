@@ -1,12 +1,12 @@
-name = "Living World"
+name = "Ambercraft"
 author = "Amber"
-version = "0.1.0"
+version = "0.1.1"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "13609474d504a504fc5c2f0b80e0ac74b03b7065fbd95231f7d1969de5441aff"
+hash = "b18bfc1280584a798e7836376f61681bc9e8850256304edc5cdf3fefe185ee43"
 
 [versions]
 forge = "47.4.10"

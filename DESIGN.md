@@ -1,4 +1,4 @@
-# Living World design brief
+# Ambercraft design brief
 
 This document is the decision standard for mod selection, configuration,
 world generation, loot, and KubeJS work. A mod being good in isolation is not
@@ -6,7 +6,7 @@ enough; it must strengthen the experience described here.
 
 ## Core promise
 
-Living World is a recognizable Minecraft world that feels larger, older, and
+Ambercraft is a recognizable Minecraft world that feels larger, older, and
 less centered on the player. It emphasizes exploration, environmental change,
 rare discoveries, inhabited places, and infrastructure built by friends. It is
 not a kitchen-sink pack, a colony-management game, or a mandatory factory

@@ -1,4 +1,4 @@
-# Living World
+# Ambercraft
 
 A Forge 1.20.1 vanilla-plus exploration and adventure pack managed with
 [packwiz](https://packwiz.infra.link/). The pack currently targets Forge
@@ -56,7 +56,7 @@ packwiz-compatible launcher can install the client directly from a hosted
 ```sh
 mkdir -p exports
 ./tools/packwiz modrinth export --restrictDomains=false \
-  -o exports/living-world-0.1.0.mrpack
+  -o exports/ambercraft-0.1.1.mrpack
 ```
 
 Mixed Modrinth/CurseForge exports can be slow because packwiz must contact both

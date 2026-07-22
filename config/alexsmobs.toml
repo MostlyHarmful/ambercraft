@@ -1,0 +1,4 @@
+# Ambercraft keeps Alex's Mobs but removes flies from natural spawning.
+# A spawn weight of zero is the mod's documented disable value.
+
+flySpawnWeight = 0

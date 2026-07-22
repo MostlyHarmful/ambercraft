@@ -3,7 +3,7 @@ set -eu
 
 INSTANCE_DIR=${1:-.}
 STAMP=$(date -u '+%Y%m%dT%H%M%SZ')
-OUTPUT=${2:-"living-world-test-$STAMP.txt"}
+OUTPUT=${2:-"ambercraft-test-$STAMP.txt"}
 
 if [ ! -d "$INSTANCE_DIR" ]; then
   echo "Instance directory does not exist: $INSTANCE_DIR" >&2
@@ -11,7 +11,7 @@ if [ ! -d "$INSTANCE_DIR" ]; then
 fi
 
 {
-  echo "Living World test report"
+  echo "Ambercraft test report"
   echo "Captured (UTC): $STAMP"
   echo "Instance: $INSTANCE_DIR"
   echo
