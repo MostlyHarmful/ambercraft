@@ -1,0 +1,20 @@
+# Repository and packwiz source metadata
+.git/
+.gitignore
+.gitattributes
+.packwizignore
+.packwiz.toml
+.packwiz-cache/
+pack.toml
+index.toml
+
+# Local tooling, build products, and documentation
+tools/
+scripts/
+build/
+exports/
+desired-mods.txt
+README.md
+DESIGN.md
+PROGRESSION.md
+TESTING.md

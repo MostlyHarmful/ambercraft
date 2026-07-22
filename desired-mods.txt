@@ -1,0 +1,81 @@
+Alex's Caves
+Alex's Mobs
+AmbientSounds
+Amendments
+AppleSkin
+Artifacts
+Athena
+BaguetteLib
+Better Caravans
+Better Clouds
+Carry On
+Chipped
+Chunky
+Citadel
+Cloth Config v10 API
+CorgiLib
+CoroUtil
+Corpse
+Corpse Curios Compatibility
+Create
+Create: Copycats+
+Create: Steam 'n' Rails
+CreativeCore
+Curios API
+Data Anchor
+Distant Horizons
+Embeddium
+Embeddium (Rubidium) Extra
+End Remastered
+End's Phantasm
+Enhanced Celestials
+EntityCulling
+Every Compat
+Friends&Foes
+GeckoLib 4
+GlitchCore
+Handcrafted
+ImmediatelyFast
+Immersive Weathering
+Incendium
+Integrated Dungeons and Structures
+Integrated Stronghold
+Integrated Villages
+Jade
+Jade Addons
+Just Enough Items
+KubeJS
+KubeJS Create
+Lithostitched
+Lootr
+LootJS
+Mob Conversion
+Moonlight Library
+Mouse Tweaks
+Mowzie's Mobs
+Nullscape
+Resourceful Lib
+Serene Seasons
+Sophisticated Backpacks
+Sophisticated Core
+Sound Physics Remastered
+Sodium/Embeddium Dynamic Lights
+Supplementaries
+Tectonic
+TerraBlender
+Terralith
+The Roads More Travelled
+Xaero's Minimap
+Xaero's World Map
+YUNG's API
+YUNG's Better Desert Temples
+YUNG's Better Dungeons
+YUNG's Better Jungle Temples
+YUNG's Better Mineshafts
+YUNG's Better Nether Fortresses
+YUNG's Better Ocean Monuments
+YUNG's Better Witch Huts
+YUNG's Bridges
+YUNG's Cave Biomes
+Zombie Awareness
+spark

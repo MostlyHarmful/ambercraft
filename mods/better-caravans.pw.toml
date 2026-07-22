@@ -1,0 +1,13 @@
+name = "Better Caravans"
+filename = "bettercaravans-forge-1.20.1-1.0.3-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/AfYuWICz/versions/yU4jIZ9l/bettercaravans-forge-1.20.1-1.0.3-1.20.1.jar"
+hash-format = "sha512"
+hash = "5d9bb726534b8ec4f2230ac3f0daa97cf6e254acf7eea540d6fdc511fa026e8fc20044a8ce2837e2863c111b1cbcf9f726a0f52174c8357226e04bc3004d894c"
+
+[update]
+[update.modrinth]
+mod-id = "AfYuWICz"
+version = "yU4jIZ9l"

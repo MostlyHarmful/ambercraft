@@ -1,0 +1,13 @@
+name = "Living World"
+author = "Amber"
+version = "0.1.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "13609474d504a504fc5c2f0b80e0ac74b03b7065fbd95231f7d1969de5441aff"
+
+[versions]
+forge = "47.4.10"
+minecraft = "1.20.1"

@@ -1,0 +1,8 @@
+/.packwiz-cache/
+/.packwiz.toml
+/build/
+/exports/
+/tools/packwiz
+*.mrpack
+*.zip
+.DS_Store
