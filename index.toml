@@ -69,6 +69,10 @@ file = "kubejs/client_scripts/living_world_tooltips.js"
 hash = "2ab82a8143178854675c0fba99f9d9324c3ee662cd60306a3c436a798ce93135"
 
 [[files]]
+file = "kubejs/data/alexsdelight/recipes/barbecue_on_a_stick.json"
+hash = "5e41ad5646fb7e2e9112dfbafd6ed32025033c73a06aa66b1b9f4c8ffbd3295c"
+
+[[files]]
 file = "kubejs/data/ambercraft/functions/xaero_fairplay_join.mcfunction"
 hash = "a1e2a654e21951aaf7976bbe166fc5cee4571e5fc610b7bbab1cd96f2fe767dd"
 
@@ -119,6 +123,14 @@ hash = "688b2a73714397f6061408945965c921eebe91898ea814affbade3dcc661cc0e"
 [[files]]
 file = "kubejs/data/betterdungeons/advancements/zombie_dungeon.json"
 hash = "beee6384c0151ffcb52bbd2b65cb2e5e65bd56ae6f476aa260c94db2d7a68f08"
+
+[[files]]
+file = "kubejs/data/cavedelight/recipes/cutting/tectonic_pie.json"
+hash = "fdbe87c5d9714df8b48f9d551fb5c41b22568ac86d2011d21b22dd5db082a8fa"
+
+[[files]]
+file = "kubejs/data/cavedelight/recipes/dino_nugget_platter.json"
+hash = "fdbe87c5d9714df8b48f9d551fb5c41b22568ac86d2011d21b22dd5db082a8fa"
 
 [[files]]
 file = "kubejs/data/endrem/advancements/main/black_eye.json"
@@ -267,6 +279,10 @@ hash = "43b2a29ed1f17ec57a5ebcf910dc55207944b536de9010337a831c753782c123"
 [[files]]
 file = "kubejs/data/enhancedcelestials/enhancedcelestials/lunar/event/super_blood_moon.json"
 hash = "7f787cb1428155fc04494f933ce690f21b9759d98ed70e6850c3efa60046a9d7"
+
+[[files]]
+file = "kubejs/data/farmersdelight/tags/blocks/heat_sources.json"
+hash = "97d85c14e100b372e826a16207da29f2400908a50ffdf8ea4566c4be2f02fc71"
 
 [[files]]
 file = "kubejs/data/idas/advancements/ancient_mines.json"
@@ -550,7 +566,7 @@ hash = "3040901c6c74b67c2182bfc63ef29609ba4200890b9ff23892f27294d048cd5e"
 
 [[files]]
 file = "kubejs/server_scripts/living_world_progression.js"
-hash = "cd87b0bb841adaf650f7be9e62346eaf6ce04a64e12ce57b461b09b16b26b6f8"
+hash = "c628f46330a06defe7e29e9a58bc0d8ab12aeae921ef471e6b3edad502040111"
 
 [[files]]
 file = "kubejs/startup_scripts/living_world_items.js"
@@ -559,6 +575,11 @@ hash = "acb74e433a602d55491b9cabbafc4263d98a4dc78204667ed9afd5ab06ea370f"
 [[files]]
 file = "mods/alexs-caves.pw.toml"
 hash = "0cbc4b2c6b58b7a94f030ae84f18057e5dc78a17bad429f40b8884926a6ab233"
+metafile = true
+
+[[files]]
+file = "mods/alexs-delight.pw.toml"
+hash = "99f6d4e46f784953d16aa1ce5f72327b21487dc0e27d3143c8a6b60c6d02381a"
 metafile = true
 
 [[files]]
@@ -614,6 +635,11 @@ metafile = true
 [[files]]
 file = "mods/carry-on.pw.toml"
 hash = "a613f5d2df911fea606968bbdb56eebfd05ac02ada846cf0d2e56e72345d9338"
+metafile = true
+
+[[files]]
+file = "mods/cave-delight.pw.toml"
+hash = "d709a0dfad1b0708636027100a27631709ed8a88c9fbb507fbaa56aa22220f89"
 metafile = true
 
 [[files]]
@@ -712,6 +738,11 @@ hash = "fbad2488da791994cbb4a0541e2dd22c536dbe6ca8f7edfdd9af12120e283fd2"
 metafile = true
 
 [[files]]
+file = "mods/farmers-delight.pw.toml"
+hash = "d7139e5db4b5a9b5d80330854bb23ce2cd197009b6d8e3636aa017434066b830"
+metafile = true
+
+[[files]]
 file = "mods/friends-and-foes-forge.pw.toml"
 hash = "d7e93654d8f8ba58742e86d26cbd9e7f563be4f8c9683f52d72777a3807d7078"
 metafile = true
@@ -774,6 +805,11 @@ metafile = true
 [[files]]
 file = "mods/jei.pw.toml"
 hash = "94d2b1273d74d08d3a5846aac25231c2b50059e0866aef47dc6a97cf06726b58"
+metafile = true
+
+[[files]]
+file = "mods/kotlin-for-forge.pw.toml"
+hash = "1678327ac50408273c1828b631929128d3fdfd54cda7b2e823ce9352495a68ff"
 metafile = true
 
 [[files]]
@@ -849,6 +885,11 @@ metafile = true
 [[files]]
 file = "mods/serene-seasons.pw.toml"
 hash = "23ef0c67ed600fb75d47161cdbe43b860837afe9d1f3012c44f3e7eb13bdd1e5"
+metafile = true
+
+[[files]]
+file = "mods/slice-and-dice.pw.toml"
+hash = "9b59e9b08c1281a521777e9924dab6c258e42c5d1c06852b9ebe9304021aec42"
 metafile = true
 
 [[files]]

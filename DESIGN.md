@@ -80,6 +80,18 @@ through a factory progression merely to participate in ordinary play.
 Instant universal travel should be avoided because it undermines geography,
 roads, outposts, backpacks, and railways.
 
+### Food supports expeditions and community
+
+Farmer's Delight gives farming, cooking, and settlement-building players a
+useful contribution that does not become a compulsory quest branch. Shared
+meals should improve preparation and recovery for expeditions; Create may
+automate established kitchens through Slice & Dice; ingredients from Alex's
+Mobs and Alex's Caves should make returning from exploration valuable.
+
+Prefer a few authored cross-mod dishes over enormous food catalogs. Cooking
+must not become a nutritional checklist, spoilage chore, or hard gate on End
+Remastered progression.
+
 ### Multiplayer must respect uneven attendance
 
 Players will participate at different frequencies and pursue different goals.

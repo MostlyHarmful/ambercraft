@@ -1,4 +1,5 @@
 Alex's Caves
+Alex's Delight
 Alex's Mobs
 AmbientSounds
 Amendments
@@ -9,6 +10,7 @@ BaguetteLib
 Better Caravans
 Caelus API
 Carry On
+Cave Delight
 Chipped
 Citadel
 Cloth Config v10 API
@@ -18,6 +20,7 @@ Corpse Curios Compatibility
 Create
 Create: Copycats+
 Create: Steam 'n' Rails
+Create Slice & Dice
 CreativeCore
 Curios API
 Data Anchor
@@ -29,6 +32,7 @@ End Remastered
 End's Phantasm
 Enhanced Celestials
 EntityCulling
+Farmer's Delight
 Friends&Foes
 GeckoLib 4
 GlitchCore
@@ -42,6 +46,7 @@ Integrated Villages
 Jade
 Just Enough Items
 KubeJS
+Kotlin for Forge
 Lithostitched
 Lootr
 LootJS

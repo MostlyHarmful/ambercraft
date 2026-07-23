@@ -142,11 +142,46 @@ PTY. This is a local test-harness cleanup failure rather than a Forge, worldgen,
 or pack startup failure, but this particular run does not count as a verified
 clean shutdown.
 
-### Optional compatibility warnings
+### Farmer's Delight integration
 
-Supplementaries reports missing Farmer's Delight integration data. Farmer's
-Delight is not currently part of this pack. Confirm that these remain optional,
-non-fatal warnings; do not add the mod solely to silence them.
+Farmer's Delight 1.3.2 is paired with Create Slice & Dice 3.6.0, Alex's Delight
+1.5, and Cave Delight 2.0.1. Farmer's Delight already supplies
+Serene Seasons crop tags and recognizes Quark and Supplementaries ropes.
+Integrated Villages contains a native Farmer's Delight shop structure.
+
+Ambercraft adds restrained farmhouse crop rolls, one IDAS inn meal roll, a
+Quark blaze-lantern heat-source tag, and a cutting-board route from rotten
+tomatoes to occasional Alex's Mobs maggots. Quark Delight was inspected and
+rejected because it assumes Quark's intentionally disabled duplicate crab
+module and would leave dead crab recipes.
+
+Verify all four installed mods load without recipe errors, Slice & Dice
+automates cutting/cooking, seasonal tooltips appear on the four core crops,
+Integrated Village farmhouse loot remains modest under Lootr, and the spoiled
+tomato recipe yields seeds with only an occasional maggot.
+
+Alex's Caves Delight 1.0.27-final was rejected during the first smoke test
+because it references Farmer's Delight's removed `ShepherdsPieBlock` class and
+crashes against Farmer's Delight 1.3.2.
+
+The replacement exact bundle completed Forge construction and server-data
+reload on Java 21. Cave Delight, Alex's Delight, Farmer's Delight, Kotlin for
+Forge, and Slice & Dice all initialized. End's Phantasm automatically enabled
+its own Farmer's Delight compatibility data pack. KubeJS found 9,094 recipes,
+added six Ambercraft recipes, removed three End Remastered defaults, and
+reported zero failed recipes. Slice & Dice then injected its generated
+automation recipes.
+
+The audit also found and corrected three upstream data defects: two Cave
+Delight recipes referenced items absent from the installed Alex's Caves build,
+and Alex's Delight's barbecue recipe used its obsolete `amfd` namespace. The
+impossible Cave Delight recipes are disabled by narrow data overrides, and the
+barbecue recipe now uses `alexsdelight:cooked_loose_moose_rib`. The remaining
+Incendium elytra smithing fallback is the pre-existing known warning.
+
+The sandboxed macOS smoke runtime cannot open a listening socket, so it stopped
+after successful recipe/data validation when binding port 25565. A complete
+`Done` and clean shutdown must still be confirmed on Pterodactyl.
 
 ### Immersive Weathering Tweaks and Quantified API — removed
 

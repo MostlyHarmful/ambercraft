@@ -123,6 +123,23 @@ ServerEvents.recipes(event => {
     E: 'minecraft:ender_eye',
     S: 'endrem:undead_soul'
   }).id('kubejs:living_world/undead_eye_from_necromancer_soul')
+
+  // Farmer's Delight turns the intentionally rare Alex's Mobs fly into
+  // atmosphere rather than a required farm. Spoiled produce can occasionally
+  // supply a maggot, while natural flies remain the direct source.
+  event.custom({
+    type: 'farmersdelight:cutting',
+    ingredients: [
+      { item: 'farmersdelight:rotten_tomato' }
+    ],
+    tool: {
+      tag: 'forge:tools/knives'
+    },
+    result: [
+      { item: 'farmersdelight:tomato_seeds' },
+      { item: 'alexsmobs:maggot', chance: 0.35 }
+    ]
+  }).id('kubejs:living_world/maggot_from_spoiled_produce')
 })
 
 LootJS.modifiers(event => {
@@ -153,6 +170,47 @@ LootJS.modifiers(event => {
         .when(condition => condition.randomChance(0.35))
     )
   })
+
+  // Integrated Villages already contains a Farmer's Delight shop in its swamp
+  // settlement. Light-touch loot bridges make the remaining village styles
+  // participate without flooding each per-player Lootr chest with food.
+  const integratedVillageFarmhouses = [
+    'airship_village',
+    'cabin_village',
+    'clockwork_village',
+    'kutcha_village',
+    'marketstead_village',
+    'mediterranean_village',
+    'minka_village',
+    'mossy_mounds',
+    'oasis_village',
+    'pirate_village',
+    'swamp_village',
+    'tavern_village'
+  ]
+
+  integratedVillageFarmhouses.forEach(village => {
+    const table = `integrated_villages:chests/${village}/${village}_farmhouse`
+    event.addLootTableModifier(table)
+      .addLoot(
+        LootEntry.of('farmersdelight:cabbage_seeds')
+          .when(condition => condition.randomChance(0.18))
+      )
+      .addLoot(
+        LootEntry.of('farmersdelight:tomato_seeds')
+          .when(condition => condition.randomChance(0.18))
+      )
+      .addLoot(
+        LootEntry.of('farmersdelight:rice')
+          .when(condition => condition.randomChance(0.12))
+      )
+  })
+
+  event.addLootTableModifier('idas:chests/bearclaw_inn/bearclaw_inn_food')
+    .addLoot(
+      LootEntry.of('farmersdelight:roast_chicken')
+        .when(condition => condition.randomChance(0.25))
+    )
 
   // Landmark routes make the installed structure overhauls part of the same
   // campaign. Lootr gives each player an independent roll from these chests.

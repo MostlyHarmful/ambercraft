@@ -1,12 +1,12 @@
 name = "Ambercraft"
 author = "Amber"
-version = "0.2.2"
+version = "0.2.3"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "84529aa93196f764eee3b95db4285017b3fbecac19016f193668661aac689cb3"
+hash = "92d225bbed9f8249520ad05131325c3328fd6f38488258875a8eafbaf6d641f0"
 
 [versions]
 forge = "47.4.10"
