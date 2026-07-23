@@ -49,12 +49,13 @@ Pterodactyl launch.
 ### Ecological overlap and broken hollow-log placement — configured
 
 Quark's hollow-log module is disabled after its fallen hollow logs generated
-detached on ocean surfaces in the CachyOS visual test. Quark's crab is disabled
-in favor of the Friends & Foes crab, avoiding two nearly equivalent beach mobs.
-Alex's Mobs fly spawn weight is reduced from three to one so maggots remain
-naturally obtainable. The automatic Animal Dictionary handout is disabled.
-Confirm all changes in a fresh world; existing entities, generated blocks, and
-already-issued books are not removed retroactively.
+detached on ocean surfaces in the CachyOS visual test. Quark's crab remains
+disabled after Friends & Foes was removed; the pack does not need another
+low-impact ambient beach mob. Alex's Mobs fly spawn weight is reduced from
+three to one so maggots remain naturally obtainable. The automatic Animal
+Dictionary handout is disabled. Confirm all changes in a fresh world; existing
+entities, generated blocks, and already-issued books are not removed
+retroactively.
 
 ### IDAS optional integrations — resolved
 
@@ -301,7 +302,7 @@ Embeddium, ImmediatelyFast, and Oculus while omitting Spark, Incendium,
 Nullscape, Zombie Awareness, and CoroUtil. The server archive omitted Oculus,
 Embeddium, ImmediatelyFast, Mouse Tweaks, Zombie Awareness, and CoroUtil. The
 Pterodactyl installer policy was also exercised against a disposable server
-tree and applied the bounded G1 flags and all four intended server-property
+tree and applied the bounded G1 flags and all five intended server-property
 changes exactly once.
 
 ### JEI catalogue size
@@ -329,6 +330,56 @@ only configured target was the absent `irons_spellbooks:priest`; KubeJS Create
 was unused by the current scripts; and the other three duplicated decorative,
 information, scripting, or surface-structure roles already covered elsewhere.
 
+### Quark consolidation candidate
+
+Ambercraft 0.2.5 removes Friends & Foes, Sophisticated Backpacks, and
+Sophisticated Core. Friends & Foes no longer had a distinct ecological,
+structure, or encounter role beside Alex's Mobs, Mowzie's Mobs, IDAS, YUNG,
+and Incendium. Quark's crab remains disabled rather than replacing it.
+
+Quark's Backpack is now the sole portable expedition-storage system. The exact
+1.20.1 implementation is a chest-slot item, so it intentionally trades chest
+armor for capacity; Elytra continues to use its separate Curios slot. Quark's
+Pipes are disabled because Create owns item logistics. Corpse and its Curios
+compatibility remain the dedicated death-recovery system, while Quark's Totem
+of Holding remains disabled.
+
+### Release balance and exploit guardrails
+
+The deployment installer now sets `difficulty=hard`. This supplies the intended
+combat pressure without globally inflating every creature into a health sponge.
+Alex's Mobs' Void Worm is the exception: its health is 240 and damage modifier
+1.1 so the optional post-End encounter remains a real group challenge.
+
+Alex's Mobs' common Nether pressure was reduced rather than removed: Straddler
+weight is 35 and Laviathan weight is 8. Its Incendium biome entries remain
+enabled, preserving the intended ecology without letting two creatures dominate
+the expanded Nether. Mimicream can no longer repair its zero-durability copies,
+and transmutation is restricted to authored tables.
+
+Artifacts remains Ambercraft's exploration-only capability layer, but campsite
+generation and artifact frequency are lower. Everlasting Beef and Eternal Steak
+are removed because infinite food would erase expedition preparation and much
+of Farmer's Delight. Supplementaries now owns the pack's general-purpose rope;
+Farmer's Delight fences and safety nets use that rope through replacement
+recipes.
+
+Carry On no longer permits hostile mobs, players, stacking carried entities,
+Lootr containers, Create machinery, campaign blocks, bosses, mimics, corpses,
+portals, spawners, beds, or other progression-sensitive blocks. Ordinary
+animals and household containers remain portable.
+
+Quark's Pathfinder Maps are disabled because the Expedition Ledger supplies
+spoiler-light direction. Quark Pipes remain disabled in favor of Create, and
+display-name collisions for the two cloud and wrench items are clarified.
+
+The exact 0.2.5 server bundle completed its validation restart at
+`Done (8.452s)`. KubeJS loaded its sole server script with zero errors and zero
+warnings; the recipe pass added 11 recipes, removed 8, and reported zero failed
+recipes. Distant Horizons closed all three dimensions with zero incomplete
+generation tasks. The remaining Incendium smithing-recipe parse warning is an
+upstream fallback already present before this balance pass.
+
 ### Structure density and discovery notifications
 
 Static structure-set review found most authored spacing already conservative.
@@ -350,7 +401,9 @@ The first synchronized client launch generated the new Mowzie's Mobs config and
 logged many default-value corrections. It also reported missing models for the
 diamond and Black Pink Grottol variants. The client still completed its resource
 reload, and neither custom Ambercraft item produced a missing-model warning.
-Recheck the Mowzie warnings on the second launch and inspect Grottols in game.
+Inspection found a malformed comment embedded in both upstream model texture
+maps. Ambercraft now supplies narrow corrected models for those two variants.
+Recheck the warnings after a full client restart and inspect Grottols in game.
 
 ### Final static balance pass
 
@@ -396,7 +449,8 @@ The next build is acceptable only when all of the following pass:
 6. Verify one Create contraption, Copycats block, and Steam 'n' Rails train,
    including a server restart.
 7. Verify Lootr ownership with two separate players.
-8. Verify Corpse recovery with Curios and backpack contents.
+8. Verify Quark Backpack capacity, access, chest-armor exclusion, Elytra-slot
+   coexistence, and Corpse recovery of the backpack and all of its contents.
 9. Observe a lunar event near a village, then profile the server with spark.
 10. Confirm the implemented End Remastered routes, tooltips, and Integrated
     Stronghold portal room work as documented in `PROGRESSION.md`.
@@ -439,3 +493,232 @@ The remaining client gate requires relaunching this Prism instance, reaching
 the title screen, visually checking the two custom items and their JEI recipes,
 and then joining the test server. The synchronized launch reached KubeJS client
 resource reload with one client script loaded and zero KubeJS errors.
+
+## Performance candidate 0.2.6
+
+Ambercraft 0.2.6 adds FerriteCore 6.0.1 and ModernFix 5.27.66 on both sides.
+FerriteCore is the low-risk memory optimization; ModernFix is the broader
+startup, memory, and bug-fix trial and must pass both dedicated-server and
+renderer tests before release. No additional overlapping lighting, ticking, or
+memory-fix mod is included.
+
+Deployment now enforces view distance 10 and simulation distance 6. Distant
+Horizons remains responsible for distant terrain, while the smaller simulation
+radius reduces continuously ticking chunks when players separate. The server
+retains the measured `-Xms1G -Xmx6G -XX:+UseG1GC` profile; the full Aikar flag
+bundle and P/E-core affinity are intentionally absent.
+
+Before accepting this candidate:
+
+1. Confirm both new mods load on a clean dedicated-server start.
+2. Confirm the client reaches the title screen with Embeddium, Oculus,
+   ImmediatelyFast, and Distant Horizons together.
+3. Join the server and verify KubeJS reload, Create contraptions, and DH
+   delivery.
+4. Capture idle, existing-chunk travel, and fresh-generation spark profiles.
+5. Compare total container memory and GC behavior with the recorded 0.2.5 G1
+   baseline.
+
+The Framework host currently exposes only 16 GiB despite a possible second
+16 GiB module, and its Linux kernel exposes no active Intel frequency driver.
+Physical inspection, BIOS 3.20, and enabling Intel Speed Shift/HWP remain host
+maintenance tasks; they are not worked around with JVM flags in this pack.
+
+The exact 0.2.6 bundle was deployed to the existing Pterodactyl test world and
+reached `Done (9.832s)` after ModernFix reported 58.545 seconds for the complete
+process startup. ModernFix loaded all 110 default options, FerriteCore was
+present, and KubeJS loaded one server script with zero errors and warnings.
+The familiar Incendium smithing fallback remained the only recipe parse
+warning.
+
+Live verification showed `difficulty=hard`, `view-distance=10`, and
+`simulation-distance=6`. The JVM reported a 1 GiB initial heap, 6 GiB maximum
+heap, and G1GC. Total container use was approximately 3.0 GiB out of 8.4 GiB
+immediately after startup. The isolated startup test does not replace the
+required client launch or multiplayer spark profiles.
+
+## Enchantment workshop candidate 0.2.7
+
+Ambercraft 0.2.7 adds Create: Enchantment Industry 1.4.0, the build explicitly
+targeting Create 6.0.8. Quark Matrix Enchanting is disabled so the pack has one
+intentional non-vanilla enchanting system.
+
+The server defaults disable hyper-enchanting and cap its extension at zero.
+KubeJS removes the Hyper Experience mixing recipe, which also closes the mod's
+Quark Ancient Tome printing route. Both enchanted-book copy coefficients are
+set to 100x against a 4000 mB printer tank, making book cloning practically
+unavailable while written books, name tags, train schedules, and clipboards
+remain printable. Ordinary Blaze Enchanter work costs 1.5x experience.
+Deployer and crushing-wheel XP recovery are reduced to avoid lossless mob-farm
+loops.
+
+Before accepting this candidate:
+
+1. Confirm the generated world server config accepts all managed values without
+   correction or reset.
+2. Confirm KubeJS removes the Hyper Experience recipe with no script errors.
+3. Verify a Blaze Enchanter can enchant ordinary gear and a spout can repair an
+   already-Mending item.
+4. Verify an enchanted book and Quark Ancient Tome cannot be copied, while a
+   written book and train schedule can.
+5. Confirm JEI exposes no craftable Hyper Experience route and that Enchantment
+   Industry does not re-enable Quark Matrix Enchanting.
+
+The final 0.2.7 bundle passed the 86-mod, 234-file Packwiz audit and was
+deployed to Pterodactyl. The existing test world reached `Done (2.882s)` with a
+27.552-second complete process startup. KubeJS loaded its one server script
+with zero errors and zero warnings, processed 9,013 recipes, removed nine, and
+reported no failed recipes. Forge accepted the normalized Enchantment Industry
+server config on the second startup without correcting it. The Incendium
+smithing fallback and the already-known Carry On and Alex's Mobs config
+normalizations remain; none prevented startup.
+
+This smoke test proves server loading and configuration syntax, not the five
+in-game behavior checks above. Those remain client test gates.
+
+### Client candidate 0.2.7
+
+A fresh Packwiz client install from the same candidate resolved 76 jars. It
+correctly included Create: Enchantment Industry, Oculus, Embeddium, JEI,
+Distant Horizons, FerriteCore, and ModernFix while omitting Spark, Incendium,
+Nullscape, and the server-side YUNG structure implementations.
+
+The clean Prism instance launched Forge 47.4.10 on Oracle Java 21.0.12 with
+Generational ZGC after enabling Prism's per-instance Java compatibility
+override. KubeJS loaded one startup script and two client scripts with zero
+errors or warnings. Oculus recognized the Apple M3/OpenGL 4.1 renderer, exposed
+its shader-pack page, and remained disabled because no shader pack was forced.
+AmbientSounds, Sound Physics, Xaero's shaders, JEI, Create/Flywheel, and the
+resource reload all completed. The first title-screen launch took about 41
+seconds.
+
+The first resource pass exposed three visible upstream asset defects:
+
+- malformed Diamond and Black Pink Grottol models from Mowzie's Mobs;
+- Cave Delight models targeting removed Farmer's Delight pie parents and one
+  unqualified Trilocaris parent;
+- Phantasm's optional Farmer's Delight cabinet and knife assets not being
+  activated automatically.
+
+Ambercraft now ships narrow resource overrides for those entries. The
+Phantasm fallback deliberately uses its normal Pream plank and crystalline
+sword textures rather than duplicating binary assets from the mod jar. A full
+restart is still required to confirm that all repaired models render.
+
+The refreshed candidate joined the dedicated server successfully. JEI was
+reduced from 224 pages in the original candidate to 46 pages. Xaero displayed
+no entity dots and its cave map was disabled by the server's fair-play signal.
+Distant Horizons initialized its server-specific database, received the
+server level, and progressively displayed distant terrain. The client remained
+connected long enough to validate those systems.
+
+After roughly 22 minutes, Oracle Java 21.0.12 on the Apple M3 terminated with
+`SIGBUS` inside Generational ZGC's `ZRelocateWork` worker. This was a fatal JVM
+error rather than a Forge or mod exception. The client default now uses regular
+ZGC without `-XX:+ZGenerational`; the dedicated server remains on G1. A
+corrected run joined the server, flew through newly generated terrain in
+creative mode, and then shut down cleanly. No additional JVM fatal log was
+created.
+
+A later regular-ZGC session terminated after eight minutes with `SIGSEGV` in
+Oracle 21.0.12's native C2 compiler (`Chunk::chop`) while compiling ASM code.
+There was again no Forge crash report or Java exception identifying a mod.
+The Apple Silicon validation client therefore returns to G1; ZGC should only
+be used on the CachyOS desktop after its installed JDK passes a longer soak.
+
+Recipe synchronization exposed a harmless Quark/Zeta creative-tab ordering
+loop. Ambercraft now enables Zeta's append-only failsafe in
+`config/zeta-common.toml`. The generic Distant Horizons/Alex's Caves warning
+continued despite the required Alex's Caves ambient-light setting already
+being disabled, so the now-redundant compatibility popup is suppressed.
+
+Integrated Villages also embeds optional Guard Villagers and Iron's
+Spellbooks entities in 19 structure templates. Ambercraft replaces those
+missing entities with vanilla iron golems and villagers through generated
+structure overrides. These overrides require a new server deployment and only
+affect newly generated structures.
+
+The first replacement pass preserved Guard Villagers' `Health: 20.0f` NBT on
+the substituted iron golems. A generated Integrated Village confirmed the
+visible result: full-sized golems with only ten hearts. The structure patcher
+now changes that field to vanilla iron-golem health (`100.0f`) and validates
+one health tag per replaced guard. Existing generated golems retain their old
+current health; newly generated villages receive the corrected value.
+
+The refreshed importable Prism archive
+`exports/Ambercraft-0.2.7-Prism.zip` contains 76 client jars, passed
+`unzip -t`, and has SHA-256
+`af80e30076b14653250d9951a01e6d705e35135a3b7ea894e7c426575384f5a3`.
+The matching server artifact
+`build/deployment/ambercraft-server-0.2.7.tar.gz` contains 74 server jars,
+passed `gzip -t`, and has SHA-256
+`6c9c53c3ed200bcf3f52135df77540b3b27552a36eb01dbe95f451f2a2cb4f8e`.
+The mixed-site `.mrpack` export again failed before producing a usable archive
+and must not be distributed.
+
+The corrected restart showed no creative-tab loop and no Alex's Caves/DH
+compatibility popup. Remaining non-blocking client checks are visual inspection
+of the final Cave Delight aliases, Elytra-slot behavior, and the Enchantment
+Industry gameplay checks above. Remaining server gates are a fresh-world
+structure-generation pass and confirmation that the Integrated Villages entity
+warnings no longer appear.
+
+### Pterodactyl deployment
+
+The verified 0.2.7 server bundle was deployed to Ambercraft on July 23, 2026.
+The prior disposable world and generated pack state are recoverable from
+`/home/container/backups/ambercraft-reset-20260723T215924Z`.
+
+The fresh world reached `Done (58.584s)` without a KubeJS error, fatal error,
+or missing Guard Villagers/Iron's Spellbooks entity warning during spawn
+generation. The running container contained 74 jars and initially used about
+3.15 GiB of its 8.4 GiB allocation. `jcmd` confirmed G1 with a 1 GiB initial
+heap and 6 GiB maximum heap. Hard difficulty, flight, zero spawn protection,
+view distance 10, simulation distance 6, and the Ambercraft MOTD were active.
+`Pazelle42` remained in `ops.json`.
+
+## Backpack and JVM follow-up candidate 0.2.8
+
+Ambercraft 0.2.8 adds Sophisticated Backpacks, Sophisticated Core, and the
+official Create contraption integration at the group's request. Quark Oddities
+is not installed; direct structure-data inspection found no Oddities blocks or
+items in IDAS or Integrated Villages, so adding that addon would not repair a
+pack dependency.
+
+Backpacks are deliberately bounded: structure loot does not hand out bags or
+upgrades, storage rises from 27 leather slots to 81 Netherite slots, container
+items cannot be nested inside, other players cannot open a worn bag, and only
+one stack upgrade is allowed. KubeJS permanently removes Inception and Omega.
+Stack tiers 2 through 4 use custom milestone recipes requiring, respectively,
+Blaze Rods, Alex's Caves Telecores, and post-dragon End resources. Basic pickup,
+deposit, refill, crafting, sorting, and Create contraption behavior remain
+available. Mob-catcher upgrades are removed because they supersede Carry On and
+can trivialize creature transport; feeding upgrades are removed because they
+automate away the pack's expedition-food loop.
+
+The candidate passed the 89-mod, 277-file Packwiz audit, JavaScript syntax
+check, shell syntax check, ZIP integrity check, and server archive integrity
+check. The client artifact contains 79 jars:
+`exports/Ambercraft-0.2.8-Prism.zip`, SHA-256
+`e9c283621ee753852075033aaa4dd545eba348ba169c1341b1aaf7e44b4f879f`.
+The server artifact contains 77 jars:
+`build/deployment/ambercraft-server-0.2.8.tar.gz`, SHA-256
+`b223680c727b9bfdff4c4254ca7c66202d74ef3a04b9b56d902a145aeed437e2`.
+
+The server is ready for an in-game fresh-world pass. Newly generated
+Integrated Villages outside the spawn region still need inspection to confirm
+their vanilla golem/villager substitutions and terrain placement.
+## Ambercraft 0.2.8 Java 17 client smoke test
+
+The packaged Prism instance reached the title screen on the Prism-managed
+Microsoft OpenJDK 17.0.8 runtime with G1. Forge 47.4.10 loaded the pack's KubeJS
+startup and client scripts with zero script errors or warnings. This confirms
+Java 17 as the supported client runtime for the release candidate.
+
+The matching server archive was deployed to the retained Pterodactyl world and
+reached `Done (2.597s)`. The running container has all 77 server jars, the world
+and `Pazelle42` operator entry remain present, and the Sophisticated Backpacks
+server configuration retained Ambercraft's capacities and one-stack-upgrade
+limit. KubeJS loaded both scripts with zero script errors or warnings; its
+recipe pass added 14 recipes, removed 18, and reported zero failed recipes.
+The known Incendium smithing-template fallback warning remains non-fatal.

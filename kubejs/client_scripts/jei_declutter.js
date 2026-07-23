@@ -30,4 +30,17 @@ JEIEvents.hideItems(event => {
     'kubejs:weathered_eye_chart',
     'kubejs:rimebound_eye_shard'
   ].forEach(item => event.hide(item))
+
+  // Supplementaries owns the pack's general-purpose rope. Farmer's Delight
+  // fences and safety nets accept it through Ambercraft's replacement recipes.
+  event.hide('farmersdelight:rope')
+
+  // These two upgrades are intentionally outside Ambercraft's progression:
+  // recursive bags and effectively limitless stacks undermine expeditions.
+  event.hide('sophisticatedbackpacks:inception_upgrade')
+  event.hide('sophisticatedbackpacks:stack_upgrade_omega_tier')
+  event.hide('sophisticatedbackpacks:mob_catcher_upgrade')
+  event.hide('sophisticatedbackpacks:advanced_mob_catcher_upgrade')
+  event.hide('sophisticatedbackpacks:feeding_upgrade')
+  event.hide('sophisticatedbackpacks:advanced_feeding_upgrade')
 })

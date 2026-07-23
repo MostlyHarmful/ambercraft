@@ -45,10 +45,10 @@ function awardSharedBossMilestone(event, item, title) {
 
   if (participants.length < 2) {
     event.server.tell(
-      Text.gold(`${title} was overcome, but its campaign secret did not resonate.`)
+      Text.gold(`${title} is down, but whatever it was guarding is still dormant.`)
     )
     event.server.tell(
-      Text.gray('Return with an ally nearby when facing this foe to claim that shared milestone.')
+      Text.gray('Come back with a friend and finish the fight together.')
     )
     return
   }
@@ -57,7 +57,7 @@ function awardSharedBossMilestone(event, item, title) {
   // a Wither crater, fire, water current, or later explosion cannot erase it.
   participants[0].give(item)
   event.server.tell(
-    Text.gold(`Shared milestone: ${title} fell before ${participants.length} companions.`)
+    Text.gold(`${title} fell with ${participants.length} adventurers in the fight. Something new was recovered.`)
   )
 }
 
@@ -65,6 +65,103 @@ ServerEvents.recipes(event => {
   event.remove({ id: 'endrem:exotic_eye' })
   event.remove({ id: 'endrem:undead_eye' })
   event.remove({ id: 'endrem:witch_eye' })
+
+  // Enchantment Industry is a shared workshop, not a treasure-duplication
+  // machine. Hyper Experience is the route used for above-cap enchanting and
+  // Quark Ancient Tome printing, so Ambercraft removes its production recipe.
+  event.remove({ id: 'create_enchantment_industry:mixing/hyper_experience' })
+
+  // Sophisticated Backpacks supports expeditions and Create contraptions, but
+  // it should not become nested, near-limitless portable storage. Inception
+  // and Omega remain unavailable; upper stack tiers become shared milestones
+  // tied to the Nether, Alex's Caves, and the post-dragon End.
+  ;[
+    'sophisticatedbackpacks:inception_upgrade',
+    'sophisticatedbackpacks:stack_upgrade_tier_2',
+    'sophisticatedbackpacks:stack_upgrade_tier_3',
+    'sophisticatedbackpacks:stack_upgrade_tier_4',
+    'sophisticatedbackpacks:stack_upgrade_omega_tier',
+    'sophisticatedbackpacks:mob_catcher_upgrade',
+    'sophisticatedbackpacks:advanced_mob_catcher_upgrade',
+    'sophisticatedbackpacks:feeding_upgrade',
+    'sophisticatedbackpacks:advanced_feeding_upgrade'
+  ].forEach(id => event.remove({ id: id }))
+
+  event.shaped('sophisticatedbackpacks:stack_upgrade_tier_2', [
+    'GBG',
+    'BSB',
+    'GBG'
+  ], {
+    G: '#forge:storage_blocks/gold',
+    B: 'minecraft:blaze_rod',
+    S: 'sophisticatedbackpacks:stack_upgrade_tier_1'
+  }).id('kubejs:living_world/nether_stack_upgrade')
+
+  event.shaped('sophisticatedbackpacks:stack_upgrade_tier_3', [
+    'DTD',
+    'TST',
+    'DTD'
+  ], {
+    D: '#forge:storage_blocks/diamond',
+    T: 'alexscaves:telecore',
+    S: 'sophisticatedbackpacks:stack_upgrade_tier_2'
+  }).id('kubejs:living_world/deep_expedition_stack_upgrade')
+
+  event.shaped('sophisticatedbackpacks:stack_upgrade_tier_4', [
+    'NVN',
+    'VSV',
+    'NBN'
+  ], {
+    N: 'minecraft:netherite_ingot',
+    V: 'phantasm:void_crystal_shard',
+    B: 'minecraft:dragon_breath',
+    S: 'sophisticatedbackpacks:stack_upgrade_tier_3'
+  }).id('kubejs:living_world/end_stack_upgrade')
+
+  // Supplementaries supplies Ambercraft's general-purpose rope. Farmer's
+  // Delight keeps its useful rope fences and safety nets, but their recipes
+  // now use the same material instead of adding a second interchangeable item.
+  ;[
+    'farmersdelight:rope',
+    'farmersdelight:rope_from_safety_net',
+    'farmersdelight:rope_fence',
+    'farmersdelight:rope_fence_gate',
+    'farmersdelight:safety_net'
+  ].forEach(id => event.remove({ id: id }))
+
+  event.shaped('4x supplementaries:rope', [
+    'SS',
+    'SS'
+  ], {
+    S: 'farmersdelight:straw'
+  }).id('kubejs:living_world/supplementaries_rope_from_straw')
+
+  event.shapeless('4x supplementaries:rope', [
+    'farmersdelight:safety_net'
+  ]).id('kubejs:living_world/rope_from_safety_net')
+
+  event.shaped('3x farmersdelight:rope_fence', [
+    'RSR',
+    'RSR'
+  ], {
+    R: 'supplementaries:rope',
+    S: '#forge:rods/wooden'
+  }).id('kubejs:living_world/rope_fence')
+
+  event.shaped('farmersdelight:rope_fence_gate', [
+    'SRS',
+    'SRS'
+  ], {
+    R: 'supplementaries:rope',
+    S: '#forge:rods/wooden'
+  }).id('kubejs:living_world/rope_fence_gate')
+
+  event.shaped('3x farmersdelight:safety_net', [
+    'RRR',
+    'RRR'
+  ], {
+    R: 'supplementaries:rope'
+  }).id('kubejs:living_world/safety_net')
 
   event.shaped('kubejs:expedition_ledger', [
     'MCP',
@@ -143,6 +240,16 @@ ServerEvents.recipes(event => {
 })
 
 LootJS.modifiers(event => {
+  // Infinite food trivializes expeditions and Farmer's Delight. Artifacts
+  // remains the source of capability-changing treasure, but this one reward
+  // is removed from both chests and mobs.
+  event.addLootTypeModifier('chest')
+    .removeLoot('artifacts:everlasting_beef')
+    .removeLoot('artifacts:eternal_steak')
+  event.addLootTypeModifier('entity')
+    .removeLoot('artifacts:everlasting_beef')
+    .removeLoot('artifacts:eternal_steak')
+
   function addThemedArtifactPool(targetTable, artifactTable) {
     event.addLootTableModifier(targetTable).addLoot(
       LootEntry.ofJson({
@@ -325,29 +432,29 @@ PlayerEvents.inventoryChanged(event => {
   event.server.persistentData.putBoolean(key, true)
   const count = discoveredEyeCount(event.server)
   event.server.tell(
-    Text.gold(`The Expedition Ledger records a new resonance (${count}/16 discovered).`)
+    Text.gold(`A new eye has been added to the Expedition Ledger (${count}/16).`)
   )
   event.server.tell(
-    Text.gray(`${event.player.name.string} recovered ${event.item.displayName.string}.`)
+    Text.gray(`${event.player.name.string} found ${event.item.displayName.string}.`)
   )
 
   if (count === 12) {
     event.server.tell(
-      Text.lightPurple('Twelve distinct resonances are known. Secure the eyes, gather the group, and seek the stronghold.')
+      Text.lightPurple('The Ledger holds enough eyes to open the way. Bring them together and start looking for the stronghold.')
     )
   }
 })
 
 ItemEvents.rightClicked('kubejs:expedition_ledger', event => {
   const count = discoveredEyeCount(event.server)
-  let hint = 'Begin with inhabited places, old temples, and forgotten mines.'
+  let hint = 'Start close to home: villages, old temples, and abandoned mines.'
 
-  if (count >= 3) hint = 'The trail now descends: deep caves, drowned monuments, and ancient darkness.'
-  if (count >= 6) hint = 'Look beyond safe roads. The Nether and legendary creatures hold stronger resonances.'
-  if (count >= 9) hint = 'Some remaining milestones answer only when companions face danger together.'
-  if (count >= 12) hint = 'Enough paths are known. Find the stronghold and choose twelve distinct eyes.'
+  if (count >= 3) hint = 'The easy leads are running thin. Try the deep caves, ocean monuments, and places touched by sculk.'
+  if (count >= 6) hint = 'The next clues lie beyond safe roads—in the Nether and with creatures people know better than to wake.'
+  if (count >= 9) hint = 'A few of the remaining prizes will only yield to a group. Bring food, spare gear, and someone you trust.'
+  if (count >= 12) hint = 'You have enough. Gather twelve different eyes and find the stronghold.'
 
-  event.player.tell(Text.gold('Ambercraft Expedition Ledger'))
-  event.player.tell(Text.gray(`${count} of 16 possible resonances have been recorded across this world.`))
+  event.player.tell(Text.gold('Expedition Ledger'))
+  event.player.tell(Text.gray(`The group has found ${count} of the 16 known eyes.`))
   event.player.tell(Text.aqua(hint))
 })

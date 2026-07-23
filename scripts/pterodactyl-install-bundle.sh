@@ -24,6 +24,18 @@ rm -rf "$SERVER_DIR/mods"
 mkdir -p "$SERVER_DIR/mods"
 tar -xzf "$TRANSFER_DIR/$ARCHIVE" -C "$SERVER_DIR"
 
+# Forge copies default server configs when it creates a world, but this pack is
+# also deployed onto retained test worlds. Seed Ambercraft's managed backpack
+# limits once when that world has no Sophisticated Backpacks config yet. Forge
+# fills the remaining upstream defaults on first launch and preserves the
+# resulting complete file on later deployments.
+BACKPACK_DEFAULT="$SERVER_DIR/defaultconfigs/sophisticatedbackpacks-server.toml"
+BACKPACK_WORLD_CONFIG="$SERVER_DIR/world/serverconfig/sophisticatedbackpacks-server.toml"
+if [ -f "$BACKPACK_DEFAULT" ] && [ -d "$SERVER_DIR/world" ] && [ ! -f "$BACKPACK_WORLD_CONFIG" ]; then
+  mkdir -p "$SERVER_DIR/world/serverconfig"
+  cp "$BACKPACK_DEFAULT" "$BACKPACK_WORLD_CONFIG"
+fi
+
 # macOS can attach AppleDouble metadata to archives. These files are never pack
 # content and may otherwise be mistaken for JARs by Forge.
 for path in mods config defaultconfigs kubejs; do
@@ -75,8 +87,11 @@ set_property() {
 }
 
 set_property allow-flight true
+set_property difficulty hard
 set_property spawn-protection 0
 set_property max-tick-time 120000
+set_property view-distance 10
+set_property simulation-distance 6
 set_property motd Ambercraft
 
 for path in mods config defaultconfigs kubejs packwiz.json backups server.properties libraries/net/minecraftforge/forge/1.20.1-47.4.10/unix_args.txt; do

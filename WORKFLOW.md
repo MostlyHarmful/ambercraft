@@ -29,6 +29,11 @@ upload the generated server installation to Pterodactyl over SFTP. Do not use
 the current `.mrpack`; mixed CurseForge and Modrinth export is recorded as
 broken in `TESTING.md`.
 
+The current importable client artifact is
+`exports/Ambercraft-0.2.8-Prism.zip`. Prism should use Java 17, a 2–8 GiB heap,
+and G1. This matches Forge 1.20.1's expected runtime and avoids the native
+Oracle Java 21 failures observed on Apple Silicon.
+
 The longer-term arrangement is:
 
 1. Push a tested commit from this Mac.
@@ -79,8 +84,9 @@ directory so removed mods cannot linger, and overlays canonical configuration
 and KubeJS files. It does not replace worlds, `server.properties`, `ops.json`,
 the whitelist, or the Forge installation. It does enforce the tested 1–6 GiB
 G1 profile through Forge's active `unix_args.txt`, enables modded flight,
-disables vanilla spawn protection, sets a two-minute watchdog, and normalizes
-the MOTD. Start the server from the panel only after deployment completes.
+disables vanilla spawn protection, sets view distance 10 and simulation
+distance 6, sets a two-minute watchdog, and normalizes the MOTD. Start the
+server from the panel only after deployment completes.
 
 When replacing an unrelated or manually assembled test installation, first
 quarantine its world and generated pack state, then redeploy:
@@ -95,14 +101,14 @@ and generated Moonlight datapacks into a timestamped directory under
 `backups/`. It preserves the Forge installation, server properties, operator
 list, whitelist, bans, and user cache.
 
-## Java 21 garbage collection
+## Java and garbage collection
 
-Use Generational ZGC on the CachyOS client, where Distant Horizons can create
-high allocation pressure:
-
-```text
--Xms2G -Xmx8G -XX:+UseZGC -XX:+ZGenerational
-```
+Clients use Java 17 with G1. Distant Horizons does not require Java 21, and the
+possible ZGC pause-time benefit did not justify leaving Forge 1.20.1's expected
+runtime. Oracle Java 21.0.12 on Apple Silicon first crashed in `ZRelocateWork`
+under generational ZGC, then crashed again in the JVM's C2 compiler under
+regular ZGC after an eight-minute play session. Those were native JVM failures,
+not Forge crash reports.
 
 The dedicated server now runs Distant Horizons for LOD generation and delivery.
 On Ambercraft's constrained 8.4 GiB Pterodactyl allocation, continue using G1:
@@ -122,6 +128,17 @@ Forge's `user_jvm_args.txt`. Ambercraft's deployment script therefore inserts
 the bounded G1 flags into that active argument file on every deployment. Verify
 the effective heap and collector after launch rather than trusting the generic
 `MaxRAMPercentage` text shown in the panel.
+
+More physical host RAM does not automatically enlarge the Pterodactyl
+container. Keep the 6 GiB Java heap until both the host sees the second memory
+module and the container memory limit is deliberately raised. Even then,
+retain at least 2–3 GiB of container headroom for native memory, metaspace,
+threads, networking, and Distant Horizons.
+
+Ambercraft intentionally does not use the complete Aikar flag set. It targets
+Paper and includes assumptions that have not improved this Forge workload. In
+particular, do not disable explicit GC while Distant Horizons is installed.
+Use spark's GC monitor before adding collector-specific tuning.
 
 On Pterodactyl:
 

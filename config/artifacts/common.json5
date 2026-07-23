@@ -1,0 +1,24 @@
+{
+	// Infinite food is a fine novelty after progression is over, but it makes
+	// farming, cooking, and expedition supplies irrelevant too early.
+	"everlastingBeefChance": 0.0,
+
+	"entityEquipmentChance": 0.001,
+	"archaeologyChance": 0.0625,
+	"modifyHurtSounds": true,
+
+	"campsite": {
+		// One attempt per chunk keeps campsites discoverable without filling
+		// ordinary caves with a second structure layer.
+		"count": 1,
+		"minY": -60,
+		"maxY": 40,
+		"mimicChance": 0.3,
+		"useModdedChests": true,
+		"allowLightSources": true
+	},
+
+	// Ambercraft also bridges themed Artifact pools into signature modded
+	// destinations. A moderate rarity increase keeps each find memorable.
+	"artifactRarity": 1.5
+}

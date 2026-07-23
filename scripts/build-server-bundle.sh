@@ -59,6 +59,6 @@ for path in config defaultconfigs kubejs; do
 done
 # CONTENTS contains only the fixed pack-managed paths above.
 # shellcheck disable=SC2086
-COPYFILE_DISABLE=1 tar -C "$STAGE_DIR" -czf "$BUNDLE" $CONTENTS
+COPYFILE_DISABLE=1 tar --no-xattrs -C "$STAGE_DIR" -czf "$BUNDLE" $CONTENTS
 
 echo "$BUNDLE"

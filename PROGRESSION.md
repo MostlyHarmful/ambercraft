@@ -226,3 +226,13 @@ restore every default route.
   they are clearer than scripts.
 - Found books, maps, trades, and restrained advancement text for clues.
 - Lootr testing for every modified container source.
+
+## Communal enchanting
+
+Create: Enchantment Industry gives engineering-focused players a useful
+midgame contribution without making an enchanting factory an eye prerequisite.
+The workshop can collect liquid experience, enchant ordinary equipment, mend
+gear that has already earned Mending, and print schedules or written records
+for the group. Hyper-enchanting is disabled and enchanted books cannot be
+practically copied, so explorers still bring home the rare enchantments and
+Ancient Tomes that make the workshop valuable.

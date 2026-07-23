@@ -2,7 +2,7 @@
 
 A Forge 1.20.1 vanilla-plus exploration and adventure pack managed with
 [packwiz](https://packwiz.infra.link/). The pack currently targets Forge
-47.4.10 and contains 86 Packwiz-managed mod entries. The install index also
+47.4.10 and contains 89 Packwiz-managed mod entries. The install index also
 ships Ambercraft's configuration, compatibility overrides, and campaign data.
 
 Mod selection and configuration are governed by [`DESIGN.md`](DESIGN.md). Read
@@ -51,18 +51,21 @@ To add a mod, prefer an exact project URL when names are ambiguous:
 The canonical distribution is `pack.toml`, `index.toml`, the metadata files,
 and any future `config/`, `defaultconfigs/`, `kubejs/`, or resource files. A
 packwiz-compatible launcher can install the client directly from a hosted
-`pack.toml` URL. For launchers without native packwiz support, export a pack:
+`pack.toml` URL. For launchers without native packwiz support, use the tested
+Prism archive:
 
 ```sh
-mkdir -p exports
-./tools/packwiz modrinth export --restrictDomains=false \
-  -o exports/ambercraft-0.1.1.mrpack
+unzip -t exports/Ambercraft-0.2.8-Prism.zip
 ```
 
-Mixed Modrinth/CurseForge exports can be slow because packwiz must contact both
-services. A failed or interrupted export must not be distributed.
+Import that ZIP in Prism Launcher. It contains the exact side-filtered client,
+Forge 47.4.10, and Ambercraft's managed configuration. Packwiz's mixed
+Modrinth/CurseForge `.mrpack` export is not the release artifact: a failed or
+interrupted export can leave a zero-byte file.
 
-For a server, install Java 21 and Forge 47.4.10, then use packwiz-installer with
+For a client, use Java 17 with G1. The currently deployed server remains on its
+tested Java 21/G1 runtime; a later maintenance window can standardize it on
+Java 17. Install Forge 47.4.10, then use packwiz-installer with
 the hosted `pack.toml` URL. This exact combination has passed the repository's
 initial dedicated-server smoke test. Client-only entries are excluded
 automatically.
@@ -78,8 +81,9 @@ and copies it into the stopped Ambercraft Pterodactyl container:
 ```
 
 Deployment also reapplies Ambercraft's tested Pterodactyl runtime profile:
-`-Xms1G -Xmx6G -XX:+UseG1GC`, modded flight enabled, spawn protection disabled,
-and a two-minute watchdog. The stock Forge egg does not read
+`-Xms1G -Xmx6G -XX:+UseG1GC`, view distance 10, simulation distance 6,
+modded flight enabled, spawn protection disabled, and a two-minute watchdog.
+The stock Forge egg does not read
 `user_jvm_args.txt`, so the deployment script writes these JVM flags into the
 Forge argument file that the egg actually launches.
 
@@ -90,7 +94,9 @@ Embeddium, Embeddium Extra, Sodium/Embeddium Dynamic Lights
 and its Options API, Entity Culling, ImmediatelyFast, JEI, Mouse Tweaks,
 Oculus, and Sound Physics Remastered. Distant Horizons and both Xaero maps run
 on both sides for server-backed LOD delivery and stable world identity. Spark
-is server-only. Jade is installed on both sides so its server-backed block data
+is server-only. FerriteCore and ModernFix run on both sides as Ambercraft's
+small shared memory and startup optimization layer. Jade is installed on both
+sides so its server-backed block data
 remains available. Athena is on both
 sides because Chipped uses it for connected-texture/block behavior.
 
@@ -130,6 +136,10 @@ See [`TESTING.md`](TESTING.md) for the current results and unresolved warnings.
 See [`WORKFLOW.md`](WORKFLOW.md) before moving a candidate between machines.
 
 Create 6 is the most compatibility-sensitive content mod in the list. Treat
-Create, Copycats+, and Steam 'n' Rails as one version-locked group when updating.
-KubeJS Create is intentionally absent until Ambercraft uses Create-specific
-scripted recipes; ordinary custom recipes continue to use base KubeJS.
+Create, Copycats+, Steam 'n' Rails, and Create: Enchantment Industry as one
+version-locked group when updating. Enchantment Industry is configured as a
+communal midgame alternative to librarian halls: normal enchanting, liquid XP,
+repair, and mundane printing remain useful, while hyper-enchanting and practical
+enchanted-book duplication are disabled. KubeJS Create is intentionally absent
+until Ambercraft uses Create-specific scripted recipes; ordinary custom recipes
+continue to use base KubeJS.

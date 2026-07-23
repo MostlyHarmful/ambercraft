@@ -19,6 +19,7 @@ Corpse
 Corpse Curios Compatibility
 Create
 Create: Copycats+
+Create: Enchantment Industry
 Create: Steam 'n' Rails
 Create Slice & Dice
 CreativeCore
@@ -33,7 +34,7 @@ End's Phantasm
 Enhanced Celestials
 EntityCulling
 Farmer's Delight
-Friends&Foes
+FerriteCore
 GeckoLib 4
 GlitchCore
 Handcrafted
@@ -53,13 +54,15 @@ LootJS
 Moonlight Library
 Mouse Tweaks
 Mowzie's Mobs
+ModernFix
 Nullscape
 Oculus
 Resourceful Lib
 Serene Seasons
-Sophisticated Backpacks
-Sophisticated Core
 Sound Physics Remastered
+Sophisticated Backpacks
+Sophisticated Backpacks Create Integration
+Sophisticated Core
 Sodium/Embeddium Dynamic Lights
 Supplementaries
 Tectonic

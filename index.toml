@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "39f0c585a6d87d6ed30ed47caa5f56bf96984be46dd66d8b4f4d18636cefb456"
+hash = "2c9f9cc9597e853834cd92d32f7fa32f05fdd5cca4ea160741b9899fec05a5d8"
 
 [[files]]
 file = "config/alexscaves-client.toml"
@@ -10,7 +10,15 @@ hash = "1863ec486ae7385d92900d078bd00aba3a2a767cde6646b8b8601b5633738cb8"
 
 [[files]]
 file = "config/alexsmobs.toml"
-hash = "99496954f78982b34068d5113935ae9816afd86b7b2580465b7ffbcb32fbe8e6"
+hash = "779135aa81165f2d05b3f326a94686944b8e27679ec20a1f2db555d735b681f8"
+
+[[files]]
+file = "config/artifacts/common.json5"
+hash = "6bc17a0af84f6453920b84bcfc3d4a9b25a6eb0af57547ff6547cbe4d0ec502e"
+
+[[files]]
+file = "config/carryon-common.toml"
+hash = "731acc1c17d5faeb6d861b4bb882cec84a8023ffa788a679285a0b52d8d9df22"
 
 [[files]]
 file = "config/endrem.toml"
@@ -22,7 +30,7 @@ hash = "c760b710e6933dcd0fedfe42344c82960c5db53e1e591efd63b6a0f78ce55932"
 
 [[files]]
 file = "config/quark-common.toml"
-hash = "225d3ec257a95434f8c3aff96b226ac56c9546ddf6b94e13b5a78988dd6b6cf6"
+hash = "478b1fe108a1ea875f6c1f438c745b9645604477b2841a1d883652b24e37df63"
 
 [[files]]
 file = "config/sereneseasons/fertility.toml"
@@ -31,6 +39,10 @@ hash = "df44f01650966bffa7e769c0109403858d34bbeb366c55dae09588b08eba6ea4"
 [[files]]
 file = "config/sereneseasons/seasons.toml"
 hash = "480d0af0ede5ec3a76e184409c125e6bf50ee9cf0518c49e32de1bc7d58a9c92"
+
+[[files]]
+file = "config/sophisticatedbackpacks-common.toml"
+hash = "f85aac0ab1e212681d9bdb0b5693318a1f4f06bbf295acbc6010ff1d463e4995"
 
 [[files]]
 file = "config/trmt.json"
@@ -61,12 +73,104 @@ file = "config/xaero/world-map/server_profiles/default.cfg"
 hash = "d438aea41ca41e93697e059f523686935c0add482f6abe96b532bbf10c6ed80a"
 
 [[files]]
+file = "config/zeta-common.toml"
+hash = "e5ec25ce2113b12980ed9834987c9ccebd2f859aba1272f77f47af424c076a5b"
+
+[[files]]
+file = "defaultconfigs/create_enchantment_industry-server.toml"
+hash = "2690504646adabb40b37ea77539227f2a581fb9b09d5c4ba5e72cb15d8e05e42"
+
+[[files]]
+file = "defaultconfigs/sophisticatedbackpacks-server.toml"
+hash = "60b14c02a036352e4d30c57a966cd06128f38de40521813b208f7d55b5ed210c"
+
+[[files]]
+file = "kubejs/assets/cavedelight/models/block/boiled_trilocaris.json"
+hash = "70c7c34e0e719aa7f3e6535462303af2c49c2c833c91f90adda4f453de398e5d"
+
+[[files]]
+file = "kubejs/assets/cavedelight/models/block/tectonic_cheesecake.json"
+hash = "006fe51efb26a10ad27c93f8683aae6bd42a69241da26b493f8b5bb7f9d07320"
+
+[[files]]
+file = "kubejs/assets/cavedelight/models/block/tectonic_cheesecake_slice1.json"
+hash = "c3959495d858d90af16bba0e2e078e2a5411f90859497828e4622608858deac8"
+
+[[files]]
+file = "kubejs/assets/cavedelight/models/block/tectonic_cheesecake_slice2.json"
+hash = "4074907319fa1024909ac9bd2e2affc9ee496d49a9b36c0d632c94b89bad6dee"
+
+[[files]]
+file = "kubejs/assets/cavedelight/models/block/tectonic_cheesecake_slice3.json"
+hash = "a9f47b622d4a5001606ed9de4d538a25ab12ac1ef5515861b36acbcb5ec6bf22"
+
+[[files]]
+file = "kubejs/assets/farmersdelight/models/block/pie.json"
+hash = "46bd7a01267fd5b47c905d778dce3dbcba68429f13243b704d6fd5d9583303a1"
+
+[[files]]
+file = "kubejs/assets/farmersdelight/models/block/pie_slice1.json"
+hash = "1d461d7b0dfce45620d2a5f2845f3fdfa35cc8bd4c253dc0e3af114b5ec99590"
+
+[[files]]
+file = "kubejs/assets/farmersdelight/models/block/pie_slice2.json"
+hash = "6870a5f19a3b3e58f2e732e92063c1eb3d504c27991871ccb932a75b5941d1db"
+
+[[files]]
+file = "kubejs/assets/farmersdelight/models/block/pie_slice3.json"
+hash = "13d98c5281973cd7f88e040909abc3461ec1d798d4b9e2eceb81867448a4d01c"
+
+[[files]]
+file = "kubejs/assets/minecraft/models/boiled_trilocaris.json"
+hash = "33ccc2b7d6feb7a8358c6bb2ca4d6e49947dff15fbb723b849cfac1f846c8670"
+
+[[files]]
+file = "kubejs/assets/mowziesmobs/models/block/black_pink_grottol.json"
+hash = "c54ce8b75ef9c81b370c0342f04884b893da37ef8ed81a7e31be0e78c98bf319"
+
+[[files]]
+file = "kubejs/assets/mowziesmobs/models/block/diamond_grottol.json"
+hash = "126e83b03152a9da019de2e36555ce2cd57c37f8872a7f64a05d3428fd26a124"
+
+[[files]]
+file = "kubejs/assets/phantasm/blockstates/pream_cabinet.json"
+hash = "e348710493bc635c5f5b965600f93dbc2e363e869ccd6aeea8516caab7bae6c5"
+
+[[files]]
+file = "kubejs/assets/phantasm/models/block/pream_cabinet.json"
+hash = "b01656d6b615e423e58a8c290335e15f1f878d2e7769e4081ba922c7b25773d3"
+
+[[files]]
+file = "kubejs/assets/phantasm/models/block/pream_cabinet_open.json"
+hash = "c2873972f09268d8a3ce4cc8c18922165c9fd7431be4afc2ebf3da605e5ebd7f"
+
+[[files]]
+file = "kubejs/assets/phantasm/models/item/crystalline_knife.json"
+hash = "deb1ec9c6a30b1096a4bb6497a82abcee714ce21da62a48e0f4775e4fa0a6dd9"
+
+[[files]]
+file = "kubejs/assets/phantasm/models/item/potted_pream_sapling.json"
+hash = "b069e3bdf8a74b1e5e7aa3ac5a412f01442221cbb98de342811fd9ba07b66b26"
+
+[[files]]
+file = "kubejs/assets/phantasm/models/item/pream_cabinet.json"
+hash = "c2873972f09268d8a3ce4cc8c18922165c9fd7431be4afc2ebf3da605e5ebd7f"
+
+[[files]]
+file = "kubejs/assets/quark/lang/en_us.json"
+hash = "d5a21e916429f101499588d4e2f6f716878e55bf05db0861a976aa19ce477a47"
+
+[[files]]
+file = "kubejs/assets/supplementaries/lang/en_us.json"
+hash = "f74a42f0204d7b16d5c7a20e0f179d7d5d8d9f4e9c2d3393c50a5ac1c9e44751"
+
+[[files]]
 file = "kubejs/client_scripts/jei_declutter.js"
-hash = "edd68c73ed790531b453f34806a4b100d77a2ca5962bc74fd799a4002f9f54bd"
+hash = "98fba5c29f1c6daa63996b30fd2e84c74f504e3d057cef064d1bda032302e1ae"
 
 [[files]]
 file = "kubejs/client_scripts/living_world_tooltips.js"
-hash = "2ab82a8143178854675c0fba99f9d9324c3ee662cd60306a3c436a798ce93135"
+hash = "33c1e776456a91ce95674bafbdab18449b834dce91ef885ea4a2898929d1d606"
 
 [[files]]
 file = "kubejs/data/alexsdelight/recipes/barbecue_on_a_stick.json"
@@ -74,7 +178,7 @@ hash = "5e41ad5646fb7e2e9112dfbafd6ed32025033c73a06aa66b1b9f4c8ffbd3295c"
 
 [[files]]
 file = "kubejs/data/ambercraft/functions/xaero_fairplay_join.mcfunction"
-hash = "a1e2a654e21951aaf7976bbe166fc5cee4571e5fc610b7bbab1cd96f2fe767dd"
+hash = "51746a23021661b4be1765d2f188aaa2ce0cd66cd7f38c0cc28233fb1d26b1d3"
 
 [[files]]
 file = "kubejs/data/ambercraft/functions/xaero_fairplay_load.mcfunction"
@@ -525,6 +629,82 @@ file = "kubejs/data/integrated_villages/advancements/tavern_village.json"
 hash = "64f6851ea1faea901556951e825cb43831ae47bf255e02d9ba1b4a658bb31159"
 
 [[files]]
+file = "kubejs/data/integrated_villages/structures/airship_village/mobs/airship_village_irons_priest.nbt"
+hash = "428d51027a317a7629237f5e412b29d5f2e977181340fe7ab155afb1a13a0ac2"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/airship_village/mobs/airship_village_villager_guard.nbt"
+hash = "a694adfa83fd3d768751130157c25071d4bef7f7b8347a3ec661c4b5a31e0bd4"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/cabin_village/mobs/cabin_village_villager_guard.nbt"
+hash = "e0aa2881032227dbede01e0ea7988a41a940cf025500a5bc5490375486d6a3d6"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/clockwork_village/mobs/clockwork_village_villager_guard.nbt"
+hash = "3e861ac0b6bfdf62ff2becda6ee7da1c62991d356cd25bed5ce4a33a1c4e7745"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/clockwork_village/mobs/clockwork_village_villager_priest.nbt"
+hash = "8c047f5b5269b6716191727caf8b932cb45537d15a09e3f8529231bf68d8f3bc"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/integration/mobs/irons_priest.nbt"
+hash = "00d8faa71272ec10b0615e8a429b7520295edcc66d190960351a4444524b43d0"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/kutcha_village/mobs/kutcha_village_villager_guard.nbt"
+hash = "47d34885e5a13f42aeb86c46f3d761abf5ea2c41da528d1d19896f5904203729"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/marketstead_village/mobs/marketstead_village_villager_guard.nbt"
+hash = "71dd9d7eb3c922e7f78078e6f3778fa9664a8e5ba7c3994b4293ef100b1cfe51"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/mediterranean_village/mobs/mediterranean_village_irons_priest.nbt"
+hash = "6afeed55f1dbdb300e4fc9846a2ba2373df0c3f2cdf3c4feebc6bb429bcaae6f"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/mediterranean_village/mobs/mediterranean_village_villager_guard.nbt"
+hash = "79da1759bf37455526abf2f49ba1cf06bf6671a4b4cc916b698ce1cf5c0b8c47"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/minka_village/mobs/minka_village_irons_priest.nbt"
+hash = "6afeed55f1dbdb300e4fc9846a2ba2373df0c3f2cdf3c4feebc6bb429bcaae6f"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/minka_village/mobs/minka_village_villager_guard.nbt"
+hash = "79da1759bf37455526abf2f49ba1cf06bf6671a4b4cc916b698ce1cf5c0b8c47"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/mossy_mounds/mobs/mossy_mounds_villager_guard.nbt"
+hash = "11b969a3a1552838e17505746ee62d0dbedb4b99369823b97a30af53e4ff2a8c"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/oasis_village/mobs/oasis_village_villager_guard.nbt"
+hash = "cb156b4a156629ea0e18ffd22b3d01817f083914f943e3164e6962388eee45eb"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/pirate_village/mobs/pirate_village_villager_guard.nbt"
+hash = "e4333c5b8699c34890bb88cc77e33a38a11efc08e95d3e2048d88a627d7e7f1f"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/swamp_village/mobs/swamp_village_irons_priest.nbt"
+hash = "6afeed55f1dbdb300e4fc9846a2ba2373df0c3f2cdf3c4feebc6bb429bcaae6f"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/swamp_village/mobs/swamp_village_villager_guard.nbt"
+hash = "36f5bfe5e13b7b9e5c4639ed1dec5f05eb61e122419304c0dbc6780cba7d3ade"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/tavern_village/mobs/tavern_village_irons_priest.nbt"
+hash = "5ff4c075f472dfd7dd238c1a8394d4c470c78788819d268ed049657518f128b1"
+
+[[files]]
+file = "kubejs/data/integrated_villages/structures/tavern_village/mobs/tavern_village_villager_guard.nbt"
+hash = "e9e44973022f456fad4dd97dd19f93bd391148fd6ae799ec7f1e963dafcc7a25"
+
+[[files]]
 file = "kubejs/data/integrated_villages/worldgen/structure_set/regular_villages.json"
 hash = "25329f23cbf053d213802904f60d3f8f5c276c1107bee0ac2b69c4862bf38efe"
 
@@ -566,11 +746,11 @@ hash = "3040901c6c74b67c2182bfc63ef29609ba4200890b9ff23892f27294d048cd5e"
 
 [[files]]
 file = "kubejs/server_scripts/living_world_progression.js"
-hash = "c628f46330a06defe7e29e9a58bc0d8ab12aeae921ef471e6b3edad502040111"
+hash = "53303cc3d9b54617f8026f9a2f34123b7e46afe10be5a2390c368dbeb0b96149"
 
 [[files]]
 file = "kubejs/startup_scripts/living_world_items.js"
-hash = "acb74e433a602d55491b9cabbafc4263d98a4dc78204667ed9afd5ab06ea370f"
+hash = "fa1604cbed94f073ff2e49eab5ebc4332201a60f7c722a8a2331b296e40f2fc0"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -678,13 +858,18 @@ hash = "2fba2317a375669ccb1376525d4d4e0d1903cc5dc44fc70dce1d0e3dbb6aacb1"
 metafile = true
 
 [[files]]
+file = "mods/create-enchantment-industry.pw.toml"
+hash = "9d5fe87411e96d180a82f8da60ca8d2020e7bba269b5a5ea084345e211da2bd6"
+metafile = true
+
+[[files]]
 file = "mods/create-steam-n-rails.pw.toml"
 hash = "4c091982c192238cc7b2cefbb3a6e634edc6d7a780e547d693df7f4e3e1b04be"
 metafile = true
 
 [[files]]
 file = "mods/create.pw.toml"
-hash = "9d7971a7af2ff4a96a0e5aede76f9cf8dc978da601e2754f79d6ec8631125bb9"
+hash = "fb5c251cf4997fa65ca043bab7c9ecbd02e108031584a3e26276b77d212de23c"
 metafile = true
 
 [[files]]
@@ -743,8 +928,8 @@ hash = "d7139e5db4b5a9b5d80330854bb23ce2cd197009b6d8e3636aa017434066b830"
 metafile = true
 
 [[files]]
-file = "mods/friends-and-foes-forge.pw.toml"
-hash = "d7e93654d8f8ba58742e86d26cbd9e7f563be4f8c9683f52d72777a3807d7078"
+file = "mods/ferrite-core.pw.toml"
+hash = "902bac905b93271f02bd0951a22bac06a3da24f5c237fcaeb469e14a7679e508"
 metafile = true
 
 [[files]]
@@ -833,6 +1018,11 @@ hash = "66bcfe786e6bbdee6f7ea0805ec3d2561b41285a5c77f1e465e80f4c2fd9200c"
 metafile = true
 
 [[files]]
+file = "mods/modernfix.pw.toml"
+hash = "912dc66ae13a57f9f6559eb0c7c2b42f973f5768b46192528bec1d37df8398ef"
+metafile = true
+
+[[files]]
 file = "mods/mouse-tweaks.pw.toml"
 hash = "679fa8f3b49b9ed3fbcb29d6ccdb99bce465faa01f9cec000464ac8d4fbe134f"
 metafile = true
@@ -898,13 +1088,18 @@ hash = "bec4fd7f9b90e9040786e31d14bf4af7fb42fce842b9f5acfdd0821c973ecb82"
 metafile = true
 
 [[files]]
+file = "mods/sophisticated-backpacks-create-integration.pw.toml"
+hash = "323e14af559790da46e54ad8e2f0fa7a210571f405e55fbe2e68cead9e6153b8"
+metafile = true
+
+[[files]]
 file = "mods/sophisticated-backpacks.pw.toml"
-hash = "4347a1900c5719443d7bf2bb255da15e0ec9105daecf8a4ba7dfd0621646b9e4"
+hash = "a3cac5897c9b839391a71d26996889e5dae780a94c2534e9cc5acbff0e483f4f"
 metafile = true
 
 [[files]]
 file = "mods/sophisticated-core.pw.toml"
-hash = "6e53a72e3777b668c2da7ccb139405a53da3bb67004584b47cc2c203db093e66"
+hash = "5daf8d7d250b491e172fd178a9cc66c9e0dedf462fa0d9e79635026807c3d053"
 metafile = true
 
 [[files]]

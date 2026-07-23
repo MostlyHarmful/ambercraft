@@ -379,13 +379,19 @@
 					"Is Blacklist" = false
 
 [oddities]
+	# Quark Oddities is intentionally not installed. IDAS and Integrated
+	# Villages use core Quark content only; Sophisticated Backpacks and Create
+	# Enchantment Industry cover the useful storage and enchanting roles.
 	Backpack = false
 	"Totem Of Holding" = false
-	Crate = true
-	Magnets = true
-	"Matrix Enchanting" = true
-	Pipes = true
-	"Tiny Potato" = true
+	Crate = false
+	Magnets = false
+	# Enchantment Industry owns Ambercraft's intentional enchanting workshop.
+	# Keeping Matrix Enchanting would add a second, disconnected selection
+	# system and let players bypass the factory's costs.
+	"Matrix Enchanting" = false
+	Pipes = false
+	"Tiny Potato" = false
 
 	[oddities.backpack]
 		#Set this to true to allow the backpacks to be unequipped even with items in them
@@ -1261,7 +1267,7 @@
 	"Color Runes" = true
 	"Endermosh Music Disc" = true
 	"Parrot Eggs" = true
-	"Pathfinder Maps" = true
+	"Pathfinder Maps" = false
 	Pickarang = true
 	"Seed Pouch" = true
 	"Skull Pikes" = true

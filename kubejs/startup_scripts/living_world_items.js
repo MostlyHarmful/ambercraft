@@ -1,6 +1,6 @@
 StartupEvents.registry('item', event => {
   event.create('expedition_ledger')
-    .displayName('Ambercraft Expedition Ledger')
+    .displayName('Expedition Ledger')
     .rarity('uncommon')
     .maxStackSize(1)
     .texture('minecraft:item/writable_book')

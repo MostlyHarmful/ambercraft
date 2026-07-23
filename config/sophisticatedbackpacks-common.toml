@@ -1,0 +1,6 @@
+
+#Common Settings
+[common]
+	#Ambercraft keeps backpacks craftable rather than adding finished storage
+	#and upgrades to already-generous structure loot.
+	chestLootEnabled = false

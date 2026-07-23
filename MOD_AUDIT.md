@@ -45,8 +45,6 @@ while retaining temperature and terrain-related climate axes.
   surface density without a campaign role.
 - **Mowzie's Mobs** generates Frostmaw spawns, Umvuthana groves, wrought
   chambers, and monasteries.
-- **Friends & Foes** generates its citadel, Iceologer cabin, Illusioner shack,
-  and training grounds.
 - **Alex's Caves** has fourteen primary structure sets, including ruins,
   geological formations, Gingerbread Town, Licowitch Tower, trenches, and
   underground cabins.
@@ -64,9 +62,6 @@ narrow KubeJS data overrides. Those large content mods are not required.
 - **Alex's Caves** owns creatures confined to its six cave ecosystems. These
   include Deep Ones, dinosaurs, magnetic constructs, irradiated creatures,
   abyssal life, Forlorn Hollows inhabitants, and Candy Cavity creatures.
-- **Friends & Foes** restores the Copper Golem, Glare, Iceologer, Mauler,
-  Moobloom, Rascal, Tuff Golem, Wildfire, and crab. Quark's duplicate crab is
-  disabled.
 - **Mowzie's Mobs** is the focused legendary-encounter layer: Foliaath,
   Ferrous Wroughtnaut, Frostmaw, Grottol, Naga, Sculptor, Umvuthana, Umvuthi,
   and their encounter helpers.
@@ -75,7 +70,9 @@ narrow KubeJS data overrides. Those large content mods are not required.
   the expanded End.
 - **Quark** retains Forgotten, Foxhound, Shiba, Stonelings, Toretoise, and
   Wraith because IDAS uses some Quark creatures and their encounters are
-  distinct from ordinary wildlife. Its crab remains disabled.
+  distinct from ordinary wildlife. Its crab remains disabled rather than
+  reintroducing another low-impact ambient animal after Friends & Foes was
+  removed.
 
 ### Dynamic world systems
 
@@ -117,8 +114,18 @@ justify the catalogue and loading cost.
 ### Exploration rewards and safety
 
 - **Artifacts** supplies structure-discovered wearable capabilities.
-- **Sophisticated Backpacks** supplies expedition storage. Quark's duplicate
-  backpack is disabled.
+- **Sophisticated Backpacks** supplies shared expedition storage and integrates
+  with Create contraptions. Quark Oddities is not installed, so Quark's
+  backpack is unavailable rather than an overlapping alternative. Finished
+  backpacks and upgrades are excluded from chest loot. Capacities rise from 27
+  slots at leather to 81 at Netherite; bags cannot contain shulkers or other
+  container items; and only one stack upgrade fits. Inception and Omega remain
+  unavailable. The upper stack tiers instead require, in order, a Nether
+  expedition, Telecores from Alex's Caves, and post-dragon End resources. This
+  preserves useful sorting and infrastructure interactions while turning major
+  capacity increases into communal campaign rewards. Mob-catcher upgrades are
+  removed in favor of Carry On's bounded, hands-occupied transport, and feeding
+  upgrades are removed so expeditions still consume prepared food.
 - **Lootr** gives players individual structure loot.
 - **Corpse** and its Curios compatibility preserve death retrieval without
   enabling keep-inventory. Quark's duplicate Totem of Holding is disabled.
@@ -129,6 +136,20 @@ justify the catalogue and loading cost.
   earned Elytra remains useful when the expedition returns home.
 - **End Remastered**, KubeJS, and LootJS form the campaign spine documented in
   `PROGRESSION.md`.
+- **Farmer's Delight** owns everyday food progression and expedition
+  preparation. Artifacts' infinite beef and steak are disabled so cooking,
+  farming, and carried supplies remain meaningful.
+- **Supplementaries** owns the common rope item. Farmer's Delight rope fences
+  and safety nets retain their uses through unified recipes without a duplicate
+  rope entry.
+- **Create: Enchantment Industry** gives factory-minded players a communal
+  enchanting, repair, and experience-processing project. Quark Matrix
+  Enchanting is disabled to avoid two competing enchanting overhauls. Hyper
+  Experience production and hyper-enchanting are disabled, and enchanted-book
+  copying is priced beyond the printer's practical capacity; discovered
+  Mending books, treasure enchantments, and Ancient Tomes therefore remain
+  meaningful finds. Written books, name tags, schedules, and clipboards remain
+  printable.
 
 ### Client and administration
 
@@ -157,12 +178,14 @@ sandstone bricks, spruce chests, thatch, and vertical oak planks.
 Consequently, broad Quark categories cannot be disabled without hollowing out
 generated structures. The safe release-one overrides are:
 
-- disabled: crab, Hollow Logs, Backpack, Totem of Holding;
+- disabled: crab, Hollow Logs, Totem of Holding, pipes;
 - disabled world placement: Big Stone Clusters, Fallen Logs, Nether Obsidian
   Spikes, New Stone Types, Spiral Spires, Chorus Vegetation;
+- enabled: Backpack as the pack's deliberately limited expedition-storage
+  system;
 - retained: required blocks, tools, mobs, and biome resources;
-- retained pending play: inventory conveniences, Matrix Enchanting, pipes,
-  crate, magnet, and the remaining small tweaks.
+- retained pending play: inventory conveniences, Matrix Enchanting, crate,
+  magnet, and the remaining small tweaks.
 
 ## Loot audit and campaign use
 
@@ -263,6 +286,11 @@ the upstream mod contains no dedicated cabin stable foundation template.
   operational cost.
 - Every Compat, Mob Conversion, Jade Addons, KubeJS Create, YUNG's Bridges:
   removed in the first pruning pass.
+- Friends & Foes: its remaining wildlife and copper-golem niche overlapped
+  Alex's Mobs, Quark, and the pack's exploration systems.
+- Quark Oddities: not installed. Static structure inspection found that IDAS
+  and Integrated Villages use core Quark content, not Oddities' backpack,
+  pipes, crates, magnets, or matrix enchanting systems.
 
 ## Questions that static analysis cannot answer
 

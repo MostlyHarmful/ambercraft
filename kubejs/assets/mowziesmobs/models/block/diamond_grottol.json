@@ -1,0 +1,9 @@
+{
+  "parent": "builtin/generated",
+  "textures": {
+    "layer0": "mowziesmobs:entity/grottol",
+    "particle": "mowziesmobs:block/diamond_grottol_particle",
+    "layer1": "mowziesmobs:block/diamond_grottol_particle"
+  },
+  "tabula": "mowziesmobs:models/block/diamond_grottol"
+}

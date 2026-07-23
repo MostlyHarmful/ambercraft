@@ -154,3 +154,7 @@ If those answers are weak, do not add it.
   chosen boss before the End and reserve its larger power curve for later play.
 - KubeJS exists to provide restrained connective tissue, not hundreds of recipe
   changes or compulsory task chains.
+- Create: Enchantment Industry is connective infrastructure: engineers can turn
+  collected experience and already-earned enchantments into a shared workshop,
+  but the factory does not manufacture treasure enchantments, clone Ancient
+  Tomes, or exceed vanilla enchantment caps.
