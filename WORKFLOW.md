@@ -65,6 +65,42 @@ On the CachyOS desktop:
 5. Run `scripts/capture-test-report.sh <instance-directory>` from a clone of
    this repository and return the resulting report here.
 
+Build and deploy a server candidate from this Mac:
+
+```sh
+./scripts/build-server-bundle.sh
+./scripts/deploy-pterodactyl.sh
+```
+
+The build step runs Packwiz Installer in server mode, so client-only mods are
+excluded. The deployment step refuses to proceed while Ambercraft is running,
+stores a timestamped backup under `backups/`, replaces the complete `mods/`
+directory so removed mods cannot linger, and overlays canonical configuration
+and KubeJS files. It does not replace worlds, `server.properties`, `ops.json`,
+the whitelist, or the Forge installation. Start the server from the panel only
+after deployment completes.
+
+## Java 21 garbage collection
+
+Use Generational ZGC on the CachyOS client, where Distant Horizons can create
+high allocation pressure:
+
+```text
+-Xms2G -Xmx8G -XX:+UseZGC -XX:+ZGenerational
+```
+
+The dedicated server does not run Distant Horizons, but low-pause collection is
+still useful for a modded multiplayer server. Ambercraft's 8 GiB Pterodactyl
+allocation should use:
+
+```text
+-Xms1G -Xmx7G -XX:+UseZGC -XX:+ZGenerational
+```
+
+Do not combine these with G1-specific tuning flags. The explicit 7 GiB server
+heap leaves memory for native allocations, threads, Forge, and the container;
+the previous 95 percent maximum-RAM setting left too little headroom.
+
 On Pterodactyl:
 
 1. Stop the server and take a world backup before changing the candidate.

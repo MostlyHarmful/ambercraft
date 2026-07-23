@@ -69,6 +69,14 @@ automatically.
 Keep the server world, `server.properties`, whitelist, and operator files
 outside the pack repository.
 
+The current private-repository deployment path builds a filtered server bundle
+and copies it into the stopped Ambercraft Pterodactyl container:
+
+```sh
+./scripts/build-server-bundle.sh
+./scripts/deploy-pterodactyl.sh
+```
+
 ## Side rules
 
 The following are intentionally client-only: AmbientSounds, AppleSkin, Better
