@@ -6,8 +6,28 @@ JEIEvents.hideItems(event => {
     /chipped:(?!(alchemy_bench|botanist_workbench|carpenters_table|loom_table|mason_table|tinkering_table)$).+/
   )
 
-  // Every Compat generates Chipped variants for compatible wood families under
-  // this path. They use the same Chipped workstations, so listing them here is
-  // redundant while other Every Compat families should remain searchable.
-  event.hide(/everycomp:chipped\/.+/)
+  // End Remastered is Ambercraft's mystery campaign, not a JEI checklist.
+  // Recovered eyes remain fully usable and retain their in-world tooltips.
+  ;[
+    'endrem:old_eye',
+    'endrem:rogue_eye',
+    'endrem:nether_eye',
+    'endrem:cold_eye',
+    'endrem:magical_eye',
+    'endrem:black_eye',
+    'endrem:lost_eye',
+    'endrem:wither_eye',
+    'endrem:guardian_eye',
+    'endrem:cursed_eye',
+    'endrem:exotic_eye',
+    'endrem:evil_eye',
+    'endrem:undead_eye',
+    'endrem:cryptic_eye',
+    'endrem:corrupted_eye',
+    'endrem:witch_eye',
+    'endrem:undead_soul',
+    'endrem:witch_pupil',
+    'kubejs:weathered_eye_chart',
+    'kubejs:rimebound_eye_shard'
+  ].forEach(item => event.hide(item))
 })

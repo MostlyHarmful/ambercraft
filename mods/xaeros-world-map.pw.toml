@@ -1,6 +1,6 @@
 name = "Xaero's World Map"
 filename = "xaeroworldmap-forge-1.20.1-1.44.2.jar"
-side = "client"
+side = "both"
 
 [download]
 url = "https://cdn.modrinth.com/data/NcUtCpym/versions/kQ06HixR/xaeroworldmap-forge-1.20.1-1.44.2.jar"

@@ -1,7 +1,9 @@
-# Progression prototype
+# Ambercraft progression
 
-This is the first playable campaign slice for Ambercraft. It is intentionally
-small enough to test before writing a large KubeJS ruleset.
+This is the statically implemented campaign for the first Ambercraft release.
+It uses End Remastered's sixteen possible eyes and twelve-frame portal, but
+Ambercraft—not End Remastered's default loot injections—owns every acquisition
+route. Players can choose routes and recover from an unlucky structure search.
 
 ## Campaign spine
 
@@ -9,7 +11,7 @@ Players should recover a configurable selection of End Remastered eyes through
 different kinds of play. The campaign should move from inhabited places through
 increasingly dangerous expeditions and culminate in Integrated Stronghold.
 
-Provisional routes:
+The implemented campaign covers:
 
 1. **Village route:** obtain a clue, trade, or component from an Integrated
    Village rather than simply taking an eye from an ordinary chest.
@@ -47,37 +49,175 @@ blocking the server.
 - Create's basic machinery remains ungated. Only a few advanced communal tools
   may use exploration materials.
 
-## First implementation slice
+## Shared campaign structure
 
-Implement and playtest only three altered routes first:
+The **Ambercraft Expedition Ledger** is the group's spoiler-light campaign
+interface. It is crafted from familiar surveying supplies, so the campaign can
+begin before anyone chooses an engineering path. Right-clicking the Ledger
+reports how many distinct eyes the world has recorded and gives one broad lead
+appropriate to the current campaign phase.
 
-1. Integrated Village clue or trade.
-2. Alex's Caves material-based eye recipe.
-3. One Mowzie's Mobs drop used as an eye-repair ingredient.
+The first time any player carries a new eye, the server records that discovery
+globally and announces it. This makes asynchronous exploration useful to
+everyone without requiring every player to be online. Extra copies do not
+increase the distinct-eye count and therefore do not accelerate the campaign.
 
-Leave the other eyes at their defaults during this prototype. Once these three
-routes work in multiplayer and feel understandable without a quest checklist,
-expand the campaign incrementally.
+Four campaign components require at least two non-spectator players within 64
+blocks when the encounter dies:
 
-### Implemented prototype
+- Frostmaw's Rimebound Eye Shard;
+- Umvuthi's Magical Eye;
+- the Elder Guardian's Guardian Eye;
+- the Wither's Wither Eye.
+
+The defeated enemy still gives all of its normal rewards when fought solo.
+Only its Ambercraft campaign component asks the group to return together. Since
+twelve of sixteen eyes open the portal, none of these synchronous routes is an
+absolute progression lock.
+
+This division supports different interests without turning them into chores:
+
+- explorers locate destinations, clues, and rare resources;
+- combat players lead the four shared encounters;
+- engineers build the Ledger, transport, expedition supplies, and the rail
+  network that makes widely spaced routes practical;
+- builders create the shared archive, stations, safe outposts, roads, storage,
+  and social spaces that turn individual finds into communal infrastructure.
+
+Only the first two roles have explicit eye drops. The latter two contribute
+through persistent infrastructure rather than arbitrary "build this exact
+machine or house" quest checks.
+
+## Implemented routes
 
 - Integrated Village cleric chests have a 35% chance to contain a Weathered Eye
   Chart. The chart is used with paper and an Eye of Ender to craft the Old Eye.
 - Pure Darkness from Alex's Caves' Forlorn Hollows is used with obsidian, an
   Echo Shard, and an Eye of Ender to craft the Black Eye.
-- Frostmaw drops a separate Rimebound Eye Shard in addition to its normal
-  rewards. The shard is used with ice, snow, and an Eye of Ender to craft the
-  Cold Eye.
+- Frostmaw yields a Rimebound Eye Shard when defeated with an ally nearby. The
+  shard is used with ice, snow, and an Eye of Ender to craft the Cold Eye.
 
-These are alternate acquisition routes only. Default End Remastered routes
-remain enabled until the prototype has passed client, Lootr, and multiplayer
-gameplay testing.
+Default End Remastered chest injections, entity drops, cleric trade, enchanting
+route, and three built-in eye recipes are disabled. Ambercraft supplies these
+routes:
 
-The first boss prototype should use only one encounter. Frostmaw or Ferrous
-Wroughtnaut are the leading candidates because they read as discoverable local
-legends rather than a disconnected boss arena. Do not require every Mowzie's
-Mobs boss, and do not require killing the Warden; alternate routes are part of
-the campaign design.
+| Eye or component | Ambercraft route | Role |
+| --- | --- | --- |
+| Old Eye | Weathered Eye Chart from an Integrated Village cleric chest, then craft | inhabited-world introduction |
+| Rogue Eye | YUNG's Better Jungle Temple treasure | temple expedition |
+| Lost Eye | IDAS Ancient Mines Create chest | underground engineering |
+| Corrupted Eye | IDAS Pillager Fortress library | hostile civilization |
+| Black Eye | Pure Darkness from Alex's Caves' Forlorn Hollows, then craft | rare cave expedition |
+| Cold Eye | Rimebound Eye Shard from Frostmaw, then craft | legendary creature |
+| Guardian Eye | Elder Guardian defeated with an ally nearby | ocean boss |
+| Witch Eye | YUNG's Better Witch Hut chest | occult exploration |
+| Nether Eye | YUNG's Better Nether Fortress worship chest | Nether expedition |
+| Exotic Eye | YUNG's Better Ocean Monument upper chamber | alternate ocean route |
+| Cryptic Eye | Ancient City chest | Deep Dark expedition without mandatory Warden kill |
+| Undead Eye | IDAS Necromancer's Spire soul, then craft with vanilla undead/Nether materials | supernatural structure and fabrication |
+| Magical Eye | Umvuthi defeated with an ally nearby | major legendary boss |
+| Cursed Eye | the king statue within Incendium's Forbidden Castle | major Nether destination |
+| Wither Eye | Wither defeated with an ally nearby | late pre-End vanilla boss |
+| Evil Eye | rare treasure in an Integrated Village airship | high-altitude settlement expedition |
+
+The landmark routes in the table are guaranteed in their named signature chest
+unless a probability is stated explicitly. The Village Chart and Ancient City
+Cryptic Eye remain 35% rolls because each can be attempted across many ordinary
+containers. At twelve recorded resonances, the Ledger announces that the group
+can gather its collection and seek the stronghold.
+
+Each eye now has a restrained tooltip clue. These clues identify a kind of
+place or challenge without exposing coordinates or presenting a quest checklist.
+The Undead Soul carries its own clue as well, so the intermediate item found in
+the Necromancer's Spire is understandable before it is crafted into an eye.
+
+The resulting balance is choice-driven rather than a boss rush: the portal has
+twelve frames and the campaign offers sixteen eyes. Players can pursue combat,
+structures, crafting, settlement exploration, or dangerous-biome exploration
+and skip four routes that do not appeal to the group.
+
+Frostmaw and Umvuthi are the only added bosses with explicit eye routes. Ferrous
+Wroughtnaut, Sculptor, and the remaining Mowzie's encounters remain optional
+discoveries. The Warden is not a mandatory kill: the Cryptic Eye is found in an
+Ancient City chest and can also be skipped in favor of another eye.
+
+## Loot and power policy
+
+Lootr intentionally individualizes ordinary structure containers, including
+the Ambercraft chest-route roll. This prevents one early explorer from erasing
+a destination for everyone else. It does not multiply campaign speed: only the
+first copy of each distinct eye changes the global Ledger, and twelve different
+eyes—not twelve total items—are required.
+
+Boss milestones are ordinary shared world drops and are not individualized.
+Major communal finds should be stored or displayed centrally. Common expedition
+resources, Create materials, building supplies, food, potions, and equipment
+remain ordinary shared logistics; the campaign does not magically duplicate
+them.
+
+Static inspection found powerful rewards in the expected high-risk locations:
+IDAS can very rarely produce enchanted golden apples, diamond equipment, and
+isolated Netherite scrap in major dungeons; Incendium has bespoke weapons and
+an Infernal Feather earned from its Hovering Inferno, but upgrading it to
+Infernal Wings still requires an Elytra. Mowzie's rewards are capability-rich,
+but come from persistent bosses that heal when encounters are abandoned.
+These are watch-list rewards, not clear early-game bypasses, so their authored
+loot remains intact for the first multiplayer test.
+
+The release rule is to nerf a reward only when it skips an entire meaningful
+tier, is repeatably farmable too early, or makes another major system obsolete.
+Rare, specialized, side-grade discoveries are part of Ambercraft's intended fun.
+
+Artifacts supplies roughly forty-five uncraftable Curios with movement,
+survival, exploration, or situational combat abilities. Rather than install a
+second overlapping trinket progression, Ambercraft bridges Artifacts' own themed
+loot pools into eight signature modded treasure tables:
+
+- the Better Jungle Temple;
+- IDAS Ancient Mines;
+- the IDAS Pillager Fortress library;
+- the Better Nether Fortress worship chamber;
+- the Better Ocean Monument upper chamber;
+- the IDAS Necromancer's Spire;
+- the Integrated Village airship treasure;
+- the Integrated Stronghold treasure chamber.
+
+These are nested references to Artifacts' authored pools, not guaranteed item
+drops. Their original per-table chances remain intact (between 15% and 45%),
+and the available items match the destination: mining and darkness tools in
+mines, aquatic tools in monuments, Nether-oriented finds in fortresses, and so
+on. Ordinary village and dungeon chests are excluded to avoid Curio saturation.
+Lootr gives each player a fair independent opportunity, while the uncertain roll
+preserves reasons to explore more than one destination.
+
+Mowzie's Mobs, Alex's Caves, Incendium, Quark, and End's Phantasm keep their
+unique items attached to their intended creatures, biomes, and encounters.
+Moving those rewards into generic chests would make the original content
+optional in the wrong way. Relics, Nameless Trinkets, More Artifacts, and
+Dungeons Artifacts are not included in release one because their extra stat,
+leveling, soul-meter, or large Curio systems overlap Artifacts and would make
+the pack's power curve harder to read.
+
+## Spoiler policy
+
+- End Remastered's advancement tab is replaced with invisible, impossible
+  criteria so it cannot reveal every route.
+- All eyes and intermediate eye components are hidden from JEI. They still work,
+  retain their clue tooltips when found, and can be crafted normally.
+- Structure-discovery advancement toasts and global announcements remain
+  suppressed; their tabs may still record exploration quietly.
+- The Ledger gives phase-level guidance, while item tooltips provide the more
+  specific clue only after a relevant item is encountered.
+- No guide item is forced into a player's inventory on login.
+
+## Remaining validation boundary
+
+Static validation can prove that item IDs, loot-table IDs, recipes, scripts,
+and datapacks load. It cannot prove that a 35 or 50 percent Lootr roll feels
+fair, that four shared encounters are enjoyable, or that the Ledger clues are
+discoverable without becoming obvious. If testing exposes a blocked route,
+restore only the specific End Remastered fallback needed; do not silently
+restore every default route.
 
 ## Implementation tools
 
@@ -86,6 +226,3 @@ the campaign design.
   they are clearer than scripts.
 - Found books, maps, trades, and restrained advancement text for clues.
 - Lootr testing for every modified container source.
-
-Do not remove default End Remastered acquisition methods until replacement paths
-have been verified in a disposable multiplayer world.

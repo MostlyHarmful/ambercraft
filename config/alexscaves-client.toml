@@ -1,0 +1,21 @@
+[visuals]
+	# Alex's Caves visual defaults, explicitly shipped so Forge does not rewrite a
+	# partial client config on every fresh installation.
+	cave_maps_visible_in_third_person = true
+	screen_shaking = true
+	emissive_block_models = true
+	nuclear_bomb_flash = true
+	biome_ambient_light = true
+	# Required for Distant Horizons compatibility. This keeps the cave ambient
+	# light itself but disables Alex's Caves' biome tinting pass.
+	biome_ambient_light_coloring = false
+	biome_sky_overrides = true
+	biome_sky_fog_overrides = true
+	ambersol_shines = true
+	radiation_glow_effect = true
+	subterranodon_indicator_x = 22
+	subterranodon_indicator_y = 6
+	sugar_rush_saturation_effect = true
+
+[audio]
+	nuclear_bomb_muffles_sounds = true

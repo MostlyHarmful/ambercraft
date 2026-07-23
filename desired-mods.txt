@@ -7,14 +7,12 @@ Artifacts
 Athena
 BaguetteLib
 Better Caravans
-Better Clouds
+Caelus API
 Carry On
 Chipped
-Chunky
 Citadel
 Cloth Config v10 API
 CorgiLib
-CoroUtil
 Corpse
 Corpse Curios Compatibility
 Create
@@ -26,11 +24,11 @@ Data Anchor
 Distant Horizons
 Embeddium
 Embeddium (Rubidium) Extra
+Elytra Slot
 End Remastered
 End's Phantasm
 Enhanced Celestials
 EntityCulling
-Every Compat
 Friends&Foes
 GeckoLib 4
 GlitchCore
@@ -42,18 +40,16 @@ Integrated Dungeons and Structures
 Integrated Stronghold
 Integrated Villages
 Jade
-Jade Addons
 Just Enough Items
 KubeJS
-KubeJS Create
 Lithostitched
 Lootr
 LootJS
-Mob Conversion
 Moonlight Library
 Mouse Tweaks
 Mowzie's Mobs
 Nullscape
+Oculus
 Resourceful Lib
 Serene Seasons
 Sophisticated Backpacks
@@ -75,7 +71,5 @@ YUNG's Better Mineshafts
 YUNG's Better Nether Fortresses
 YUNG's Better Ocean Monuments
 YUNG's Better Witch Huts
-YUNG's Bridges
 YUNG's Cave Biomes
-Zombie Awareness
 spark

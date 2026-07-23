@@ -2,8 +2,8 @@
 
 A Forge 1.20.1 vanilla-plus exploration and adventure pack managed with
 [packwiz](https://packwiz.infra.link/). The pack currently targets Forge
-47.4.10 and contains the 81 selected mods in `desired-mods.txt`, plus seven
-automatically resolved library and content dependencies.
+47.4.10 and contains 81 Packwiz-managed mod entries. The install index also
+ships Ambercraft's configuration, compatibility overrides, and campaign data.
 
 Mod selection and configuration are governed by [`DESIGN.md`](DESIGN.md). Read
 that brief before adding another content system or designing progression.
@@ -77,14 +77,21 @@ and copies it into the stopped Ambercraft Pterodactyl container:
 ./scripts/deploy-pterodactyl.sh
 ```
 
+Deployment also reapplies Ambercraft's tested Pterodactyl runtime profile:
+`-Xms1G -Xmx6G -XX:+UseG1GC`, modded flight enabled, spawn protection disabled,
+and a two-minute watchdog. The stock Forge egg does not read
+`user_jvm_args.txt`, so the deployment script writes these JVM flags into the
+Forge argument file that the egg actually launches.
+
 ## Side rules
 
-The following are intentionally client-only: AmbientSounds, AppleSkin, Better
-Clouds and YACL, Distant Horizons, Embeddium, Embeddium Extra, Sodium/Embeddium
-Dynamic Lights and its Options API, Entity Culling, ImmediatelyFast, JEI,
-Mouse Tweaks, Sound Physics Remastered, and Xaero's maps. Chunky and
-spark are server-only. Jade and Jade Addons are installed on both sides so
-server-backed block data and mod integrations remain available. Athena is on both
+The following are intentionally client-only: AmbientSounds, AppleSkin,
+Embeddium, Embeddium Extra, Sodium/Embeddium Dynamic Lights
+and its Options API, Entity Culling, ImmediatelyFast, JEI, Mouse Tweaks,
+Oculus, and Sound Physics Remastered. Distant Horizons and both Xaero maps run
+on both sides for server-backed LOD delivery and stable world identity. Spark
+is server-only. Jade is installed on both sides so its server-backed block data
+remains available. Athena is on both
 sides because Chipped uses it for connected-texture/block behavior.
 
 ## World-generation cautions
@@ -95,6 +102,10 @@ End's Phantasm make the End a substantial final expedition. Integrated Villages
 replaces villages, while Integrated Stronghold, IDAS, and the YUNG suite add or
 replace other structures. Do not add or remove any of these after
 players begin exploring without first testing a world copy.
+
+Quark's climate-control module ignores humidity only. This increases the range
+of Terralith biomes eligible within a temperature region while preserving warm
+versus cold climates and Tectonic's terrain parameters.
 
 Mowzie's Mobs is the pack's focused added-boss layer. Its encounters should be
 used as optional or alternate End Remastered routes through crafted eye
@@ -110,7 +121,9 @@ Before opening the server publicly:
 2. Confirm End Remastered eyes lead to an Integrated Stronghold and that the
    portal can be completed.
 3. Finalize worldgen and season settings.
-4. Use Chunky to pregenerate the intended play area only after those checks.
+4. Use Distant Horizons' `/dh pregen` for the intended launch area only after
+   those checks. Do not run Chunky concurrently; DH 3.2 removed the hard block
+   but its queue can still develop missing LODs when Chunky outruns it.
 5. Back up the world, then begin the permanent world.
 
 See [`TESTING.md`](TESTING.md) for the current results and unresolved warnings.
@@ -118,5 +131,5 @@ See [`WORKFLOW.md`](WORKFLOW.md) before moving a candidate between machines.
 
 Create 6 is the most compatibility-sensitive content mod in the list. Treat
 Create, Copycats+, and Steam 'n' Rails as one version-locked group when updating.
-KubeJS Create should be tested at the same time because its recipe integrations
-also depend on Create's API.
+KubeJS Create is intentionally absent until Ambercraft uses Create-specific
+scripted recipes; ordinary custom recipes continue to use base KubeJS.

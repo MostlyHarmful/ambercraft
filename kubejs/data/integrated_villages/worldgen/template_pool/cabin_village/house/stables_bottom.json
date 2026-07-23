@@ -1,0 +1,15 @@
+{
+  "name": "integrated_villages:cabin_village/house/stables_bottom",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "integrated_villages:cabin_village/house/cabin_village_basichouse1_bottom",
+        "processors": "integrated_villages:cabin_village_processor",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+scoreboard objectives add ambercraft_xaero_leave custom:leave_game

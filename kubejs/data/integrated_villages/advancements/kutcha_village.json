@@ -1,0 +1,43 @@
+{
+  "parent": "integrated_villages:integrated_villages_root",
+  "display": {
+    "icon": {
+      "item": "minecraft:chiseled_sandstone"
+    },
+    "title": {
+      "translate": "Kutcha Village"
+    },
+    "description": {
+      "translate": "A colorful village hidden within the vast yellow sands"
+    },
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "in_kutcha_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "integrated_villages:kutcha_village"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "in_kutcha_village"
+    ]
+  ]
+}

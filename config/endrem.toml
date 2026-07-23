@@ -1,0 +1,9 @@
+[endrem]
+	# Ambercraft supplies all eye routes through its campaign scripts.
+	is_evil_eye_obtainable = false
+	throw_ender_eye = false
+	use_ender_eye = false
+	eye_break_chance = 10
+	frame_has_eye = false
+	is_cryptic_eye_obtainable = false
+	can_remove_eye = false

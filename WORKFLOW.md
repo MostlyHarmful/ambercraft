@@ -77,8 +77,10 @@ excluded. The deployment step refuses to proceed while Ambercraft is running,
 stores a timestamped backup under `backups/`, replaces the complete `mods/`
 directory so removed mods cannot linger, and overlays canonical configuration
 and KubeJS files. It does not replace worlds, `server.properties`, `ops.json`,
-the whitelist, or the Forge installation. Start the server from the panel only
-after deployment completes.
+the whitelist, or the Forge installation. It does enforce the tested 1–6 GiB
+G1 profile through Forge's active `unix_args.txt`, enables modded flight,
+disables vanilla spawn protection, sets a two-minute watchdog, and normalizes
+the MOTD. Start the server from the panel only after deployment completes.
 
 When replacing an unrelated or manually assembled test installation, first
 quarantine its world and generated pack state, then redeploy:
@@ -102,8 +104,8 @@ high allocation pressure:
 -Xms2G -Xmx8G -XX:+UseZGC -XX:+ZGenerational
 ```
 
-The dedicated server does not run Distant Horizons. On Ambercraft's constrained
-8.4 GiB Pterodactyl allocation, use G1 instead:
+The dedicated server now runs Distant Horizons for LOD generation and delivery.
+On Ambercraft's constrained 8.4 GiB Pterodactyl allocation, continue using G1:
 
 ```text
 -Xms1G -Xmx6G -XX:+UseG1GC
@@ -114,6 +116,12 @@ the container after a player joined. Even at a 6 GiB maximum, ZGC used about
 7.8 GiB of total container memory during fresh spawn generation. G1 offers a
 safer throughput/memory tradeoff here. The previous 95 percent maximum-RAM
 setting also left too little headroom.
+
+The stock Pterodactyl Forge egg launches `@unix_args.txt` directly and ignores
+Forge's `user_jvm_args.txt`. Ambercraft's deployment script therefore inserts
+the bounded G1 flags into that active argument file on every deployment. Verify
+the effective heap and collector after launch rather than trusting the generic
+`MaxRAMPercentage` text shown in the panel.
 
 On Pterodactyl:
 
@@ -134,8 +142,9 @@ Use three distinct five-minute spark profiles on the Pterodactyl host:
 3. **Fresh exploration:** one player generating new terrain continuously.
 
 Record player count, approximate activity, view distance, simulation distance,
-and whether Chunky pregeneration was complete. A combined profile without this
-context cannot reliably distinguish mob AI from world generation.
+DH generation mode and request distance, and whether `/dh pregen` was active.
+A combined profile without this context cannot reliably distinguish mob AI from
+world generation.
 
 For multiplayer load, add players only after the three single-player profiles
 are understood. The first useful progression is one, two, four, then the

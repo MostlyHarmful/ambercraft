@@ -107,8 +107,8 @@ world and replace equivalent content rather than sit beside it.
 - Prefer memorable rare events over frequent interruptions.
 - Soften or disable seasonal crop failure for irregular players.
 - Prevent roads and weathering from rapidly damaging deliberate builds.
-- Keep Zombie Awareness detection local enough to avoid endless pathfinding.
-- Make Distant Horizons and other expensive visual systems optional client mods.
+- Keep Distant Horizons optional for rendering on clients, while allowing the
+  server component to generate and stream one shared LOD dataset.
 - Keep large decorative families discoverable through their own workstations or
   interfaces instead of listing thousands of near-identical variants in JEI.
 - Test Integrated Villages and IDAS on steep Terralith/Tectonic terrain.
