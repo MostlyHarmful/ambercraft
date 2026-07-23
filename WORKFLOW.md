@@ -30,7 +30,7 @@ the current `.mrpack`; mixed CurseForge and Modrinth export is recorded as
 broken in `TESTING.md`.
 
 The current importable client artifact is
-`exports/Ambercraft-0.2.8-Prism.zip`. Prism should use Java 17, a 2–8 GiB heap,
+`exports/Ambercraft-0.2.9-Prism.zip`. Prism should use Java 17, a 2–8 GiB heap,
 and G1. This matches Forge 1.20.1's expected runtime and avoids the native
 Oracle Java 21 failures observed on Apple Silicon.
 

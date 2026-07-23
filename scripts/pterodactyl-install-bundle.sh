@@ -92,6 +92,7 @@ set_property spawn-protection 0
 set_property max-tick-time 120000
 set_property view-distance 10
 set_property simulation-distance 6
+set_property function-permission-level 4
 set_property motd Ambercraft
 
 for path in mods config defaultconfigs kubejs packwiz.json backups server.properties libraries/net/minecraftforge/forge/1.20.1-47.4.10/unix_args.txt; do

@@ -722,3 +722,33 @@ server configuration retained Ambercraft's capacities and one-stack-upgrade
 limit. KubeJS loaded both scripts with zero script errors or warnings; its
 recipe pass added 14 recipes, removed 18, and reported zero failed recipes.
 The known Incendium smithing-template fallback warning remains non-fatal.
+
+## Graceful-stop maintenance candidate 0.2.9
+
+Ambercraft 0.2.9 adds `ambercraft:graceful_stop`, which runs `save-all flush`
+before the normal `stop` command. Deployment sets
+`function-permission-level=4` so the server-authored function may invoke the
+operator-level shutdown command. This narrows Integrated API's asynchronous
+structure-map villager persistence race while still allowing Forge and Distant
+Horizons to complete their normal shutdown lifecycle.
+
+Ambercraft is the only Pterodactyl server assigned to the Forge egg at the time
+of this change, so setting that egg's stop command to
+`function ambercraft:graceful_stop` does not impose an Ambercraft-specific
+function on another server.
+
+The candidate passed the 89-mod, 278-file Packwiz audit, shell syntax check,
+client ZIP integrity check, and server archive integrity check. The client
+artifact is `exports/Ambercraft-0.2.9-Prism.zip`, SHA-256
+`218ed5bd5fbd7c41a9aefa800a914686e929e55afc0db1559c4dabd10c31cc95`.
+The server artifact is
+`build/deployment/ambercraft-server-0.2.9.tar.gz`, SHA-256
+`cd8277dc914f004e33074ef4c5dce27d538014adbabc3236c959ec44e7009a83`.
+
+The 0.2.9 bundle was deployed to the retained Pterodactyl world and reached
+`Done (54.100s)` on its first launch. Pterodactyl's normal Stop action invoked
+the new function successfully: all three dimensions were saved before shutdown,
+then Distant Horizons closed all three generation queues and database
+connections, and Forge completed its final player/chunk save. The container
+exited normally. Its validation restart reached `Done (3.359s)` and was left
+online.

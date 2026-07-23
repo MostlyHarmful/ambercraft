@@ -177,6 +177,10 @@ file = "kubejs/data/alexsdelight/recipes/barbecue_on_a_stick.json"
 hash = "5e41ad5646fb7e2e9112dfbafd6ed32025033c73a06aa66b1b9f4c8ffbd3295c"
 
 [[files]]
+file = "kubejs/data/ambercraft/functions/graceful_stop.mcfunction"
+hash = "f4d064cfda000657d859735f0718ffa1c4c7427c5bd2898277129794d35a4c52"
+
+[[files]]
 file = "kubejs/data/ambercraft/functions/xaero_fairplay_join.mcfunction"
 hash = "51746a23021661b4be1765d2f188aaa2ce0cd66cd7f38c0cc28233fb1d26b1d3"
 
