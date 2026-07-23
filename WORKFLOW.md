@@ -102,19 +102,18 @@ high allocation pressure:
 -Xms2G -Xmx8G -XX:+UseZGC -XX:+ZGenerational
 ```
 
-The dedicated server does not run Distant Horizons, but low-pause collection is
-still useful for a modded multiplayer server. Ambercraft's 8 GiB Pterodactyl
-allocation should use:
+The dedicated server does not run Distant Horizons. On Ambercraft's constrained
+8.4 GiB Pterodactyl allocation, use G1 instead:
 
 ```text
--Xms1G -Xmx6G -XX:+UseZGC -XX:+ZGenerational
+-Xms1G -Xmx6G -XX:+UseG1GC
 ```
 
-Do not combine these with G1-specific tuning flags. Testing showed that a 7 GiB
-heap could exhaust Ambercraft's approximately 8.4 GiB container after a player
-joined. The explicit 6 GiB heap leaves substantially more memory for native
-allocations, threads, Forge, ZGC mappings, and the container; the previous 95
-percent maximum-RAM setting also left too little headroom.
+Do not combine ZGC and G1 flags. Testing showed that a 7 GiB ZGC heap exhausted
+the container after a player joined. Even at a 6 GiB maximum, ZGC used about
+7.8 GiB of total container memory during fresh spawn generation. G1 offers a
+safer throughput/memory tradeoff here. The previous 95 percent maximum-RAM
+setting also left too little headroom.
 
 On Pterodactyl:
 
