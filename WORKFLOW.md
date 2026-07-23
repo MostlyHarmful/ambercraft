@@ -80,6 +80,19 @@ and KubeJS files. It does not replace worlds, `server.properties`, `ops.json`,
 the whitelist, or the Forge installation. Start the server from the panel only
 after deployment completes.
 
+When replacing an unrelated or manually assembled test installation, first
+quarantine its world and generated pack state, then redeploy:
+
+```sh
+./scripts/reset-pterodactyl-test-state.sh --confirm
+./scripts/deploy-pterodactyl.sh
+```
+
+The reset moves the existing world, configs, KubeJS directory, Packwiz state,
+and generated Moonlight datapacks into a timestamped directory under
+`backups/`. It preserves the Forge installation, server properties, operator
+list, whitelist, bans, and user cache.
+
 ## Java 21 garbage collection
 
 Use Generational ZGC on the CachyOS client, where Distant Horizons can create
@@ -94,12 +107,14 @@ still useful for a modded multiplayer server. Ambercraft's 8 GiB Pterodactyl
 allocation should use:
 
 ```text
--Xms1G -Xmx7G -XX:+UseZGC -XX:+ZGenerational
+-Xms1G -Xmx6G -XX:+UseZGC -XX:+ZGenerational
 ```
 
-Do not combine these with G1-specific tuning flags. The explicit 7 GiB server
-heap leaves memory for native allocations, threads, Forge, and the container;
-the previous 95 percent maximum-RAM setting left too little headroom.
+Do not combine these with G1-specific tuning flags. Testing showed that a 7 GiB
+heap could exhaust Ambercraft's approximately 8.4 GiB container after a player
+joined. The explicit 6 GiB heap leaves substantially more memory for native
+allocations, threads, Forge, ZGC mappings, and the container; the previous 95
+percent maximum-RAM setting also left too little headroom.
 
 On Pterodactyl:
 

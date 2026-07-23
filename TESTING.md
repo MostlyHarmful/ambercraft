@@ -27,6 +27,15 @@ structures and gameplay systems behave correctly.
 
 ## Known issues
 
+### Pterodactyl 7 GiB ZGC heap — resolved configuration
+
+The first Pterodactyl multiplayer launch reached `Done` and accepted a player,
+then the Linux memory-cgroup OOM killer terminated Java at essentially the full
+8.4 GiB container limit. The JVM had been given a 7 GiB maximum heap, leaving
+insufficient native/container headroom. Use `-Xms1G -Xmx6G -XX:+UseZGC
+-XX:+ZGenerational` for the next test. This was a host-enforced OOM kill, not a
+Java exception or mod crash.
+
 ### Ecological overlap and broken hollow-log placement — configured
 
 Quark's hollow-log module is disabled after its fallen hollow logs generated
