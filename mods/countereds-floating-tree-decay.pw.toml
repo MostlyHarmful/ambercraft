@@ -1,0 +1,13 @@
+name = "Countered's Floating Tree Decay"
+filename = "floating_tree_decay-forge-1.1.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/zgwXuyyY/versions/CnbIsrwS/floating_tree_decay-forge-1.1.0.jar"
+hash-format = "sha512"
+hash = "2dbcb794f715eff6406337795eb1aab6520332c54626ec1520a9b6e2ea678dab5b86dac1482ec399878751434d330b64a7cd27cc39502e76d8fa6fe67a07af75"
+
+[update]
+[update.modrinth]
+mod-id = "zgwXuyyY"
+version = "CnbIsrwS"
