@@ -66,6 +66,11 @@ ServerEvents.recipes(event => {
   event.remove({ id: 'endrem:undead_eye' })
   event.remove({ id: 'endrem:witch_eye' })
 
+  // Integrated Villages supplies a limited number of recoverable toolboxes.
+  // Treat them as useful settlement finds instead of an inexpensive,
+  // infinitely craftable early substitute for expedition storage.
+  event.remove({ id: 'create:crafting/curiosities/brown_toolbox' })
+
   // Enchantment Industry is a shared workshop, not a treasure-duplication
   // machine. Hyper Experience is the route used for above-cap enchanting and
   // Quark Ancient Tome printing, so Ambercraft removes its production recipe.
@@ -457,4 +462,11 @@ ItemEvents.rightClicked('kubejs:expedition_ledger', event => {
   event.player.tell(Text.gold('Expedition Ledger'))
   event.player.tell(Text.gray(`The group has found ${count} of the 16 known eyes.`))
   event.player.tell(Text.aqua(hint))
+})
+
+// Reapply Xaero's fair-play controls on every real login. The older
+// leave-score fallback can miss clients that reinstall while the server is
+// stopped, because a shutdown does not always increment leave_game.
+PlayerEvents.loggedIn(event => {
+  event.player.runCommandSilent('function ambercraft:xaero_fairplay_join')
 })

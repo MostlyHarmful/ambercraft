@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "2c9f9cc9597e853834cd92d32f7fa32f05fdd5cca4ea160741b9899fec05a5d8"
+hash = "5b05d607ba2bb0ce37bba6391895f9b6ad9a596a95ab678f437e1d2982e64361"
 
 [[files]]
 file = "config/alexscaves-client.toml"
@@ -750,7 +750,7 @@ hash = "3040901c6c74b67c2182bfc63ef29609ba4200890b9ff23892f27294d048cd5e"
 
 [[files]]
 file = "kubejs/server_scripts/living_world_progression.js"
-hash = "53303cc3d9b54617f8026f9a2f34123b7e46afe10be5a2390c368dbeb0b96149"
+hash = "f3e890b40bb84f7f629b8a178703509c2fd9ef10defa9c2dae1aa8b1de2c010d"
 
 [[files]]
 file = "kubejs/startup_scripts/living_world_items.js"
