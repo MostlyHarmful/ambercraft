@@ -1,9 +1,6 @@
 #!/bin/sh
 set -eu
 
-PACKWIZ=${PACKWIZ:-./tools/packwiz}
-
-test -x "$PACKWIZ"
 test -f pack.toml
 test -f index.toml
 
@@ -21,5 +18,5 @@ if [ "$indexed_mod_count" -ne "$metadata_count" ]; then
   exit 1
 fi
 
-"$PACKWIZ" list >/dev/null
+"packwiz" list >/dev/null
 echo "Pack audit passed: $metadata_count mods, $index_count total indexed files."

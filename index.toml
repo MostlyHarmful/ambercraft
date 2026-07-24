@@ -807,11 +807,6 @@ hash = "724fe40135f0ed7f2614cd14116706686df7b092052af048dfbd109dad0c6863"
 metafile = true
 
 [[files]]
-file = "mods/bluemap.pw.toml"
-hash = "c95753b5a5db1ee56db105798b4c3f25e8db05854743c2ecab76785a52bbe84d"
-metafile = true
-
-[[files]]
 file = "mods/caelus.pw.toml"
 hash = "8a8ea0af79b88d9c192d208aa5be4bacd934e2b92d4721566e2e796eb9761e10"
 metafile = true
@@ -844,6 +839,11 @@ metafile = true
 [[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "e3dd03e7fec88831974857e2cdded54dd5c5bdcaa3f6d6248c2800e82db4dd41"
+metafile = true
+
+[[files]]
+file = "mods/connector.pw.toml"
+hash = "28ec0fe825391261f68b2de4f7719f29dbc7b8c5a02876e6acfde975375cf3f4"
 metafile = true
 
 [[files]]
@@ -942,6 +942,11 @@ hash = "902bac905b93271f02bd0951a22bac06a3da24f5c237fcaeb469e14a7679e508"
 metafile = true
 
 [[files]]
+file = "mods/forgified-fabric-api.pw.toml"
+hash = "2a2f2168bf03bfa3034ad9583588676c5d66b6f7c767df9fe259ab55350792d2"
+metafile = true
+
+[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "898fd2704dd260ae8f3dc20b4416439751f0a9e76367c4f0bbdac886b6987802"
 metafile = true
@@ -954,6 +959,11 @@ metafile = true
 [[files]]
 file = "mods/handcrafted.pw.toml"
 hash = "db495b3ac268709a2ba673bfe220b10257fb7dae549f94bfbd539617d571f131"
+metafile = true
+
+[[files]]
+file = "mods/hoofprint.pw.toml"
+hash = "189d433785d954e85b270c47788e0eedec99dfbcc2d6697c230d6d935fe37494"
 metafile = true
 
 [[files]]
@@ -1024,11 +1034,6 @@ metafile = true
 [[files]]
 file = "mods/lootr.pw.toml"
 hash = "66bcfe786e6bbdee6f7ea0805ec3d2561b41285a5c77f1e465e80f4c2fd9200c"
-metafile = true
-
-[[files]]
-file = "mods/maplink.pw.toml"
-hash = "f00de960fb89f32a5f3a76cc368993509f6fed14ecf6d38f9f05e27b139f118d"
 metafile = true
 
 [[files]]
@@ -1137,6 +1142,11 @@ hash = "148bc9c5989ac676d91b6f07a5e871d7b5d11c1b7b46fe30c3894c1512069a88"
 metafile = true
 
 [[files]]
+file = "mods/surveyor.pw.toml"
+hash = "fb69c986964628b74a5287f8128f17d1f1fb4aef9c18e610cbb389bfe6dddb47"
+metafile = true
+
+[[files]]
 file = "mods/tectonic.pw.toml"
 hash = "a01449c29314bff0ad2047911d8253641801e01997709f53fa5b3f52954232a3"
 metafile = true
@@ -1154,16 +1164,6 @@ metafile = true
 [[files]]
 file = "mods/the-roads-more-travelled.pw.toml"
 hash = "79590ef35db62ef627af23ea90854230b8b5d403ddfd8df8b8fc4718452552e2"
-metafile = true
-
-[[files]]
-file = "mods/xaeros-minimap.pw.toml"
-hash = "38b987b54c0b5405a89465bf16613a283740650122ac373fc365cd13afe5eb69"
-metafile = true
-
-[[files]]
-file = "mods/xaeros-world-map.pw.toml"
-hash = "7bc86ce52ef42d948462c04658553448e5e909fb952f4b485e375d435c3ec751"
 metafile = true
 
 [[files]]
