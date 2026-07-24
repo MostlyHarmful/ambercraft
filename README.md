@@ -62,6 +62,17 @@ Import that ZIP in Prism Launcher. It contains the exact side-filtered client,
 and its pre-launch command runs Packwiz Installer against this repository before
 Minecraft starts. Pack-managed additions, removals, and updates therefore sync
 without replacing the Prism instance or its saves and personal game settings.
+
+Build a fresh, complete Prism archive from the current `pack.toml` version with:
+
+```bash
+./scripts/build-client-bundle.sh
+```
+
+The script refreshes and audits Packwiz, resolves the client side into a clean
+staging instance, installs the automatic updater, creates the ZIP under
+`exports/`, verifies its integrity, and prints its SHA-256 checksum.
+
 Forge 47.4.10, and Ambercraft's managed configuration. Packwiz's mixed
 Modrinth/CurseForge `.mrpack` export is not the release artifact: a failed or
 interrupted export can leave a zero-byte file.

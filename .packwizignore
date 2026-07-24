@@ -11,6 +11,7 @@ index.toml
 # Local tooling, build products, and documentation
 tools/
 scripts/
+client-instance/
 build/
 exports/
 desired-mods.txt
