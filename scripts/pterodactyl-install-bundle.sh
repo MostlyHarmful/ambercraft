@@ -35,6 +35,14 @@ if [ -f "$BACKPACK_DEFAULT" ] && [ -d "$SERVER_DIR/world" ] && [ ! -f "$BACKPACK
   mkdir -p "$SERVER_DIR/world/serverconfig"
   cp "$BACKPACK_DEFAULT" "$BACKPACK_WORLD_CONFIG"
 fi
+if [ -f "$BACKPACK_WORLD_CONFIG" ]; then
+  sed -i \
+    -e 's/^[[:space:]]*tooManyBackpacksSlowness = .*/\t\ttooManyBackpacksSlowness = true/' \
+    -e 's/^[[:space:]]*maxNumberOfBackpacks = .*/\t\tmaxNumberOfBackpacks = 1/' \
+    -e 's/^[[:space:]]*slownessLevelsPerAdditionalBackpack = .*/\t\tslownessLevelsPerAdditionalBackpack = 1.0/' \
+    -e 's/^[[:space:]]*onlyWornBackpackTriggersUpgrades = .*/\t\tonlyWornBackpackTriggersUpgrades = true/' \
+    "$BACKPACK_WORLD_CONFIG"
+fi
 
 # macOS can attach AppleDouble metadata to archives. These files are never pack
 # content and may otherwise be mistaken for JARs by Forge.
@@ -90,7 +98,7 @@ set_property allow-flight true
 set_property difficulty hard
 set_property spawn-protection 0
 set_property max-tick-time 120000
-set_property view-distance 10
+set_property view-distance 8
 set_property simulation-distance 6
 set_property function-permission-level 4
 set_property motd Ambercraft

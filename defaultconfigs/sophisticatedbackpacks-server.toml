@@ -15,6 +15,15 @@
 	tickDedupeLogicDisabled = false
 	canBePlacedInContainerItems = false
 
+	[server.nerfs]
+		# One expedition backpack is useful; carrying a stack of full portable
+		# inventories should become progressively impractical.
+		tooManyBackpacksSlowness = true
+		maxNumberOfBackpacks = 1
+		slownessLevelsPerAdditionalBackpack = 1.0
+		onlyWornBackpackTriggersUpgrades = true
+		nerfEffect = "minecraft:slowness"
+
 	[server.leatherBackpack]
 		inventorySlotCount = 27
 		upgradeSlotCount = 1

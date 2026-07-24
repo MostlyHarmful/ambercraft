@@ -2,7 +2,7 @@
 
 A Forge 1.20.1 vanilla-plus exploration and adventure pack managed with
 [packwiz](https://packwiz.infra.link/). The pack currently targets Forge
-47.4.10 and contains 89 Packwiz-managed mod entries. The install index also
+47.4.10 and contains 90 Packwiz-managed mod entries. The install index also
 ships Ambercraft's configuration, compatibility overrides, and campaign data.
 
 Mod selection and configuration are governed by [`DESIGN.md`](DESIGN.md). Read
@@ -81,7 +81,7 @@ and copies it into the stopped Ambercraft Pterodactyl container:
 ```
 
 Deployment also reapplies Ambercraft's tested Pterodactyl runtime profile:
-`-Xms1G -Xmx6G -XX:+UseG1GC`, view distance 10, simulation distance 6,
+`-Xms1G -Xmx6G -XX:+UseG1GC`, view distance 8, simulation distance 6,
 modded flight enabled, spawn protection disabled, and a two-minute watchdog.
 The stock Forge egg does not read
 `user_jvm_args.txt`, so the deployment script writes these JVM flags into the
@@ -127,9 +127,9 @@ Before opening the server publicly:
 2. Confirm End Remastered eyes lead to an Integrated Stronghold and that the
    portal can be completed.
 3. Finalize worldgen and season settings.
-4. Use Distant Horizons' `/dh pregen` for the intended launch area only after
-   those checks. Do not run Chunky concurrently; DH 3.2 removed the hard block
-   but its queue can still develop missing LODs when Chunky outruns it.
+4. With players offline, use server-only Chunky to generate a bounded launch
+   area. Distant Horizons' independent generation remains disabled during play;
+   it can build and serve LODs from the real chunks Chunky creates.
 5. Back up the world, then begin the permanent world.
 
 See [`TESTING.md`](TESTING.md) for the current results and unresolved warnings.

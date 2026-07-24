@@ -82,7 +82,7 @@ hash = "2690504646adabb40b37ea77539227f2a581fb9b09d5c4ba5e72cb15d8e05e42"
 
 [[files]]
 file = "defaultconfigs/sophisticatedbackpacks-server.toml"
-hash = "60b14c02a036352e4d30c57a966cd06128f38de40521813b208f7d55b5ed210c"
+hash = "ca43a5a5a6ab75a98219a106fbfff858954ffaf112f42d6215742ff97749f7dd"
 
 [[files]]
 file = "kubejs/assets/cavedelight/models/block/boiled_trilocaris.json"
@@ -382,7 +382,7 @@ hash = "80842bd17f5a16e57aeb774a81ffc0ca6f55b6a3a275780f698ed385645154b2"
 
 [[files]]
 file = "kubejs/data/enhancedcelestials/enhancedcelestials/lunar/event/blood_moon.json"
-hash = "43b2a29ed1f17ec57a5ebcf910dc55207944b536de9010337a831c753782c123"
+hash = "f3fa06e26d23937378409055e31ac95ff762afddb81e356567c901141ba0b930"
 
 [[files]]
 file = "kubejs/data/enhancedcelestials/enhancedcelestials/lunar/event/super_blood_moon.json"
@@ -829,6 +829,11 @@ metafile = true
 [[files]]
 file = "mods/chipped.pw.toml"
 hash = "b0732421ae2999d558a7b70a11fa86a93738ca33f6f3ec343017796df9c47d9c"
+metafile = true
+
+[[files]]
+file = "mods/chunky.pw.toml"
+hash = "2274e08910d949f9962383e2314e8d42490f2e8195782786392614d0f0879629"
 metafile = true
 
 [[files]]

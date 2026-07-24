@@ -12,6 +12,7 @@ Caelus API
 Carry On
 Cave Delight
 Chipped
+Chunky
 Citadel
 Cloth Config v10 API
 CorgiLib

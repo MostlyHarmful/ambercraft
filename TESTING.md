@@ -752,3 +752,18 @@ then Distant Horizons closed all three generation queues and database
 connections, and Forge completed its final player/chunk save. The container
 exited normally. Its validation restart reached `Done (3.359s)` and was left
 online.
+
+## Server exploration-pressure patch
+
+The retained Pterodactyl world accepted the server-only exploration patch and
+reached `Done (3.099s)`. KubeJS loaded with zero errors and warnings and
+reported zero failed recipes. The live server now runs view distance 8 and
+simulation distance 6, has Distant Horizons independent generation disabled,
+and includes Chunky 1.3.146 for bounded offline pregeneration.
+
+Sophisticated Backpacks now permits one backpack without penalty. Each
+additional carried backpack adds one level of Slowness, and only the worn
+backpack can trigger active upgrades. Existing anti-nesting and removed
+Inception-upgrade safeguards remain in place. Ordinary blood moons now have a
+10 percent eligible-night chance after a minimum seven-night interval; their
+existing sleep block remains active.

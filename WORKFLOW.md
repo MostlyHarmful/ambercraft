@@ -84,7 +84,7 @@ directory so removed mods cannot linger, and overlays canonical configuration
 and KubeJS files. It does not replace worlds, `server.properties`, `ops.json`,
 the whitelist, or the Forge installation. It does enforce the tested 1–6 GiB
 G1 profile through Forge's active `unix_args.txt`, enables modded flight,
-disables vanilla spawn protection, sets view distance 10 and simulation
+disables vanilla spawn protection, sets view distance 8 and simulation
 distance 6, sets a two-minute watchdog, and normalizes the MOTD. Start the
 server from the panel only after deployment completes.
 
