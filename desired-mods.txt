@@ -7,7 +7,6 @@ AppleSkin
 Artifacts
 Athena
 BaguetteLib
-Better Caravans
 Caelus API
 Carry On
 Cave Delight

@@ -767,3 +767,9 @@ backpack can trigger active upgrades. Existing anti-nesting and removed
 Inception-upgrade safeguards remain in place. Ordinary blood moons now have a
 10 percent eligible-night chance after a minimum seven-night interval; their
 existing sleep block remains active.
+
+Better Caravans 1.0.3 subsequently crashed the dedicated server with a
+`ConcurrentModificationException` in `CaravanManager.tick` as the final player
+disconnected. Minecraft completed its world save and Distant Horizons closed
+its levels normally. Better Caravans was removed because the failure is in its
+unconfigurable runtime collection handling and can recur during caravan unload.

@@ -807,11 +807,6 @@ hash = "724fe40135f0ed7f2614cd14116706686df7b092052af048dfbd109dad0c6863"
 metafile = true
 
 [[files]]
-file = "mods/better-caravans.pw.toml"
-hash = "ced3cb7ff582de75b99995a18822568143f98ab8251fe77849770cbf34cec4be"
-metafile = true
-
-[[files]]
 file = "mods/caelus.pw.toml"
 hash = "8a8ea0af79b88d9c192d208aa5be4bacd934e2b92d4721566e2e796eb9761e10"
 metafile = true

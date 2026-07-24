@@ -25,7 +25,7 @@ The implemented campaign covers:
 9. **Legendary-creature route:** restore an eye with a component earned from a
    selected Mowzie's Mobs encounter. The boss drop should be an ingredient, not
    a finished eye, so the reward remains legible as part of the same campaign.
-10. **Wild-card route:** allow one alternate eye from caravans, witch content,
+10. **Wild-card route:** allow one alternate eye from witch content,
     or another difficult structure so the campaign is not completely linear.
 
 After the stronghold, the campaign shifts from collecting access keys to an End

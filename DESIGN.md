@@ -28,7 +28,7 @@ does not constitute progression.
 ### The world is an actor
 
 Prefer systems that create activity outside direct player control: seasons,
-lunar events, weathering, caravans, village defense, reactive enemies, wildlife,
+lunar events, weathering, village defense, reactive enemies, wildlife,
 and physical traces of travel. These should produce comprehensible situations,
 not constant random noise or destructive chores.
 

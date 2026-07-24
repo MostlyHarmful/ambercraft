@@ -84,14 +84,15 @@ narrow KubeJS data overrides. Those large content mods are not required.
   icicles, and environmental aging. Rust and leaf-pile intensity are reduced.
 - **The Roads More Travelled** records repeated traffic. Thresholds are raised
   substantially, and it no longer destroys leaves or garden vegetation.
-- **Better Caravans** supplies mobile traders, escorts, and caravan incidents.
+- **Better Caravans was removed** after its caravan manager crashed the
+  dedicated server while unloading caravans. Vanilla wandering traders remain.
 
 These systems remain intentionally independent: calendar, sky event, physical
 aging, player trace, traveling NPC activity, and hostile reaction. Their rates
 are conservative so several systems can overlap without constant interruption.
-Ordinary blood moons now have a 5% nightly chance after a ten-night minimum
-gap and raise hostile spawning to 1.75x, down from 10% after four nights and
-2.25x. Super blood moons are deliberately exceptional: 2% on a valid full moon
+Ordinary blood moons now have a 10% eligible-night chance after a seven-night
+minimum gap and raise hostile spawning to 1.75x. Super blood moons are
+deliberately exceptional: 2% on a valid full moon
 after a forty-night minimum gap, with a 3x rather than 4.5x multiplier.
 
 ### Building and infrastructure
@@ -295,7 +296,8 @@ the upstream mod contains no dedicated cabin stable foundation template.
 ## Questions that static analysis cannot answer
 
 1. Whether large Integrated Villages are delightful more often than malformed.
-2. Whether Better Caravans can navigate sustained Tectonic terrain.
+2. Whether wandering traders and village guards navigate sustained Tectonic
+   terrain acceptably.
 3. Whether Mowzie boss difficulty and rewards fit the group's combat tolerance.
 4. Whether the new eye clues and probabilities feel fair with Lootr.
 5. Whether Nullscape and End's Phantasm produce a satisfying dragon approach.

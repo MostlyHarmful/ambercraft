@@ -2,7 +2,7 @@
 
 A Forge 1.20.1 vanilla-plus exploration and adventure pack managed with
 [packwiz](https://packwiz.infra.link/). The pack currently targets Forge
-47.4.10 and contains 90 Packwiz-managed mod entries. The install index also
+47.4.10 and contains 89 Packwiz-managed mod entries. The install index also
 ships Ambercraft's configuration, compatibility overrides, and campaign data.
 
 Mod selection and configuration are governed by [`DESIGN.md`](DESIGN.md). Read
