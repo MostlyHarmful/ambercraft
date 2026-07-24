@@ -1,6 +1,14 @@
 hash-format = "sha256"
 
 [[files]]
+file = "client-instance/instance.cfg"
+hash = "9440472ff2d7fdff8b237a5623d80663770e07b2801d1e65c85f1ee270f02fb1"
+
+[[files]]
+file = "client-instance/mmc-pack.json"
+hash = "2e3d3126d53034a7d4ae913cfda4e1765eed4694a34aa7ddb81eb1357d339184"
+
+[[files]]
 file = "config/DistantHorizons.toml"
 hash = "5b05d607ba2bb0ce37bba6391895f9b6ad9a596a95ab678f437e1d2982e64361"
 
@@ -807,6 +815,11 @@ hash = "724fe40135f0ed7f2614cd14116706686df7b092052af048dfbd109dad0c6863"
 metafile = true
 
 [[files]]
+file = "mods/bluemap.pw.toml"
+hash = "a632b5a1c76cb8a5bb13363cebbcc8504a6bbc3c0aa2d43b25cb22b298621ae8"
+metafile = true
+
+[[files]]
 file = "mods/caelus.pw.toml"
 hash = "8a8ea0af79b88d9c192d208aa5be4bacd934e2b92d4721566e2e796eb9761e10"
 metafile = true
@@ -838,7 +851,7 @@ metafile = true
 
 [[files]]
 file = "mods/cloth-config.pw.toml"
-hash = "96204145e12506e0625d8b9bfa05aad54e9a62fd511bae39f0d57fcb5e39f4cc"
+hash = "e3dd03e7fec88831974857e2cdded54dd5c5bdcaa3f6d6248c2800e82db4dd41"
 metafile = true
 
 [[files]]
@@ -1022,6 +1035,11 @@ hash = "66bcfe786e6bbdee6f7ea0805ec3d2561b41285a5c77f1e465e80f4c2fd9200c"
 metafile = true
 
 [[files]]
+file = "mods/maplink.pw.toml"
+hash = "f00de960fb89f32a5f3a76cc368993509f6fed14ecf6d38f9f05e27b139f118d"
+metafile = true
+
+[[files]]
 file = "mods/modernfix.pw.toml"
 hash = "912dc66ae13a57f9f6559eb0c7c2b42f973f5768b46192528bec1d37df8398ef"
 metafile = true
@@ -1034,6 +1052,11 @@ metafile = true
 [[files]]
 file = "mods/mowzies-mobs.pw.toml"
 hash = "69c100deb9011e828b3f11a0df754316829b751833ac30bc4726710c082f9808"
+metafile = true
+
+[[files]]
+file = "mods/noisiumed.pw.toml"
+hash = "0f29aae51e0838cc4c20b73bcb4f097834d1e76ab429175935f4c2108e347859"
 metafile = true
 
 [[files]]
