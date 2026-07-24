@@ -459,14 +459,7 @@ ItemEvents.rightClicked('kubejs:expedition_ledger', event => {
   if (count >= 9) hint = 'A few of the remaining prizes will only yield to a group. Bring food, spare gear, and someone you trust.'
   if (count >= 12) hint = 'You have enough. Gather twelve different eyes and find the stronghold.'
 
-  event.player.tell(Text.gold('Expedition Ledger'))
-  event.player.tell(Text.gray(`The group has found ${count} of the 16 known eyes.`))
-  event.player.tell(Text.aqua(hint))
-})
-
-// Reapply Xaero's fair-play controls on every real login. The older
-// leave-score fallback can miss clients that reinstall while the server is
-// stopped, because a shutdown does not always increment leave_game.
-PlayerEvents.loggedIn(event => {
-  event.player.runCommandSilent('function ambercraft:xaero_fairplay_join')
+  event.server.tell(Text.gold('Expedition Ledger'))
+  event.server.tell(Text.gray(`The group has found ${count} of the 16 known eyes.`))
+  event.server.tell(Text.aqua(hint))
 })

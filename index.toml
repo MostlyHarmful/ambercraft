@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "config/DistantHorizons.toml"
-hash = "5b05d607ba2bb0ce37bba6391895f9b6ad9a596a95ab678f437e1d2982e64361"
-
-[[files]]
 file = "config/alexscaves-client.toml"
 hash = "1863ec486ae7385d92900d078bd00aba3a2a767cde6646b8b8601b5633738cb8"
 
@@ -47,30 +43,6 @@ hash = "f85aac0ab1e212681d9bdb0b5693318a1f4f06bbf295acbc6010ff1d463e4995"
 [[files]]
 file = "config/trmt.json"
 hash = "de324c0e6088a490688eb7cc3cce7243a88b991848effcf93ea6f83c11fe8d40"
-
-[[files]]
-file = "config/xaero/lib/common.cfg"
-hash = "d46dfe4bfd416bfcdd2b757d33744b4e4595f489b6507eae3c62f5389b11a7c1"
-
-[[files]]
-file = "config/xaero/lib/server_profiles/default.cfg"
-hash = "d438aea41ca41e93697e059f523686935c0add482f6abe96b532bbf10c6ed80a"
-
-[[files]]
-file = "config/xaero/minimap/common.cfg"
-hash = "2b49df024c03a369c62a303c72755e7fedeb4f4653ff53a12fd37bd83ccd4ed0"
-
-[[files]]
-file = "config/xaero/minimap/server_profiles/default.cfg"
-hash = "d438aea41ca41e93697e059f523686935c0add482f6abe96b532bbf10c6ed80a"
-
-[[files]]
-file = "config/xaero/world-map/common.cfg"
-hash = "0c229eb0daf85bd09af51f21eeeb99497a3bd50a825d5ab1ca695fb21bf6cf9d"
-
-[[files]]
-file = "config/xaero/world-map/server_profiles/default.cfg"
-hash = "d438aea41ca41e93697e059f523686935c0add482f6abe96b532bbf10c6ed80a"
 
 [[files]]
 file = "config/zeta-common.toml"
@@ -750,11 +722,11 @@ hash = "3040901c6c74b67c2182bfc63ef29609ba4200890b9ff23892f27294d048cd5e"
 
 [[files]]
 file = "kubejs/server_scripts/living_world_progression.js"
-hash = "f3e890b40bb84f7f629b8a178703509c2fd9ef10defa9c2dae1aa8b1de2c010d"
+hash = "d5f70ca10c44eae9a90e6ed4be78b734ae876ad7dba0e4bedf198c076c10bb86"
 
 [[files]]
 file = "kubejs/startup_scripts/living_world_items.js"
-hash = "fa1604cbed94f073ff2e49eab5ebc4332201a60f7c722a8a2331b296e40f2fc0"
+hash = "8815108b0d38111a5716011b9f336d8b3ea01148eefe9590a3232d36a504f370"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
