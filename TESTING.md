@@ -773,3 +773,7 @@ Better Caravans 1.0.3 subsequently crashed the dedicated server with a
 disconnected. Minecraft completed its world save and Distant Horizons closed
 its levels normally. Better Caravans was removed because the failure is in its
 unconfigurable runtime collection handling and can recur during caravan unload.
+The server hotfix reached `Done (3.263s)` with zero KubeJS errors, warnings, or
+failed recipes. The GitHub release client archive was replaced in place after
+removing the same JAR; its SHA-256 is
+`ea466c4d7c4d4ba816ac98816afbf7f762d217efe9af2871b43e70c70e11015b`.
