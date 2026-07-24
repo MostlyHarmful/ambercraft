@@ -59,6 +59,9 @@ unzip -t exports/Ambercraft-0.2.9-Prism.zip
 ```
 
 Import that ZIP in Prism Launcher. It contains the exact side-filtered client,
+and its pre-launch command runs Packwiz Installer against this repository before
+Minecraft starts. Pack-managed additions, removals, and updates therefore sync
+without replacing the Prism instance or its saves and personal game settings.
 Forge 47.4.10, and Ambercraft's managed configuration. Packwiz's mixed
 Modrinth/CurseForge `.mrpack` export is not the release artifact: a failed or
 interrupted export can leave a zero-byte file.
