@@ -779,6 +779,11 @@ hash = "724fe40135f0ed7f2614cd14116706686df7b092052af048dfbd109dad0c6863"
 metafile = true
 
 [[files]]
+file = "mods/betterdays.pw.toml"
+hash = "7f1f331dfd9739c82ffcc4a40675370a3eaa623cc91c12d0d1de944afca1cd15"
+metafile = true
+
+[[files]]
 file = "mods/caelus.pw.toml"
 hash = "8a8ea0af79b88d9c192d208aa5be4bacd934e2b92d4721566e2e796eb9761e10"
 metafile = true
