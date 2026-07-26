@@ -73,16 +73,60 @@ that Minecraft otherwise attempts to parse.
 The post-override restart reached `Done (25.621s)` without either of the prior
 IDAS loot-table or Integrated API spawner errors.
 
-### Guard Villagers — removed pending a stable build
+### Guard Villagers 1.6.18 — rejected
 
 Guard Villagers 1.6.18 repeatedly rewrote its generated common config every two
 seconds on both the client and dedicated server. During the first real client
 join, the server also accumulated severe tick delays and ultimately triggered
 the 60-second watchdog while waiting for chunk generation. The crash report did
 not attribute the stall directly to Guard Villagers, but the continuous config
-rewrite is unacceptable independently. The mod is removed for the next A/B
-test; village defense can be reconsidered only with a version that leaves its
-configuration stable.
+rewrite is unacceptable independently. That exact release remains rejected.
+
+### Guard Villagers 1.6.17 — restrained reintroduction candidate
+
+The replacement candidate pins Guard Villagers 1.6.17 and adds Mob Conversion
+1.0.1. Guard Villagers' group village spawning is disabled. Integrated
+Villages' authored guards remain in future structures, while an existing or
+damaged bell-defined village may convert only a nitwit or unemployed vanilla
+villager. The managed cap is four guards within 96 blocks, with a 12,000-tick
+shared cooldown and no population spawning.
+
+Regular village patrols are enabled so four guards can cover the large village
+layouts. Guards retain local hostile targeting, a 24-block follow range, and a
+50-block response range for mobs attacking villagers. Friendly arrow damage is
+disabled. Existing chunks are not rewritten.
+
+Before release, run both a dedicated-server and client smoke test. Confirm:
+
+1. `config/guardvillagers-common.toml` does not rewrite repeatedly or create
+   backup churn for at least five minutes.
+2. A newly generated Integrated Village contains native guards rather than the
+   former iron-golem substitutions.
+3. An old bell-defined village can promote an eligible villager after a nearby
+   threat, but never exceeds four guards in the configured area.
+4. Guards patrol, attack nearby modded hostiles, and do not shoot villagers,
+   iron golems, or one another.
+5. No noticeable tick-time regression appears near a large village.
+
+The isolated dedicated-server smoke test on July 25, 2026 loaded Guard
+Villagers 1.6.17 and Mob Conversion 1.0.1, generated a fresh world, and reached
+`Done (51.843s)`. Forge emitted two startup-stage config-correction notices for
+Guard Villagers, but the managed file remained byte-for-byte identical
+(`188aed036a66757b91ca6cd1c41ca96bba318fd04acff5f54f9c4ae12af0319e`),
+its modification time stayed fixed after initialization, and no backup files
+or repeated two-second writes appeared. The server then shut down cleanly.
+
+This clears the prior config-loop blocker. Client joining, native guard
+generation, promotion behavior, the four-guard cap, and live village tick cost
+remain gameplay validation gates.
+
+The same 0.3.0 candidate was deployed to the retained Pterodactyl world on
+July 25, 2026. The installer created
+`backups/ambercraft-pack-before-20260726T004546Z.tar.gz`, installed the pinned
+1.6.17 guard jar and Mob Conversion 1.0.1, and preserved the existing world.
+The live server reached `Done (3.759s)`. Its managed guard config retained the
+expected SHA-256 after the two initialization-stage correction notices, with
+no subsequent rewrite loop or fatal startup error.
 
 ### Just Enough Resources — removed
 
@@ -632,18 +676,18 @@ loop. Ambercraft now enables Zeta's append-only failsafe in
 continued despite the required Alex's Caves ambient-light setting already
 being disabled, so the now-redundant compatibility popup is suppressed.
 
-Integrated Villages also embeds optional Guard Villagers and Iron's
-Spellbooks entities in 19 structure templates. Ambercraft replaces those
-missing entities with vanilla iron golems and villagers through generated
-structure overrides. These overrides require a new server deployment and only
-affect newly generated structures.
+Integrated Villages embeds optional Guard Villagers and Iron's Spellbooks
+entities in 19 structure templates. The earlier release replaced those missing
+entities with vanilla iron golems and villagers through generated structure
+overrides. Those overrides only affected newly generated structures.
 
 The first replacement pass preserved Guard Villagers' `Health: 20.0f` NBT on
 the substituted iron golems. A generated Integrated Village confirmed the
-visible result: full-sized golems with only ten hearts. The structure patcher
-now changes that field to vanilla iron-golem health (`100.0f`) and validates
-one health tag per replaced guard. Existing generated golems retain their old
-current health; newly generated villages receive the corrected value.
+visible result: full-sized golems with only ten hearts. A later patch corrected
+future replacements to vanilla iron-golem health (`100.0f`). The new Guard
+Villagers candidate removes all twelve guard substitutions and preserves only
+the seven Iron's Spellbooks priest-to-villager overrides. Existing generated
+golems retain their current state; unexplored villages regain authored guards.
 
 The refreshed importable Prism archive
 `exports/Ambercraft-0.2.7-Prism.zip` contains 76 client jars, passed

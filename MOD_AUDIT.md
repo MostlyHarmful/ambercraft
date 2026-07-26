@@ -280,18 +280,39 @@ the upstream mod contains no dedicated cabin stable foundation template.
 - Passable Foliage: undermined dense terrain and added collision ambiguity.
 - Structory and CTOV: replaced by IDAS and Integrated Villages for release one.
 - YUNG's Better Stronghold: replaced by Integrated Stronghold.
-- Guard Villagers: unstable repeated config writes in the tested build.
+- Guard Villagers 1.6.18: unstable repeated config writes in the tested build.
+  Ambercraft now pins 1.6.17 and manages its common config; this remains a
+  release gate until a client/server smoke test confirms the file stays stable.
 - Just Enough Resources: failed on an Integrated Villages trade and spoiled
   discovery with unreliable generated-resource information.
 - Immersive Weathering Tweaks and Quantified API: excessive native probing and
   operational cost.
-- Every Compat, Mob Conversion, Jade Addons, KubeJS Create, YUNG's Bridges:
-  removed in the first pruning pass.
+- Every Compat, Jade Addons, KubeJS Create, and YUNG's Bridges: removed in the
+  first pruning pass.
 - Friends & Foes: its remaining wildlife and copper-golem niche overlapped
   Alex's Mobs, Quark, and the pack's exploration systems.
 - Quark Oddities: not installed. Static structure inspection found that IDAS
   and Integrated Villages use core Quark content, not Oddities' backpack,
   pipes, crates, magnets, or matrix enchanting systems.
+
+## Village defense candidate
+
+Guard Villagers 1.6.17 and Mob Conversion 1.0.1 restore autonomous village
+defense without adding a settlement-management loop. Integrated Villages keeps
+its authored guards in newly generated villages. Guard Villagers' independent
+group spawner is disabled, while Mob Conversion can turn only unemployed or
+nitwit vanilla villagers into guards when a bell-defined village is threatened.
+
+The conversion system is capped at four guards within a 96-block village area,
+uses a ten-minute shared cooldown, preserves all employed villagers, and never
+creates population from nothing. Regular patrols are enabled so the small force
+can cover Integrated Villages' large footprints. Guards still acquire targets
+locally, do not make every hostile mob target them, and cannot damage villagers,
+iron golems, or other guards with arrows.
+
+Existing generated villages and converted iron golems are intentionally left
+unchanged. Only unexplored Integrated Villages regain their authored guards;
+existing settlements may slowly gain replacement guards through conversion.
 
 ## Questions that static analysis cannot answer
 

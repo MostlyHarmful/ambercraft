@@ -21,8 +21,16 @@ file = "config/endrem.toml"
 hash = "e096c28508fdada91e664872139d645e1563557e922299cc5f9ba417495296f6"
 
 [[files]]
+file = "config/guardvillagers-common.toml"
+hash = "188aed036a66757b91ca6cd1c41ca96bba318fd04acff5f54f9c4ae12af0319e"
+
+[[files]]
 file = "config/immersive_weathering-common.toml"
 hash = "c760b710e6933dcd0fedfe42344c82960c5db53e1e591efd63b6a0f78ce55932"
+
+[[files]]
+file = "config/mobconversion-common.toml"
+hash = "f6fce32a03aa761b331b528e4c6ed560210bffa97ef370dbe270743dc97b3224"
 
 [[files]]
 file = "config/quark-common.toml"
@@ -609,18 +617,6 @@ file = "kubejs/data/integrated_villages/structures/airship_village/mobs/airship_
 hash = "428d51027a317a7629237f5e412b29d5f2e977181340fe7ab155afb1a13a0ac2"
 
 [[files]]
-file = "kubejs/data/integrated_villages/structures/airship_village/mobs/airship_village_villager_guard.nbt"
-hash = "a694adfa83fd3d768751130157c25071d4bef7f7b8347a3ec661c4b5a31e0bd4"
-
-[[files]]
-file = "kubejs/data/integrated_villages/structures/cabin_village/mobs/cabin_village_villager_guard.nbt"
-hash = "e0aa2881032227dbede01e0ea7988a41a940cf025500a5bc5490375486d6a3d6"
-
-[[files]]
-file = "kubejs/data/integrated_villages/structures/clockwork_village/mobs/clockwork_village_villager_guard.nbt"
-hash = "3e861ac0b6bfdf62ff2becda6ee7da1c62991d356cd25bed5ce4a33a1c4e7745"
-
-[[files]]
 file = "kubejs/data/integrated_villages/structures/clockwork_village/mobs/clockwork_village_villager_priest.nbt"
 hash = "8c047f5b5269b6716191727caf8b932cb45537d15a09e3f8529231bf68d8f3bc"
 
@@ -629,56 +625,20 @@ file = "kubejs/data/integrated_villages/structures/integration/mobs/irons_priest
 hash = "00d8faa71272ec10b0615e8a429b7520295edcc66d190960351a4444524b43d0"
 
 [[files]]
-file = "kubejs/data/integrated_villages/structures/kutcha_village/mobs/kutcha_village_villager_guard.nbt"
-hash = "47d34885e5a13f42aeb86c46f3d761abf5ea2c41da528d1d19896f5904203729"
-
-[[files]]
-file = "kubejs/data/integrated_villages/structures/marketstead_village/mobs/marketstead_village_villager_guard.nbt"
-hash = "71dd9d7eb3c922e7f78078e6f3778fa9664a8e5ba7c3994b4293ef100b1cfe51"
-
-[[files]]
 file = "kubejs/data/integrated_villages/structures/mediterranean_village/mobs/mediterranean_village_irons_priest.nbt"
 hash = "6afeed55f1dbdb300e4fc9846a2ba2373df0c3f2cdf3c4feebc6bb429bcaae6f"
-
-[[files]]
-file = "kubejs/data/integrated_villages/structures/mediterranean_village/mobs/mediterranean_village_villager_guard.nbt"
-hash = "79da1759bf37455526abf2f49ba1cf06bf6671a4b4cc916b698ce1cf5c0b8c47"
 
 [[files]]
 file = "kubejs/data/integrated_villages/structures/minka_village/mobs/minka_village_irons_priest.nbt"
 hash = "6afeed55f1dbdb300e4fc9846a2ba2373df0c3f2cdf3c4feebc6bb429bcaae6f"
 
 [[files]]
-file = "kubejs/data/integrated_villages/structures/minka_village/mobs/minka_village_villager_guard.nbt"
-hash = "79da1759bf37455526abf2f49ba1cf06bf6671a4b4cc916b698ce1cf5c0b8c47"
-
-[[files]]
-file = "kubejs/data/integrated_villages/structures/mossy_mounds/mobs/mossy_mounds_villager_guard.nbt"
-hash = "11b969a3a1552838e17505746ee62d0dbedb4b99369823b97a30af53e4ff2a8c"
-
-[[files]]
-file = "kubejs/data/integrated_villages/structures/oasis_village/mobs/oasis_village_villager_guard.nbt"
-hash = "cb156b4a156629ea0e18ffd22b3d01817f083914f943e3164e6962388eee45eb"
-
-[[files]]
-file = "kubejs/data/integrated_villages/structures/pirate_village/mobs/pirate_village_villager_guard.nbt"
-hash = "e4333c5b8699c34890bb88cc77e33a38a11efc08e95d3e2048d88a627d7e7f1f"
-
-[[files]]
 file = "kubejs/data/integrated_villages/structures/swamp_village/mobs/swamp_village_irons_priest.nbt"
 hash = "6afeed55f1dbdb300e4fc9846a2ba2373df0c3f2cdf3c4feebc6bb429bcaae6f"
 
 [[files]]
-file = "kubejs/data/integrated_villages/structures/swamp_village/mobs/swamp_village_villager_guard.nbt"
-hash = "36f5bfe5e13b7b9e5c4639ed1dec5f05eb61e122419304c0dbc6780cba7d3ade"
-
-[[files]]
 file = "kubejs/data/integrated_villages/structures/tavern_village/mobs/tavern_village_irons_priest.nbt"
 hash = "5ff4c075f472dfd7dd238c1a8394d4c470c78788819d268ed049657518f128b1"
-
-[[files]]
-file = "kubejs/data/integrated_villages/structures/tavern_village/mobs/tavern_village_villager_guard.nbt"
-hash = "e9e44973022f456fad4dd97dd19f93bd391148fd6ae799ec7f1e963dafcc7a25"
 
 [[files]]
 file = "kubejs/data/integrated_villages/worldgen/structure_set/regular_villages.json"
@@ -939,6 +899,11 @@ hash = "71f185e62d546881244d4b5a213ebc3d2d6df14b0218c0e5dd6426fcb22cb55f"
 metafile = true
 
 [[files]]
+file = "mods/guard-villagers.pw.toml"
+hash = "c9e3e454a15112ffdac796ade3bd347c31cad6b86f2de4e355f39489f0d2d6c1"
+metafile = true
+
+[[files]]
 file = "mods/handcrafted.pw.toml"
 hash = "db495b3ac268709a2ba673bfe220b10257fb7dae549f94bfbd539617d571f131"
 metafile = true
@@ -1016,6 +981,11 @@ metafile = true
 [[files]]
 file = "mods/lootr.pw.toml"
 hash = "66bcfe786e6bbdee6f7ea0805ec3d2561b41285a5c77f1e465e80f4c2fd9200c"
+metafile = true
+
+[[files]]
+file = "mods/mob-conversion-autonomous-conversion.pw.toml"
+hash = "a011f504c8605e418a11beb06845a5f7fc58df5e1c0b0f103a648c07840bc3a6"
 metafile = true
 
 [[files]]

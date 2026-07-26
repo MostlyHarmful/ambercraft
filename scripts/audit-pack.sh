@@ -8,8 +8,8 @@ metadata_count=$(find mods -maxdepth 1 -name '*.pw.toml' | wc -l | tr -d ' ')
 indexed_mod_count=$(grep '^file = "mods/.*\.pw\.toml"$' index.toml | wc -l | tr -d ' ')
 index_count=$(grep -c '^\[\[files\]\]' index.toml)
 
-if [ "$metadata_count" -ne 94 ]; then
-  echo "Expected 94 mod metadata files; found $metadata_count" >&2
+if [ "$metadata_count" -ne 96 ]; then
+  echo "Expected 96 mod metadata files; found $metadata_count" >&2
   exit 1
 fi
 
@@ -18,5 +18,5 @@ if [ "$indexed_mod_count" -ne "$metadata_count" ]; then
   exit 1
 fi
 
-"packwiz" list >/dev/null
+./tools/packwiz list >/dev/null
 echo "Pack audit passed: $metadata_count mods, $index_count total indexed files."

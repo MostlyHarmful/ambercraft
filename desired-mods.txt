@@ -37,6 +37,7 @@ Farmer's Delight
 FerriteCore
 GeckoLib 4
 GlitchCore
+Guard Villagers
 Handcrafted
 ImmediatelyFast
 Immersive Weathering
@@ -52,6 +53,7 @@ Lithostitched
 Lootr
 LootJS
 Moonlight Library
+Mob Conversion - Autonomous Mob conversion/spawn
 Mouse Tweaks
 Mowzie's Mobs
 ModernFix
