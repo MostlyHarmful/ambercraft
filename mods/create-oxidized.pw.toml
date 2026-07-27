@@ -1,0 +1,14 @@
+name = "Create: Oxidized"
+filename = "create_oxidized-0.1.2.jar"
+side = "both"
+pin = true
+
+[download]
+url = "https://www.curseforge.com/api/v1/mods/953729/files/6261649/download"
+hash-format = "sha1"
+hash = "cf1aae96a1af67d6ea615060cf8061fc18730ddb"
+
+[update]
+[update.curseforge]
+file-id = 6261649
+project-id = 953729

@@ -1,0 +1,346 @@
+{
+  default_hide_dependency_lines: false
+  filename: "expedition_ledger"
+  icon: "minecraft:writable_book"
+  id: "1E00000000000001"
+  order_index: 0
+  quests: [
+    {
+      description: [
+        "Ambercraft's shared route to the End."
+        ""
+        "Sixteen kinds of Eye are known. The portal accepts any twelve different kinds. Copies of an Eye already recorded do not advance the count."
+        ""
+        "Each Eye entry contains a hint. When anyone recovers a new kind, it is recorded here for the whole group. You can explore separately and still move the same expedition forward."
+        ""
+        "Several Eyes come from dangerous creatures. Other routes reward builders, traders, engineers, and careful searches through structures."
+        ""
+        "After twelve entries are complete, gather the actual Eyes in one place and follow them to the stronghold."
+      ]
+      icon: "minecraft:writable_book"
+      id: "1F00000000000000"
+      min_width: 280
+      shape: "rsquare"
+      size: 2.0d
+      tasks: [{
+        id: "1D00000000000000"
+        title: "Shared expedition record"
+        type: "ftbquests:custom"
+      }]
+      title: "Expedition Ledger"
+      x: 0.0d
+      y: 0.0d
+    }
+    {
+      description: [
+        "A village cleric may keep a weathered chart wrapped around an ordinary Eye of Ender."
+        ""
+        "The chart is only the beginning. Study it at a crafting table."
+      ]
+      icon: "minecraft:map"
+      id: "1C00000000000001"
+      tasks: [{ id: "1D00000000000001" type: "ftbquests:custom" }]
+      title: "Cleric's Chart"
+      x: -6.0d
+      y: 4.5d
+    }
+    {
+      description: [
+        "The jungle temple tripwire protects more than its dispenser."
+        ""
+        "Search beyond the mechanism."
+      ]
+      icon: "minecraft:tripwire_hook"
+      id: "1C00000000000002"
+      tasks: [{ id: "1D00000000000002" type: "ftbquests:custom" }]
+      title: "Past the Tripwire"
+      x: -2.0d
+      y: 4.0d
+    }
+    {
+      description: [
+        "A great Nether fortress contains a place of worship."
+        ""
+        "Look past its bridges, barracks, and blaze courts."
+      ]
+      icon: "minecraft:nether_bricks"
+      id: "1C00000000000003"
+      tasks: [{ id: "1B00000000000003" type: "ftbquests:custom" }]
+      title: "Lower Chapel"
+      x: 2.0d
+      y: 4.0d
+    }
+    {
+      description: [
+        "Blue ice gathers around a sleeping creature in the coldest country."
+        ""
+        "Its shard must be worked into a finished Eye."
+      ]
+      icon: "minecraft:blue_ice"
+      id: "1C00000000000004"
+      tasks: [{ id: "1D00000000000004" type: "ftbquests:custom" }]
+      title: "Blue Ice"
+      x: 6.0d
+      y: 4.5d
+    }
+    {
+      description: [
+        "Savanna villages tell of a chief who carries the sun above his face."
+        ""
+        "Prepare for a difficult fight."
+      ]
+      icon: "minecraft:sunflower"
+      id: "1C00000000000005"
+      tasks: [{ id: "1D00000000000005" type: "ftbquests:custom" }]
+      title: "The Sun Chief"
+      x: 7.0d
+      y: 6.5d
+    }
+    {
+      description: [
+        "Pure Darkness can be carried out of the Forlorn Hollows."
+        ""
+        "Combine it with an Echo Shard, obsidian, and an Eye of Ender."
+      ]
+      icon: "minecraft:echo_shard"
+      id: "1C00000000000006"
+      tasks: [{ id: "1D00000000000006" type: "ftbquests:custom" }]
+      title: "A Material Called Darkness"
+      x: 8.0d
+      y: 8.5d
+    }
+    {
+      description: [
+        "An ancient mine contains machinery much newer than its tunnels."
+        ""
+        "The crews kept a separate Create store near the works."
+      ]
+      icon: "create:brass_hand"
+      id: "1C00000000000007"
+      tasks: [{ id: "1D00000000000007" type: "ftbquests:custom" }]
+      title: "Last Shift"
+      x: 8.0d
+      y: 11.0d
+    }
+    {
+      description: [
+        "Three Wither Skeleton skulls. Four blocks of soul sand."
+        ""
+        "The Eye appears when the Wither dies."
+      ]
+      icon: "minecraft:wither_skeleton_skull"
+      id: "1C00000000000008"
+      tasks: [{ id: "1D00000000000008" type: "ftbquests:custom" }]
+      title: "Three Skulls"
+      x: 7.0d
+      y: 13.5d
+    }
+    {
+      description: [
+        "The eldest guardian carries an answer beneath the ocean."
+        ""
+        "Bring milk."
+      ]
+      icon: "minecraft:prismarine_shard"
+      id: "1C00000000000009"
+      tasks: [{ id: "1D00000000000009" type: "ftbquests:custom" }]
+      title: "Elder"
+      x: 5.0d
+      y: 15.5d
+    }
+    {
+      description: [
+        "Two routes leave the same residue."
+        ""
+        "Search a statue in the Forbidden Castle, or face the walking furnace beneath the Black Workshop."
+      ]
+      icon: "cataclysm:infernal_forge"
+      id: "1C0000000000000A"
+      tasks: [{ id: "1D0000000000000A" type: "ftbquests:custom" }]
+      title: "Ash Sample"
+      x: 2.0d
+      y: 16.5d
+    }
+    {
+      description: [
+        "Search the upper side chambers of a great ocean monument."
+        ""
+        "The flooded halls below are a distraction."
+      ]
+      icon: "minecraft:heart_of_the_sea"
+      id: "1C0000000000000B"
+      tasks: [{ id: "1D0000000000000B" type: "ftbquests:custom" }]
+      title: "Upper Side Chamber"
+      x: -2.0d
+      y: 16.5d
+    }
+    {
+      description: [
+        "Some Integrated Villages travel above the clouds."
+        ""
+        "Their treasury sits apart from the captain's cabin."
+      ]
+      icon: "minecraft:firework_rocket"
+      id: "1C0000000000000C"
+      tasks: [{ id: "1D0000000000000C" type: "ftbquests:custom" }]
+      title: "The Airship Treasury"
+      x: -5.0d
+      y: 15.5d
+    }
+    {
+      description: [
+        "A necromancer's spire holds the soul needed for this recipe."
+        ""
+        "Add bone, membrane, a ghast tear, and an Eye of Ender."
+      ]
+      icon: "minecraft:soul_lantern"
+      id: "1C0000000000000D"
+      tasks: [{ id: "1D0000000000000D" type: "ftbquests:custom" }]
+      title: "Spire Notes"
+      x: -7.0d
+      y: 13.5d
+    }
+    {
+      description: [
+        "Ancient City inventories mention sealed caskets, though few survived."
+        ""
+        "Several cities may need to be searched."
+      ]
+      icon: "minecraft:sculk_sensor"
+      id: "1C0000000000000E"
+      tasks: [{ id: "1D0000000000000E" type: "ftbquests:custom" }]
+      title: "City Inventory"
+      x: -8.0d
+      y: 11.0d
+    }
+    {
+      description: [
+        "A great pillager fortress contains a library."
+        ""
+        "Search the shelves they guard most closely."
+      ]
+      icon: "minecraft:crossbow"
+      id: "1C0000000000000F"
+      tasks: [{ id: "1D0000000000000F" type: "ftbquests:custom" }]
+      title: "Pillager Library"
+      x: -8.0d
+      y: 8.5d
+    }
+    {
+      description: [
+        "Search the chest inside an enlarged witch hut."
+        ""
+        "The witch herself carries nothing useful."
+      ]
+      icon: "minecraft:cauldron"
+      id: "1C00000000000010"
+      tasks: [{ id: "1D00000000000010" type: "ftbquests:custom" }]
+      title: "Under the Crooked Roof"
+      x: -7.0d
+      y: 6.5d
+    }
+    {
+      dependencies: [
+        "1C00000000000001"
+        "1C00000000000002"
+        "1C00000000000003"
+        "1C00000000000004"
+        "1C00000000000005"
+        "1C00000000000006"
+        "1C00000000000007"
+        "1C00000000000008"
+        "1C00000000000009"
+        "1C0000000000000A"
+        "1C0000000000000B"
+        "1C0000000000000C"
+        "1C0000000000000D"
+        "1C0000000000000E"
+        "1C0000000000000F"
+        "1C00000000000010"
+      ]
+      hide_dependency_lines: false
+      description: [
+        "The frame needs twelve different Eyes."
+        ""
+        "This page completes when the shared Ledger has twelve entries. The physical Eyes still need to be collected, carried to the stronghold, and placed in their matching sockets."
+        ""
+        "Four routes may be left unfinished. Choose the expeditions your group enjoys."
+      ]
+      icon: "minecraft:end_portal_frame"
+      id: "1F0000000000000C"
+      min_required_dependencies: 12
+      min_width: 240
+      shape: "gear"
+      size: 2.5d
+      tasks: [{
+        id: "1B0000000000000C"
+        title: "Record twelve different Eyes"
+        type: "ftbquests:custom"
+      }]
+      title: "The End Portal"
+      x: 0.0d
+      y: 10.0d
+    }
+    {
+      dependencies: ["1F0000000000000C"]
+      hide_dependency_lines: false
+      description: [
+        "Throw an Eye and follow its course."
+        ""
+        "Integrated Strongholds are large. Prepare for a long search after reaching the site."
+      ]
+      icon: "minecraft:chiseled_stone_bricks"
+      id: "1F00000000000011"
+      tasks: [{
+        advancement: "minecraft:story/follow_ender_eye"
+        id: "1B00000000000011"
+        type: "ftbquests:advancement"
+      }]
+      title: "Find the Stronghold"
+      x: 0.0d
+      y: 20.0d
+    }
+    {
+      dependencies: ["1F00000000000011"]
+      hide_dependency_lines: false
+      description: [
+        "Bring the twelve recovered Eyes together."
+        ""
+        "Place each kind in its matching portal frame."
+      ]
+      icon: "minecraft:ender_eye"
+      id: "1F00000000000012"
+      size: 1.3d
+      tasks: [{
+        advancement: "minecraft:end/root"
+        id: "1B00000000000012"
+        type: "ftbquests:advancement"
+      }]
+      title: "Open the Way"
+      x: 0.0d
+      y: 22.5d
+    }
+    {
+      dependencies: ["1F00000000000012"]
+      hide_dependency_lines: false
+      description: [
+        "The End begins with the dragon."
+        ""
+        "The islands beyond it hold further expeditions."
+      ]
+      icon: "minecraft:dragon_head"
+      id: "1F00000000000013"
+      size: 1.5d
+      tasks: [{
+        advancement: "minecraft:end/kill_dragon"
+        id: "1B00000000000013"
+        type: "ftbquests:advancement"
+      }]
+      title: "The Dragon"
+      x: 0.0d
+      y: 25.0d
+    }
+  ]
+  subtitle: ["Twelve Eyes, one shared route"]
+  title: "Expedition Ledger"
+}

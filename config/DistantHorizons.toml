@@ -1,0 +1,8 @@
+[common.logging.warning]
+	# Ambercraft already ships the Alex's Caves rendering settings required by
+	# Distant Horizons, so its generic presence-based warning is not actionable.
+	showModCompatibilityWarningsOnStartup = false
+
+	# Java 17 with G1 is Ambercraft's supported baseline. Players may choose
+	# Shenandoah, but the generic startup warning should not interrupt every join.
+	showGarbageCollectorWarning = false

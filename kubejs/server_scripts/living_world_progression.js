@@ -21,6 +21,34 @@ const AMBERCRAFT_EYES = [
   'endrem:witch_eye'
 ]
 
+const AMBERCRAFT_LEDGER_QUESTS = {
+  'endrem:old_eye': '1C00000000000001',
+  'endrem:rogue_eye': '1C00000000000002',
+  'endrem:nether_eye': '1C00000000000003',
+  'endrem:cold_eye': '1C00000000000004',
+  'endrem:magical_eye': '1C00000000000005',
+  'endrem:black_eye': '1C00000000000006',
+  'endrem:lost_eye': '1C00000000000007',
+  'endrem:wither_eye': '1C00000000000008',
+  'endrem:guardian_eye': '1C00000000000009',
+  'endrem:cursed_eye': '1C0000000000000A',
+  'endrem:exotic_eye': '1C0000000000000B',
+  'endrem:evil_eye': '1C0000000000000C',
+  'endrem:undead_eye': '1C0000000000000D',
+  'endrem:cryptic_eye': '1C0000000000000E',
+  'endrem:corrupted_eye': '1C0000000000000F',
+  'endrem:witch_eye': '1C00000000000010'
+}
+
+const AMBERCRAFT_LEDGER_ENTRIES = [
+  { count: 0, id: '1F00000000000000' },
+  { count: 0, id: '2000000000000000' },
+  { count: 0, id: '2000000000000010' },
+  { count: 0, id: '2000000000000020' },
+  { count: 0, id: '2000000000000030' },
+  { count: 12, id: '1F0000000000000C' }
+]
+
 function eyeKey(id) {
   return `ambercraft_eye_${id.split(':')[1]}`
 }
@@ -40,25 +68,38 @@ function nearbyPlayers(entity, radius) {
   )
 }
 
-function awardSharedBossMilestone(event, item, title) {
-  const participants = nearbyPlayers(event.entity, 64)
+function completeLedgerQuest(server, player, questId) {
+  const syncKey = `ambercraft_ledger_synced_${questId.toLowerCase()}`
+  if (player.persistentData.getBoolean(syncKey)) return
 
-  if (participants.length < 2) {
-    event.server.tell(
-      Text.gold(`${title} is down, but whatever it was guarding is still dormant.`)
-    )
-    event.server.tell(
-      Text.gray('Come back with a friend and finish the fight together.')
-    )
-    return
-  }
+  server.runCommandSilent(
+    `ftbquests change_progress ${player.name.string} complete ${questId}`
+  )
+  player.persistentData.putBoolean(syncKey, true)
+}
+
+function syncExpeditionLedger(server, player) {
+  const count = discoveredEyeCount(server)
+
+  AMBERCRAFT_EYES.forEach(id => {
+    if (server.persistentData.getBoolean(eyeKey(id))) {
+      completeLedgerQuest(server, player, AMBERCRAFT_LEDGER_QUESTS[id])
+    }
+  })
+
+  AMBERCRAFT_LEDGER_ENTRIES.forEach(entry => {
+    if (count >= entry.count) completeLedgerQuest(server, player, entry.id)
+  })
+}
+
+function awardBossMilestone(event, item, title) {
+  const participants = nearbyPlayers(event.entity, 64)
+  if (participants.length === 0) return
 
   // Put the unique campaign reward directly into a participant's inventory so
   // a Wither crater, fire, water current, or later explosion cannot erase it.
   participants[0].give(item)
-  event.server.tell(
-    Text.gold(`${title} fell with ${participants.length} adventurers in the fight. Something new was recovered.`)
-  )
+  event.server.tell(Text.gold(`${title}: eye recovered.`))
 }
 
 ServerEvents.recipes(event => {
@@ -167,19 +208,6 @@ ServerEvents.recipes(event => {
   ], {
     R: 'supplementaries:rope'
   }).id('kubejs:living_world/safety_net')
-
-  event.shaped('kubejs:expedition_ledger', [
-    'MCP',
-    'LBL',
-    'PIP'
-  ], {
-    M: 'minecraft:map',
-    C: 'minecraft:compass',
-    P: 'minecraft:paper',
-    L: 'minecraft:leather',
-    B: 'minecraft:book',
-    I: 'minecraft:ink_sac'
-  }).id('kubejs:living_world/expedition_ledger')
 
   event.shaped('endrem:old_eye', [
     'PPP',
@@ -405,23 +433,30 @@ LootJS.modifiers(event => {
   })
 })
 
-// These four rewards are deliberately synchronous milestones. Defeating the
-// encounter solo still grants every normal mod reward; only the campaign
-// component asks for an ally within 64 blocks.
+// Campaign boss rewards go directly to a nearby participant so explosions,
+// fire, or water cannot erase the unique progression item.
 EntityEvents.death('mowziesmobs:frostmaw', event => {
-  awardSharedBossMilestone(event, 'kubejs:rimebound_eye_shard', 'The Frostmaw')
+  awardBossMilestone(event, 'kubejs:rimebound_eye_shard', 'The Frostmaw')
 })
 
 EntityEvents.death('mowziesmobs:umvuthi', event => {
-  awardSharedBossMilestone(event, 'endrem:magical_eye', 'Umvuthi')
+  awardBossMilestone(event, 'endrem:magical_eye', 'Umvuthi')
 })
 
 EntityEvents.death('minecraft:elder_guardian', event => {
-  awardSharedBossMilestone(event, 'endrem:guardian_eye', 'The Elder Guardian')
+  awardBossMilestone(event, 'endrem:guardian_eye', 'The Elder Guardian')
 })
 
 EntityEvents.death('minecraft:wither', event => {
-  awardSharedBossMilestone(event, 'endrem:wither_eye', 'The Wither')
+  awardBossMilestone(event, 'endrem:wither_eye', 'The Wither')
+})
+
+// Cataclysm is an optional late-Nether route into the same campaign discovery
+// as Incendium's Forbidden Castle. It can never add an extra distinct eye or
+// make the End mandatory behind Cataclysm, but a prepared group has another
+// way to earn the Cursed Eye.
+EntityEvents.death('cataclysm:netherite_monstrosity', event => {
+  awardBossMilestone(event, 'endrem:cursed_eye', 'The Netherite Monstrosity')
 })
 
 // Any eye reaching any player's inventory becomes a shared discovery exactly
@@ -437,17 +472,26 @@ PlayerEvents.inventoryChanged(event => {
   event.server.persistentData.putBoolean(key, true)
   const count = discoveredEyeCount(event.server)
   event.server.tell(
-    Text.gold(`A new eye has been added to the Expedition Ledger (${count}/16).`)
+    Text.gold(`Expedition Ledger: ${event.item.displayName.string} recorded by ${event.player.name.string} (${count}/16).`)
   )
-  event.server.tell(
-    Text.gray(`${event.player.name.string} found ${event.item.displayName.string}.`)
-  )
+  event.server.players.forEach(player => {
+    syncExpeditionLedger(event.server, player)
+  })
 
   if (count === 12) {
     event.server.tell(
-      Text.lightPurple('The Ledger holds enough eyes to open the way. Bring them together and start looking for the stronghold.')
+      Text.lightPurple('Twelve different eyes have been recorded. The stronghold can now be opened.')
     )
   }
+})
+
+// FTB Quests supplies the always-available UI, while KubeJS persistent data
+// remains the authoritative world-wide record. Late joiners receive the same
+// shared ledger after the quest data has finished syncing to their client.
+PlayerEvents.loggedIn(event => {
+  event.server.scheduleInTicks(40, () => {
+    syncExpeditionLedger(event.server, event.player)
+  })
 })
 
 ItemEvents.rightClicked('kubejs:expedition_ledger', event => {
@@ -455,8 +499,8 @@ ItemEvents.rightClicked('kubejs:expedition_ledger', event => {
   let hint = 'Start close to home: villages, old temples, and abandoned mines.'
 
   if (count >= 3) hint = 'The easy leads are running thin. Try the deep caves, ocean monuments, and places touched by sculk.'
-  if (count >= 6) hint = 'The next clues lie beyond safe roads—in the Nether and with creatures people know better than to wake.'
-  if (count >= 9) hint = 'A few of the remaining prizes will only yield to a group. Bring food, spare gear, and someone you trust.'
+  if (count >= 6) hint = 'Check the Nether records and the notes about large creatures.'
+  if (count >= 9) hint = 'The remaining routes are dangerous. Bring food, spare gear, and someone you trust.'
   if (count >= 12) hint = 'You have enough. Gather twelve different eyes and find the stronghold.'
 
   event.server.tell(Text.gold('Expedition Ledger'))

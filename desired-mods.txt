@@ -7,6 +7,8 @@ AppleSkin
 Artifacts
 Athena
 BaguetteLib
+Better Combat
+Better Days
 Caelus API
 Carry On
 Cave Delight
@@ -17,9 +19,11 @@ Cloth Config v10 API
 CorgiLib
 Corpse
 Corpse Curios Compatibility
+Countered's Floating Tree Decay
 Create
 Create: Copycats+
 Create: Enchantment Industry
+Create: Oxidized
 Create: Steam 'n' Rails
 Create Slice & Dice
 CreativeCore
@@ -35,13 +39,20 @@ Enhanced Celestials
 EntityCulling
 Farmer's Delight
 FerriteCore
+FTB Library
+FTB Quests
+FTB Teams
+Forgified Fabric API
 GeckoLib 4
 GlitchCore
 Guard Villagers
 Handcrafted
+Hoofprint
 ImmediatelyFast
 Immersive Weathering
 Incendium
+Integrated API
+Integrated Cataclysm
 Integrated Dungeons and Structures
 Integrated Stronghold
 Integrated Villages
@@ -50,6 +61,8 @@ Just Enough Items
 KubeJS
 Kotlin for Forge
 Lithostitched
+L_Ender's Cataclysm
+Lionfish API
 Lootr
 LootJS
 Moonlight Library
@@ -57,25 +70,31 @@ Mob Conversion - Autonomous Mob conversion/spawn
 Mouse Tweaks
 Mowzie's Mobs
 ModernFix
+Noisiumed
 Nullscape
 Oculus
+playerAnimator
+Quark
 Resourceful Lib
 Serene Seasons
+Shield Expansion
+Sinytra Connector
+Sodium/Embeddium Options API
 Sound Physics Remastered
 Sophisticated Backpacks
 Sophisticated Backpacks Create Integration
 Sophisticated Core
 Sodium/Embeddium Dynamic Lights
 Supplementaries
+Surveyor Map Framework
 Tectonic
 TerraBlender
 Terralith
 The Roads More Travelled
-Xaero's Minimap
-Xaero's World Map
 YUNG's API
 YUNG's Better Desert Temples
 YUNG's Better Dungeons
+YUNG's Better End Island
 YUNG's Better Jungle Temples
 YUNG's Better Mineshafts
 YUNG's Better Nether Fortresses
@@ -83,3 +102,4 @@ YUNG's Better Ocean Monuments
 YUNG's Better Witch Huts
 YUNG's Cave Biomes
 spark
+Zeta

@@ -158,15 +158,15 @@ justify the catalogue and loading cost.
   Oculus, AmbientSounds, Sound Physics, AppleSkin, Mouse Tweaks,
   and JEI are client experience or performance tools. Expensive visual features
   remain individually disableable.
-- Distant Horizons and Xaero's maps run on both sides. DH generates and streams
-  server-owned LOD data; Xaero's server components provide stable world IDs and
-  rule enforcement. Ambercraft reapplies Xaero's documented fair-play signal
-  whenever a player joins: surface mapping and waypoints remain available, but
-  cave maps and entity radar are disabled on both Minimap and World Map.
+- Distant Horizons runs on both sides and can stream server-owned LOD data.
+  Hoofprint is the client map, backed by Surveyor on both sides. It records the
+  explored surface without supplying entity radar or a cave-map mode, so the
+  fair-play behavior is structural rather than dependent on a join-time rule.
 - Jade remains on both sides for server-backed information. Jade Addons was
   removed because no important installed integration justified it.
-- Spark is the server profiler. DH's `/dh pregen` replaces Chunky so one system
-  owns full-chunk and LOD generation queues.
+- Spark is the server profiler. Chunky remains available for bounded offline
+  full-chunk generation; DH builds and serves LODs from those chunks. Do not run
+  Chunky and `/dh pregen` concurrently.
 
 ## Quark module decisions
 
@@ -234,8 +234,10 @@ The route graph remains intentionally forgiving: sixteen distinct eyes exist
 for twelve portal frames. Ambercraft now owns every route; End Remastered's
 default chest, entity, trade, enchanting, and recipe paths are disabled.
 Frostmaw, Umvuthi, the Wither, and the Elder Guardian provide four optional
-two-player campaign milestones, while the remaining routes support asynchronous
-exploration and crafting. Static inspection found no need to raise Mowzie's
+combat milestones, while the remaining routes support asynchronous exploration
+and crafting. Cooperation is encouraged through encounter difficulty and
+social coordination rather than enforced by a player-count check. Static
+inspection found no need to raise Mowzie's
 default health or damage: its encounters already heal out of combat and resist
 respawn attrition, while their unusual rewards provide sufficient incentive.
 

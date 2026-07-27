@@ -7,7 +7,9 @@
 	#Range: -1000000.0 ~ 1000000.0
 	"Angle of how ranged guards determine if a friendly mob is in front of them before firing" = -0.9
 	#Range: 0.0 ~ 1.0E8
-	"Guard crossbow attack radius" = 8.0
+	# Integrated Villages have broad streets and large central spaces. Twelve
+	# blocks lets ranged guards contribute without turning them into turrets.
+	"Guard crossbow attack radius" = 12.0
 	#Range: -999.9000244140625 ~ 999.0
 	"Chance for guards to lose durability" = 1.0
 	#Range: > -2147483648
@@ -16,7 +18,8 @@
 	#Range: -500.0 ~ 500.0
 	"Guard health regeneration amount" = 1.0
 	#Range: 0.0 ~ 900.0
-	"Guard follow range" = 24.0
+	# Give guards enough awareness to cover a district of a large settlement.
+	"Guard follow range" = 40.0
 	"Allow players to set guard patrol points only if they have hero of the village" = false
 	#This makes Guards run from polar bears, as anyone with common sense would.
 	"Have Guards have some common sense?" = false
@@ -42,7 +45,7 @@
 	"Guard speed" = 0.5
 	#This is the range in which the guards will be aggroed to mobs that are attacking villagers. Higher values are more resource intensive, and setting this to zero will disable the goal.
 	#Range: -500.0 ~ 500.0
-	Range = 50.0
+	Range = 72.0
 	#Range: 0 ~ 100000000
 	"How many guards should spawn in a village?" = 0
 	"Have guards attempt to avoid firing into other friendlies?" = true
@@ -81,6 +84,9 @@
 	"Profession Whitelist for healing ai for clerics" = ["cleric"]
 	#This makes villagers run from polar bears, as anyone with common sense would.
 	"Have Villagers have some common sense?" = true
+	# Preserve useful professions while allowing settlements to deliberately
+	# recruit otherwise-unemployed adults with a sword or crossbow.
+	"Profession Whitelist for guard conversion" = ["nitwit", "none"]
 	"Profession Whitelist for golem repair ai" = ["armorer", "weaponsmith"]
 	"Profession Whitelist for guard weaponry repair ai" = ["weaponsmith", "armorer"]
 	"Have it so clerics heal guards and players with hero of the village?" = true
@@ -92,4 +98,3 @@
 	#Range: 0 ~ 1000000
 	"How many times a smith villager can heal a golem in one day" = 3
 	"Have it so blacksmiths heal golems under 60 health?" = true
-

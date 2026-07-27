@@ -43,4 +43,6 @@
 	defaultRequireBell = "TRUE"
 	defaultMaxLimit = 4
 	# entity/chance/mode/priority/dropLoot/cooldown/villageScope/requireBell/maxLimit/triggerEntityIds
-	entries = ["guardvillagers:guard/1.0/CONVERT/1/false/12000/BOTH/true/4/minecraft:villager"]
+	# Disabled: the 1.20.1 conversion rule repeatedly selected villagers despite
+	# the configured area cap, producing runaway guards in large villages.
+	entries = []

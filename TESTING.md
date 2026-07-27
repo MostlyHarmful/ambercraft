@@ -24,6 +24,54 @@ This proves that the current server subset and Java version can complete a
 basic launch. It does not yet prove that a client can join or that all generated
 structures and gameplay systems behave correctly.
 
+## Combat, Cataclysm, and Ledger candidate — 2026-07-27
+
+The 107-mod candidate adds Better Combat, Shield Expansion, Cataclysm,
+Integrated Cataclysm, FTB Quests, and YUNG's Better End Island. Ambercraft
+supplies authored Better Combat profiles for Alex's Caves, Mowzie's Mobs,
+Farmer's Delight, and Phantasm weapons; Cataclysm's signature melee weapons
+retain the profiles shipped by Cataclysm itself. Shield Expansion recognizes
+Alex's Caves' Resistor Shield through an Ambercraft compatibility definition.
+
+The Expedition Ledger now loads as a linked 21-node main chapter: one central
+briefing, sixteen shared Eye hints surrounding a twelve-of-sixteen portal
+objective, and the stronghold, opened portal, and dragon milestones. A 19-node optional chapter covers
+the six rare Alex's Caves regions, four Cataclysm site-and-boss pairs, and
+Create's long-train milestone. KubeJS persistent world data remains
+authoritative and synchronizes the shared custom entries when players join or
+when an eye is first discovered. The physical ledger item remains registered
+for existing inventories but is no longer craftable or required.
+
+The final isolated dedicated-server candidate loaded all 107 mods. A later hot
+reload parsed both authored chapters, all 40 quests, and all three KubeJS server
+scripts without errors or warnings. The original cold-start smoke loaded
+the weapon registry, recipes, and datapacks; it reached `Done (45.292s)`.
+
+The later polish pass explicitly enables dependency lines on every linked main
+quest. Boss campaign rewards no longer enforce a two-player minimum; a living
+player within 64 blocks receives the component whether fighting alone or with
+the group.
+Forceloading the central End chunk initialized the End and its Distant Horizons
+data without a YUNG's Better End Island/Nullscape error. The forceload was then
+removed and the server shut down cleanly. This validates parsing, server
+construction, and basic End initialization, not client animations, shield
+timing, quest-button presentation, the complete island layout, or boss reward
+balance.
+
+Before live deployment:
+
+1. Join with a candidate client and verify the inventory quest button, ledger
+   synchronization, weapon animations, dual wielding, two-handed shield
+   exclusion, and Resistor Shield behavior.
+2. Back up the complete live world while the server is fully stopped.
+3. Because no player has visited the live End, delete only that world's `DIM1`
+   directory (including its stale Distant Horizons database) before the first
+   launch of this candidate. Do not delete the Overworld, Nether, player data,
+   or the complete world.
+4. Confirm the freshly generated End produces the tower, exit portal, pillars,
+   and summon
+   behavior correctly alongside Nullscape before the first dragon attempt.
+
 ## Known issues
 
 ### Pterodactyl Generational ZGC — rejected for the server
@@ -127,6 +175,27 @@ July 25, 2026. The installer created
 The live server reached `Done (3.759s)`. Its managed guard config retained the
 expected SHA-256 after the two initialization-stage correction notices, with
 no subsequent rewrite loop or fatal startup error.
+
+Legacy Integrated Villages from the iron-golem substitution period are migrated
+without touching ordinary golems. The initial Guard-specific NBT signature did
+not survive once the substituted entities were saved as iron golems. All twelve
+authored templates do retain `PersistenceRequired:1b`, while naturally spawned
+and player-built golems do not set that flag. The server checks loaded Overworld
+entities for that durable signature every ten seconds and replaces matches with
+persistent sword-and-shield guards. Processed source golems are killed after
+their replacement is created. The check remains available for old villages in
+unloaded chunks.
+
+The first persistent-field deployment revealed that below-world source golems
+could remain registered long enough to match again, producing three replacement
+guards every ten seconds in the loaded village. The corrected migration marks
+each source before summoning, so it is idempotent even if retirement is delayed.
+It also recognizes and kills every guard tagged by the faulty pass. Correct
+replacements use a separate tag and are unaffected. An attempted spatial
+deduplication was rejected because command execution forked all candidates
+before applying keeper tags, causing every duplicate to qualify as a keeper.
+Sources already moved below build height are marked but do not summon another
+guard; the retained in-village copy represents them.
 
 ### Just Enough Resources — removed
 
@@ -821,3 +890,36 @@ The server hotfix reached `Done (3.263s)` with zero KubeJS errors, warnings, or
 failed recipes. The GitHub release client archive was replaced in place after
 removing the same JAR; its SHA-256 is
 `ea466c4d7c4d4ba816ac98816afbf7f762d217efe9af2871b43e70c70e11015b`.
+
+## Ambercraft 0.3.0 integration candidate
+
+The 0.3.0 static audit covers 107 Packwiz entries and 312 indexed files. All
+bundled JSON parsed successfully, all three KubeJS server scripts passed a
+syntax check, and every custom progression loot-table target was confirmed in
+the exact installed mod JARs. The current structure spacing keeps Integrated
+Villages on a 48-chunk grid, the two common IDAS surface pools on separate
+36- and 40-chunk grids, and major Cataclysm sites on substantially wider
+48- to 160-chunk grids depending on their size and dimension.
+
+The exact server archive completed a fresh Java 21 launch at
+`Done (65.758s)`. KubeJS loaded three server scripts with zero errors or
+warnings, added 13 recipes, removed 19, and reported zero failed recipes. FTB
+Quests loaded two chapters and 40 quests. The graceful-stop function also
+loaded successfully with the same `function-permission-level=4` applied by the
+Pterodactyl deployment script. The remaining log noise is known upstream
+behavior: Connector's server-side Fabric screen mixins, Moonlight's generic
+Connector warning, and KubeJS falling back to vanilla parsing for Incendium's
+Elytra smithing recipe.
+
+Xaero and its join-time fair-play functions are absent. Hoofprint is now the
+client surface-map interface, with Surveyor on both sides for synchronized
+exploration data. Hoofprint has no cave-map or entity-radar feature to expose.
+Chunky remains server-only for bounded offline full-chunk generation; it must
+not run concurrently with DH pregeneration.
+
+The final local artifacts contain 104 client JARs and 94 server JARs:
+
+- `exports/Ambercraft-0.3.0-Prism.zip`:
+  `024d6b92cb33288598b422a91324f3ccf134109f99866a7798a68a22bf3858aa`
+- `build/deployment/ambercraft-server-0.3.0.tar.gz`:
+  `9a297a009ddfde500302de58a82c17a89feee99596588b81741bba5bfbfb6f81`

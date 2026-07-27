@@ -29,10 +29,11 @@ The implemented campaign covers:
     or another difficult structure so the campaign is not completely linear.
 
 After the stronghold, the campaign shifts from collecting access keys to an End
-expedition through Nullscape terrain and End's Phantasm content. The dragon
-remains the recognizable vanilla climax for the first release; End exploration
-and its rewards should provide the post-entry payoff without immediately adding
-a second dragon or a separate boss ladder.
+expedition. YUNG's Better End Island gives the first dragon a purpose-built
+arena and arrival without replacing its recognizable behavior. Nullscape and
+End's Phantasm then make the outer End the post-entry exploration payoff.
+Cataclysm's remaining encounters form optional late challenges rather than a
+second mandatory campaign ladder.
 
 The final required count should be lower than the number of available routes.
 This preserves player choice and prevents a single unlucky structure search from
@@ -52,28 +53,37 @@ blocking the server.
 ## Shared campaign structure
 
 The **Ambercraft Expedition Ledger** is the group's spoiler-light campaign
-interface. It is crafted from familiar surveying supplies, so the campaign can
-begin before anyone chooses an engineering path. Right-clicking the Ledger
-reports how many distinct eyes the world has recorded and gives one broad lead
-appropriate to the current campaign phase.
+interface. It is available from the inventory quest button and does not need to
+be crafted or carried. Its main chapter is presented as the surviving field
+notes of an explorer who traced all sixteen Eye accounts but never finished the
+route. Sixteen linked hints surround a large portal objective that accepts any
+twelve completed dependencies, then leads onward to the stronghold, opened
+portal, and dragon. Legacy physical Ledgers remain valid and report the same
+count.
+
+A second chapter, **Other Expeditions**, organizes optional content into rare
+Alex's Caves regions, four linked Cataclysm site-and-boss expeditions, and
+communal infrastructure. Each section explains how it is tracked and what kind
+of preparation it expects. The chapter states plainly that these routes are
+optional. This keeps major content visible without placing it in the critical
+path or turning the pack into a checklist.
 
 The first time any player carries a new eye, the server records that discovery
 globally and announces it. This makes asynchronous exploration useful to
 everyone without requiring every player to be online. Extra copies do not
 increase the distinct-eye count and therefore do not accelerate the campaign.
 
-Four campaign components require at least two non-spectator players within 64
-blocks when the encounter dies:
+Five campaign components come from major combat encounters:
 
 - Frostmaw's Rimebound Eye Shard;
 - Umvuthi's Magical Eye;
 - the Elder Guardian's Guardian Eye;
-- the Wither's Wither Eye.
+- the Wither's Wither Eye;
+- the Netherite Monstrosity's alternate Cursed Eye.
 
-The defeated enemy still gives all of its normal rewards when fought solo.
-Only its Ambercraft campaign component asks the group to return together. Since
-twelve of sixteen eyes open the portal, none of these synchronous routes is an
-absolute progression lock.
+Each component is awarded to a living player within 64 blocks when the enemy
+dies. Multiplayer coordination is encouraged socially and by the encounters'
+difficulty rather than enforced by the reward script.
 
 This division supports different interests without turning them into chores:
 
@@ -88,13 +98,18 @@ Only the first two roles have explicit eye drops. The latter two contribute
 through persistent infrastructure rather than arbitrary "build this exact
 machine or house" quest checks.
 
+Cataclysm is deliberately optional before the End. Defeating the Netherite
+Monstrosity supplies the same Cursed Eye available from
+Incendium's Forbidden Castle, so it rewards an early hard challenge without
+adding an extra distinct eye or blocking players who prefer exploration.
+
 ## Implemented routes
 
 - Integrated Village cleric chests have a 35% chance to contain a Weathered Eye
   Chart. The chart is used with paper and an Eye of Ender to craft the Old Eye.
 - Pure Darkness from Alex's Caves' Forlorn Hollows is used with obsidian, an
   Echo Shard, and an Eye of Ender to craft the Black Eye.
-- Frostmaw yields a Rimebound Eye Shard when defeated with an ally nearby. The
+- Frostmaw yields a Rimebound Eye Shard when defeated. The
   shard is used with ice, snow, and an Eye of Ender to craft the Cold Eye.
 
 Default End Remastered chest injections, entity drops, cleric trade, enchanting
@@ -109,15 +124,15 @@ routes:
 | Corrupted Eye | IDAS Pillager Fortress library | hostile civilization |
 | Black Eye | Pure Darkness from Alex's Caves' Forlorn Hollows, then craft | rare cave expedition |
 | Cold Eye | Rimebound Eye Shard from Frostmaw, then craft | legendary creature |
-| Guardian Eye | Elder Guardian defeated with an ally nearby | ocean boss |
+| Guardian Eye | Elder Guardian defeated | ocean boss |
 | Witch Eye | YUNG's Better Witch Hut chest | occult exploration |
 | Nether Eye | YUNG's Better Nether Fortress worship chest | Nether expedition |
 | Exotic Eye | YUNG's Better Ocean Monument upper chamber | alternate ocean route |
 | Cryptic Eye | Ancient City chest | Deep Dark expedition without mandatory Warden kill |
 | Undead Eye | IDAS Necromancer's Spire soul, then craft with vanilla undead/Nether materials | supernatural structure and fabrication |
-| Magical Eye | Umvuthi defeated with an ally nearby | major legendary boss |
+| Magical Eye | Umvuthi defeated | major legendary boss |
 | Cursed Eye | the king statue within Incendium's Forbidden Castle | major Nether destination |
-| Wither Eye | Wither defeated with an ally nearby | late pre-End vanilla boss |
+| Wither Eye | Wither defeated | late pre-End vanilla boss |
 | Evil Eye | rare treasure in an Integrated Village airship | high-altitude settlement expedition |
 
 The landmark routes in the table are guaranteed in their named signature chest

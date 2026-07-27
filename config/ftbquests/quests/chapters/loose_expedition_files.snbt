@@ -1,0 +1,375 @@
+{
+  default_hide_dependency_lines: false
+  filename: "loose_expedition_files"
+  icon: "minecraft:filled_map"
+  id: "2E00000000000002"
+  order_index: 1
+  quests: [
+    {
+      description: [
+        "Major expeditions that sit outside the route to the End."
+        ""
+        "These objectives track rare cave regions, Cataclysm sites and bosses, and a large Create project. They complete automatically as the group reaches them."
+        ""
+        "Nothing in this chapter is required to open the stronghold. Use it when you want another destination, a difficult fight, or a shared project."
+      ]
+      disable_toast: true
+      icon: "minecraft:filled_map"
+      id: "2000000000000000"
+      min_width: 260
+      shape: "rsquare"
+      size: 2.0d
+      tasks: [{
+        id: "2100000000000000"
+        title: "Optional expedition index"
+        type: "ftbquests:custom"
+      }]
+      title: "Other Expeditions"
+      x: 0.0d
+      y: 0.0d
+    }
+    {
+      dependencies: ["2000000000000000"]
+      description: [
+        "Alex's Caves contains six rare underground regions. Each has its own hazards, creatures, materials, and equipment."
+        ""
+        "Cave Tablets and the maps made from them provide the intended way to locate these places. This section records the first visit to each region."
+      ]
+      disable_toast: true
+      icon: "alexscaves:cave_tablet"
+      id: "2000000000000010"
+      min_width: 220
+      shape: "hexagon"
+      size: 1.5d
+      tasks: [{
+        id: "2100000000000010"
+        title: "Rare cave expeditions"
+        type: "ftbquests:custom"
+      }]
+      title: "Alex's Caves"
+      x: -9.0d
+      y: 4.0d
+    }
+    {
+      description: [
+        "Locate the Magnetic Caves."
+        ""
+        "Metal behaves strangely here. Bring equipment that does not leave you helpless when the cave starts moving it."
+      ]
+      icon: "minecraft:compass"
+      id: "2000000000000101"
+      optional: true
+      tasks: [{
+        advancement: "alexscaves:alexscaves/discover_magnetic_caves"
+        id: "2100000000000101"
+        type: "ftbquests:advancement"
+      }]
+      title: "Magnetic Caves"
+      x: -13.0d
+      y: 7.5d
+    }
+    {
+      description: [
+        "Locate the Primordial Caves."
+        ""
+        "The cavern is an enclosed prehistoric ecosystem. Its largest inhabitants deserve room and preparation."
+      ]
+      icon: "minecraft:fern"
+      id: "2000000000000102"
+      optional: true
+      tasks: [{
+        advancement: "alexscaves:alexscaves/discover_primordial_caves"
+        id: "2100000000000102"
+        type: "ftbquests:advancement"
+      }]
+      title: "Primordial Caves"
+      x: -9.0d
+      y: 7.5d
+    }
+    {
+      description: [
+        "Locate the Toxic Caves."
+        ""
+        "Radiation and acid make ordinary armor a poor substitute for proper protection."
+      ]
+      icon: "minecraft:lime_dye"
+      id: "2000000000000103"
+      optional: true
+      tasks: [{
+        advancement: "alexscaves:alexscaves/discover_toxic_caves"
+        id: "2100000000000103"
+        type: "ftbquests:advancement"
+      }]
+      title: "Toxic Caves"
+      x: -5.0d
+      y: 7.5d
+    }
+    {
+      description: [
+        "Locate the Abyssal Chasm."
+        ""
+        "This is a deep-water expedition. Diving equipment and a plan for returning to the surface will matter."
+      ]
+      icon: "minecraft:nautilus_shell"
+      id: "2000000000000104"
+      optional: true
+      tasks: [{
+        advancement: "alexscaves:alexscaves/discover_abyssal_chasm"
+        id: "2100000000000104"
+        type: "ftbquests:advancement"
+      }]
+      title: "Abyssal Chasm"
+      x: -13.0d
+      y: 11.0d
+    }
+    {
+      description: [
+        "Locate the Forlorn Hollows."
+        ""
+        "Pure Darkness found here is part of the Black Eye route, and the creatures below react poorly to light."
+      ]
+      icon: "minecraft:echo_shard"
+      id: "2000000000000105"
+      optional: true
+      tasks: [{
+        advancement: "alexscaves:alexscaves/discover_forlorn_hollows"
+        id: "2100000000000105"
+        type: "ftbquests:advancement"
+      }]
+      title: "Forlorn Hollows"
+      x: -9.0d
+      y: 11.0d
+    }
+    {
+      description: [
+        "Locate the Candy Cavity."
+        ""
+        "The bright terrain hides aggressive wildlife and several unusual ways to travel."
+      ]
+      icon: "minecraft:sugar"
+      id: "2000000000000106"
+      optional: true
+      tasks: [{
+        advancement: "alexscaves:alexscaves/discover_candy_cavity"
+        id: "2100000000000106"
+        type: "ftbquests:advancement"
+      }]
+      title: "Candy Cavity"
+      x: -5.0d
+      y: 11.0d
+    }
+    {
+      dependencies: ["2000000000000000"]
+      description: [
+        "Cataclysm adds rare, large dungeons built around major boss encounters."
+        ""
+        "Finding a site records the first half of its expedition. Defeating the creature inside completes the second. These fights offer powerful specialized rewards and are intended for well-equipped players."
+      ]
+      disable_toast: true
+      icon: "minecraft:netherite_sword"
+      id: "2000000000000020"
+      min_width: 240
+      shape: "hexagon"
+      size: 1.5d
+      tasks: [{
+        id: "2100000000000020"
+        title: "Cataclysm expeditions"
+        type: "ftbquests:custom"
+      }]
+      title: "Cataclysm"
+      x: 9.0d
+      y: 4.0d
+    }
+    {
+      description: [
+        "Find the Soul Blacksmith in the Nether."
+        ""
+        "The structure contains the arena and preparation space for the Netherite Monstrosity."
+      ]
+      icon: "minecraft:netherite_scrap"
+      id: "2000000000000201"
+      optional: true
+      tasks: [{
+        advancement: "cataclysm:find_soul_black_smith"
+        id: "2100000000000201"
+        type: "ftbquests:advancement"
+      }]
+      title: "Soul Blacksmith"
+      x: 6.0d
+      y: 7.5d
+    }
+    {
+      dependencies: ["2000000000000201"]
+      description: [
+        "Defeat the Netherite Monstrosity."
+        ""
+        "This also provides an alternate route to the Cursed Eye."
+      ]
+      icon: "minecraft:netherite_block"
+      id: "2000000000000202"
+      optional: true
+      tasks: [{
+        advancement: "cataclysm:kill_monstrosity"
+        id: "2100000000000202"
+        type: "ftbquests:advancement"
+      }]
+      title: "Netherite Monstrosity"
+      x: 12.0d
+      y: 7.5d
+    }
+    {
+      description: [
+        "Find the Sunken City in a deep ocean."
+        ""
+        "Bring underwater mobility, breathing support, and a reliable route back out."
+      ]
+      icon: "minecraft:prismarine_bricks"
+      id: "2000000000000203"
+      optional: true
+      tasks: [{
+        advancement: "cataclysm:find_sunken_city"
+        id: "2100000000000203"
+        type: "ftbquests:advancement"
+      }]
+      title: "Sunken City"
+      x: 6.0d
+      y: 11.0d
+    }
+    {
+      dependencies: ["2000000000000203"]
+      description: [
+        "Defeat the Leviathan beneath the Sunken City."
+        ""
+        "Expect a large underwater arena and a fight that punishes poor positioning."
+      ]
+      icon: "minecraft:heart_of_the_sea"
+      id: "2000000000000204"
+      optional: true
+      tasks: [{
+        advancement: "cataclysm:kill_leviathan"
+        id: "2100000000000204"
+        type: "ftbquests:advancement"
+      }]
+      title: "Leviathan"
+      x: 12.0d
+      y: 11.0d
+    }
+    {
+      description: [
+        "Find the Cursed Pyramid in a desert."
+        ""
+        "The dungeon beneath it leads to the Ancient Remnant."
+      ]
+      icon: "minecraft:chiseled_sandstone"
+      id: "2000000000000205"
+      optional: true
+      tasks: [{
+        advancement: "cataclysm:find_cursed_pyramid"
+        id: "2100000000000205"
+        type: "ftbquests:advancement"
+      }]
+      title: "Cursed Pyramid"
+      x: 6.0d
+      y: 14.5d
+    }
+    {
+      dependencies: ["2000000000000205"]
+      description: [
+        "Defeat the Ancient Remnant."
+        ""
+        "The pyramid provides the arena. Clear enough room to move before committing to the fight."
+      ]
+      icon: "minecraft:bone"
+      id: "2000000000000206"
+      optional: true
+      tasks: [{
+        advancement: "cataclysm:kill_remnant"
+        id: "2100000000000206"
+        type: "ftbquests:advancement"
+      }]
+      title: "Ancient Remnant"
+      x: 12.0d
+      y: 14.5d
+    }
+    {
+      description: [
+        "Find the Ruined Citadel in the outer End."
+        ""
+        "This route begins after the dragon opens access to the distant islands."
+      ]
+      icon: "minecraft:end_stone_bricks"
+      id: "2000000000000207"
+      optional: true
+      tasks: [{
+        advancement: "cataclysm:find_ruined_citadel"
+        id: "2100000000000207"
+        type: "ftbquests:advancement"
+      }]
+      title: "Ruined Citadel"
+      x: 6.0d
+      y: 18.0d
+    }
+    {
+      dependencies: ["2000000000000207"]
+      description: [
+        "Defeat the Ender Guardian below the Ruined Citadel."
+        ""
+        "Treat this as a post-dragon challenge."
+      ]
+      icon: "minecraft:ender_pearl"
+      id: "2000000000000208"
+      optional: true
+      tasks: [{
+        advancement: "cataclysm:kill_ender_guardian"
+        id: "2100000000000208"
+        type: "ftbquests:advancement"
+      }]
+      title: "Ender Guardian"
+      x: 12.0d
+      y: 18.0d
+    }
+    {
+      dependencies: ["2000000000000000"]
+      description: [
+        "Large shared builds give recovered materials and distant discoveries a permanent use."
+        ""
+        "This section tracks notable infrastructure. It does not affect campaign progression."
+      ]
+      disable_toast: true
+      icon: "create:track"
+      id: "2000000000000030"
+      min_width: 220
+      shape: "hexagon"
+      size: 1.5d
+      tasks: [{
+        id: "2100000000000030"
+        title: "Communal infrastructure"
+        type: "ftbquests:custom"
+      }]
+      title: "Shared Infrastructure"
+      x: 0.0d
+      y: 5.0d
+    }
+    {
+      dependencies: ["2000000000000030"]
+      description: [
+        "Assemble a Create train with at least thirty carriages."
+        ""
+        "This is a long-term communal milestone. It has no Eye reward and never blocks the End route."
+      ]
+      icon: "create:track"
+      id: "2000000000000301"
+      optional: true
+      tasks: [{
+        advancement: "create:long_train"
+        id: "2100000000000301"
+        type: "ftbquests:advancement"
+      }]
+      title: "A Thirty-Carriage Train"
+      x: 0.0d
+      y: 9.0d
+    }
+  ]
+  subtitle: ["Optional discoveries, fights, and shared projects"]
+  title: "Other Expeditions"
+}

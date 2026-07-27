@@ -2,7 +2,7 @@
 
 A Forge 1.20.1 vanilla-plus exploration and adventure pack managed with
 [packwiz](https://packwiz.infra.link/). The pack currently targets Forge
-47.4.10 and contains 96 Packwiz-managed mod entries. The install index also
+47.4.10 and contains 107 Packwiz-managed mod entries. The install index also
 ships Ambercraft's configuration, compatibility overrides, and campaign data.
 
 Mod selection and configuration are governed by [`DESIGN.md`](DESIGN.md). Read
@@ -55,7 +55,7 @@ packwiz-compatible launcher can install the client directly from a hosted
 Prism archive:
 
 ```sh
-unzip -t exports/Ambercraft-0.2.9-Prism.zip
+unzip -t exports/Ambercraft-0.3.0-Prism.zip
 ```
 
 Import that ZIP in Prism Launcher. It contains the exact side-filtered client,
@@ -106,33 +106,37 @@ Forge argument file that the egg actually launches.
 The following are intentionally client-only: AmbientSounds, AppleSkin,
 Embeddium, Embeddium Extra, Sodium/Embeddium Dynamic Lights
 and its Options API, Entity Culling, ImmediatelyFast, JEI, Mouse Tweaks,
-Oculus, and Sound Physics Remastered. Distant Horizons and both Xaero maps run
-on both sides for server-backed LOD delivery and stable world identity. Spark
-is server-only. FerriteCore and ModernFix run on both sides as Ambercraft's
-small shared memory and startup optimization layer. Jade is installed on both
-sides so its server-backed block data
-remains available. Athena is on both
-sides because Chipped uses it for connected-texture/block behavior.
+Oculus, Sound Physics Remastered, and the Hoofprint map interface. Distant
+Horizons runs on both sides for server-backed LOD delivery. Surveyor runs on
+both sides so Hoofprint's explored map data is synchronized by the server;
+Hoofprint deliberately has no entity radar or cave-map mode to reveal
+undiscovered content. Spark and Chunky are server-only. FerriteCore and
+ModernFix run on both sides as Ambercraft's small shared memory and startup
+optimization layer. Jade is installed on both sides so its server-backed block
+data remains available. Athena is on both sides because Chipped uses it for
+connected-texture/block behavior.
 
 ## World-generation cautions
 
 The world-generation stack is deliberate: Terralith supplies Overworld biomes,
-Tectonic reshapes terrain, Incendium enriches the Nether, and Nullscape plus
-End's Phantasm make the End a substantial final expedition. Integrated Villages
-replaces villages, while Integrated Stronghold, IDAS, and the YUNG suite add or
-replace other structures. Do not add or remove any of these after
+Tectonic reshapes terrain, Incendium enriches the Nether, and YUNG's Better End
+Island, Nullscape, and End's Phantasm make the End a substantial final
+expedition. Integrated Villages replaces villages, while Integrated Stronghold,
+IDAS, Integrated Cataclysm, and the YUNG suite add or replace other structures.
+Do not add or remove any of these after
 players begin exploring without first testing a world copy.
 
 Quark's climate-control module ignores humidity only. This increases the range
 of Terralith biomes eligible within a temperature region while preserving warm
 versus cold climates and Tectonic's terrain parameters.
 
-Mowzie's Mobs is the pack's focused added-boss layer. Its encounters should be
-used as optional or alternate End Remastered routes through crafted eye
-components, not as a mandatory boss rush. Do not add another broad boss suite
-until these encounters have been tested for tone, difficulty, and reward power.
-LootJS is included as server-side pack infrastructure for narrowly injecting
-clues and progression components without replacing complete mod loot tables.
+Mowzie's Mobs supplies midgame legendary encounters. Cataclysm is the rarer,
+late challenge layer; its structures are spaced much farther apart than its
+defaults, and only the Netherite Monstrosity provides a pre-End campaign route.
+That route duplicates Incendium's Cursed Eye rather than adding a mandatory
+seventeenth discovery. LootJS is included as server-side pack infrastructure
+for narrowly injecting clues and progression components without replacing
+complete mod loot tables.
 
 Before opening the server publicly:
 
@@ -150,8 +154,10 @@ See [`TESTING.md`](TESTING.md) for the current results and unresolved warnings.
 See [`WORKFLOW.md`](WORKFLOW.md) before moving a candidate between machines.
 
 Create 6 is the most compatibility-sensitive content mod in the list. Treat
-Create, Copycats+, Steam 'n' Rails, and Create: Enchantment Industry as one
-version-locked group when updating. Enchantment Industry is configured as a
+Create, Copycats+, Steam 'n' Rails, Create: Enchantment Industry, and
+Create: Oxidized as one version-locked group when updating. Oxidized is a
+recipe-only building utility: it accelerates copper weathering without adding
+items, power tiers, or world generation. Enchantment Industry is configured as a
 communal midgame alternative to librarian halls: normal enchanting, liquid XP,
 repair, and mundane printing remain useful, while hyper-enchanting and practical
 enchanted-book duplication are disabled. KubeJS Create is intentionally absent

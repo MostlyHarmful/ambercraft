@@ -1,0 +1,15 @@
+{
+  "structures": [
+    { "structure": "cataclysm:acropolis", "weight": 1 }
+  ],
+  "placement": {
+    "type": "cataclysm:cataclysm_random_spread",
+    "salt": 913530101,
+    "spacing": 128,
+    "separation": 80,
+    "super_exclusion_zone": {
+      "chunk_count": 12,
+      "other_set": "#cataclysm:acropolis_avoid"
+    }
+  }
+}

@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/DistantHorizons.toml"
+hash = "d2874b5116c0d75c097da093164129004ce251b4e8f3a612c753e850872843de"
+
+[[files]]
 file = "config/alexscaves-client.toml"
 hash = "1863ec486ae7385d92900d078bd00aba3a2a767cde6646b8b8601b5633738cb8"
 
@@ -21,8 +25,20 @@ file = "config/endrem.toml"
 hash = "e096c28508fdada91e664872139d645e1563557e922299cc5f9ba417495296f6"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/expedition_ledger.snbt"
+hash = "2806849ae1ee20818730ee0974bd1e84347dd3e6432e4e02f17961cde9e8f965"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/loose_expedition_files.snbt"
+hash = "68b938eb6842147ed3789f8fb667dcc7a31f092714b9a805928fbe2a198c5cf9"
+
+[[files]]
+file = "config/ftbquests/quests/data.snbt"
+hash = "68996c07f7b9762c2a287ce378fdf8329b9da45f4c4627292a87479aa0039779"
+
+[[files]]
 file = "config/guardvillagers-common.toml"
-hash = "188aed036a66757b91ca6cd1c41ca96bba318fd04acff5f54f9c4ae12af0319e"
+hash = "0594560ca18f99090e9fe37e8027b4ee7688a5a9db81af6279c802189be2416d"
 
 [[files]]
 file = "config/immersive_weathering-common.toml"
@@ -30,7 +46,7 @@ hash = "c760b710e6933dcd0fedfe42344c82960c5db53e1e591efd63b6a0f78ce55932"
 
 [[files]]
 file = "config/mobconversion-common.toml"
-hash = "f6fce32a03aa761b331b528e4c6ed560210bffa97ef370dbe270743dc97b3224"
+hash = "8f3528d3d5c17bb07826082465ec060e9d21380ab3afc77d91c1cb4802e43a7f"
 
 [[files]]
 file = "config/quark-common.toml"
@@ -153,6 +169,30 @@ file = "kubejs/client_scripts/living_world_tooltips.js"
 hash = "33c1e776456a91ce95674bafbdab18449b834dce91ef885ea4a2898929d1d606"
 
 [[files]]
+file = "kubejs/data/alexscaves/shields/resistor_shield.json"
+hash = "266ad355f069cf1d7c03477131598e45dc829eebe29ed554c5f59a35e613774e"
+
+[[files]]
+file = "kubejs/data/alexscaves/weapon_attributes/desolate_dagger.json"
+hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
+
+[[files]]
+file = "kubejs/data/alexscaves/weapon_attributes/extinction_spear.json"
+hash = "9241e582904b7efffed0c4e197b792033447ad015fd6980e91dbf1dbbab9b7d5"
+
+[[files]]
+file = "kubejs/data/alexscaves/weapon_attributes/frostmint_spear.json"
+hash = "9241e582904b7efffed0c4e197b792033447ad015fd6980e91dbf1dbbab9b7d5"
+
+[[files]]
+file = "kubejs/data/alexscaves/weapon_attributes/galena_gauntlet.json"
+hash = "7bf4953412c6a3a6bfa084f04765ed7fcf862719765da04a621df25c1686c9d0"
+
+[[files]]
+file = "kubejs/data/alexscaves/weapon_attributes/limestone_spear.json"
+hash = "9241e582904b7efffed0c4e197b792033447ad015fd6980e91dbf1dbbab9b7d5"
+
+[[files]]
 file = "kubejs/data/alexsdelight/recipes/barbecue_on_a_stick.json"
 hash = "5e41ad5646fb7e2e9112dfbafd6ed32025033c73a06aa66b1b9f4c8ffbd3295c"
 
@@ -161,16 +201,12 @@ file = "kubejs/data/ambercraft/functions/graceful_stop.mcfunction"
 hash = "f4d064cfda000657d859735f0718ffa1c4c7427c5bd2898277129794d35a4c52"
 
 [[files]]
-file = "kubejs/data/ambercraft/functions/xaero_fairplay_join.mcfunction"
-hash = "51746a23021661b4be1765d2f188aaa2ce0cd66cd7f38c0cc28233fb1d26b1d3"
+file = "kubejs/data/ambercraft/loot_tables/entities/guard_weapon.json"
+hash = "8de8c9cb2c803b9dc77a0ce531b7fd7312d48e6501cf8a2e9aa3f415f7f6d92c"
 
 [[files]]
-file = "kubejs/data/ambercraft/functions/xaero_fairplay_load.mcfunction"
-hash = "b2a8719488450407b48f4d90d5639ea326efa4aa75ddac18675416c0ca81ca1c"
-
-[[files]]
-file = "kubejs/data/ambercraft/functions/xaero_fairplay_tick.mcfunction"
-hash = "b15999e70672a0d6a8ced8bc9592abaf426386d93509908cc7961096c60b088b"
+file = "kubejs/data/ambercraft/tags/entity_types/village_threats.json"
+hash = "b24ac0320544f3c77377d93430bb45e702e144c2f2d6f6d1ddd5fff216921a2b"
 
 [[files]]
 file = "kubejs/data/betterdeserttemples/advancements/root.json"
@@ -213,12 +249,68 @@ file = "kubejs/data/betterdungeons/advancements/zombie_dungeon.json"
 hash = "beee6384c0151ffcb52bbd2b65cb2e5e65bd56ae6f476aa260c94db2d7a68f08"
 
 [[files]]
+file = "kubejs/data/cataclysm/recipes/stonecutting/azure_seastone_brick_stair_from_stonecutting.json"
+hash = "4194027d020a6d84844c829fa72a540d1fc0fb4f753e8b7e68a7fe3b9a9745b9"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/abandoned_structures.json"
+hash = "b3f7e3ef324ee62bf0e8825d72b648dcc1a2aa2f84a478f3e0234675d8440055"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/acropolis.json"
+hash = "7cedbf0a543878d6d162774eb22ac468fd6d7af1b5b8cbeee850477d4df881cf"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/amethyst_nest.json"
+hash = "d51ae7f3a4f534e1f6c481b778989490d78de32692dfa7e27bae407e5e489d54"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/ancient_factory.json"
+hash = "62a5ba13a23f8df90265bc743f272621110980b3f5608380060f9cd341457c99"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/burning_arena.json"
+hash = "f2aa5982bc351ec9a6bef126e6171b269537873dadcde96a910914778157b7d4"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/cursed_pyramid.json"
+hash = "dc1460a6d987372b17531dba42bb76a575ae5a47c17ffc0ab4299de5d0747c93"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/desert_structures.json"
+hash = "98863c876e93ef487ed1f1a3ffec745a718a06e614d897d36b980e6ee56ea2f2"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/frosted_prison.json"
+hash = "435d6940b4dc4252feee03eb22a79bb92a4709c97bb421150d08b371d557dae1"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/ruined_citadel.json"
+hash = "a7926daa3efff322f665983ebdb3e975283e4247f2505c459b84bc5f7a00a710"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/small_integrated_cataclysm.json"
+hash = "973acec83428b240ebd8be5ce17748600f000187ab27b4faa4d77453d54f54bc"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/soul_black_smith.json"
+hash = "1483af30369b9634f5dad1f070aa05d679f8d7709e1d8117fb05bcc53819a1a6"
+
+[[files]]
+file = "kubejs/data/cataclysm/worldgen/structure_set/sunken_city.json"
+hash = "b283234002339ee0216e9f2ee1b3a5b8e9db90f964f03f50c3eb88dee8f8b539"
+
+[[files]]
 file = "kubejs/data/cavedelight/recipes/cutting/tectonic_pie.json"
 hash = "fdbe87c5d9714df8b48f9d551fb5c41b22568ac86d2011d21b22dd5db082a8fa"
 
 [[files]]
 file = "kubejs/data/cavedelight/recipes/dino_nugget_platter.json"
 hash = "fdbe87c5d9714df8b48f9d551fb5c41b22568ac86d2011d21b22dd5db082a8fa"
+
+[[files]]
+file = "kubejs/data/create/tags/entity_types/ignore_seat.json"
+hash = "d50b8353dbe91680b47a4cb5afcfd4e4a6fbed6d5d1bc3aadea1c9666e400694"
 
 [[files]]
 file = "kubejs/data/endrem/advancements/main/black_eye.json"
@@ -371,6 +463,30 @@ hash = "7f787cb1428155fc04494f933ce690f21b9759d98ed70e6850c3efa60046a9d7"
 [[files]]
 file = "kubejs/data/farmersdelight/tags/blocks/heat_sources.json"
 hash = "97d85c14e100b372e826a16207da29f2400908a50ffdf8ea4566c4be2f02fc71"
+
+[[files]]
+file = "kubejs/data/farmersdelight/weapon_attributes/diamond_knife.json"
+hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
+
+[[files]]
+file = "kubejs/data/farmersdelight/weapon_attributes/flint_knife.json"
+hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
+
+[[files]]
+file = "kubejs/data/farmersdelight/weapon_attributes/golden_knife.json"
+hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
+
+[[files]]
+file = "kubejs/data/farmersdelight/weapon_attributes/iron_knife.json"
+hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
+
+[[files]]
+file = "kubejs/data/farmersdelight/weapon_attributes/netherite_knife.json"
+hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
+
+[[files]]
+file = "kubejs/data/forge/tags/items/shields.json"
+hash = "5dddb40f94ba43b7bb495527b88403668fcc41053030703391f344729e846c7b"
 
 [[files]]
 file = "kubejs/data/idas/advancements/ancient_mines.json"
@@ -649,16 +765,20 @@ file = "kubejs/data/integrated_villages/worldgen/template_pool/cabin_village/hou
 hash = "b4c0b59a425ab7791d7def14614760264dd16e427d3d71670edc3d6da30f3305"
 
 [[files]]
-file = "kubejs/data/minecraft/tags/functions/load.json"
-hash = "6fc6a25d76aa4ab55f8ba7597c73942bc868fa796787b5b6a6ce6330734a385b"
-
-[[files]]
-file = "kubejs/data/minecraft/tags/functions/tick.json"
-hash = "e1f7792ba6e0329cdbe226035066a205d5b6b255d316428f252e2b62f47e29d8"
-
-[[files]]
 file = "kubejs/data/minecraft/tags/worldgen/structure/village.json"
 hash = "3587c2fd8b14be26c250a4cb236e796fadda86e020e10629f87632b27343b0c9"
+
+[[files]]
+file = "kubejs/data/mowziesmobs/weapon_attributes/earthrend_gauntlet.json"
+hash = "7bf4953412c6a3a6bfa084f04765ed7fcf862719765da04a621df25c1686c9d0"
+
+[[files]]
+file = "kubejs/data/mowziesmobs/weapon_attributes/spear.json"
+hash = "9241e582904b7efffed0c4e197b792033447ad015fd6980e91dbf1dbbab9b7d5"
+
+[[files]]
+file = "kubejs/data/mowziesmobs/weapon_attributes/wrought_axe.json"
+hash = "21da7f10e30e20de0b9a727cad10b43e5be55c0aeb39c06573a382e65dc2d7f5"
 
 [[files]]
 file = "kubejs/data/phantasm/loot_tables/blocks/acidic_nihilium.json"
@@ -677,12 +797,24 @@ file = "kubejs/data/phantasm/loot_tables/blocks/vivid_nihilium.json"
 hash = "2efa1dcf0c1491201c8f99b55f6b9104a7a38d83bcde30778cf4dc499de635ef"
 
 [[files]]
+file = "kubejs/data/phantasm/weapon_attributes/crystalline_knife.json"
+hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
+
+[[files]]
 file = "kubejs/data/supplementaries/advancements/recipes/planter_rich.json"
 hash = "3040901c6c74b67c2182bfc63ef29609ba4200890b9ff23892f27294d048cd5e"
 
 [[files]]
+file = "kubejs/server_scripts/guard_recruitment.js"
+hash = "50f01e326096ba6ea345daad576a4b970f84801f5efca5f4ec99cb091d3573db"
+
+[[files]]
+file = "kubejs/server_scripts/legacy_guard_migration.js"
+hash = "4fb4297ac61e77128d948dfd179cd039762cca5897c009d89e3808ef510392f2"
+
+[[files]]
 file = "kubejs/server_scripts/living_world_progression.js"
-hash = "d5f70ca10c44eae9a90e6ed4be78b734ae876ad7dba0e4bedf198c076c10bb86"
+hash = "d26fbd1eea910aac6e89d25cde73931c8b9a945a2ec2569eaa0aa081c4c3a53e"
 
 [[files]]
 file = "kubejs/startup_scripts/living_world_items.js"
@@ -720,7 +852,7 @@ metafile = true
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
-hash = "4e81241ba2da06f425efc5e09fb6b38470125c1581c39e1310c5843a0b96ec76"
+hash = "5e9edd1fd2395f14a0c8a4acbdbdd61e1047be1f0033deb3140d2ce0d093e9d8"
 metafile = true
 
 [[files]]
@@ -736,6 +868,11 @@ metafile = true
 [[files]]
 file = "mods/baguettelib.pw.toml"
 hash = "724fe40135f0ed7f2614cd14116706686df7b092052af048dfbd109dad0c6863"
+metafile = true
+
+[[files]]
+file = "mods/better-combat.pw.toml"
+hash = "52b4f29eb4a4392ef085617292842dc9fc84d86c318da5ce470b24eab77f6bdc"
 metafile = true
 
 [[files]]
@@ -814,13 +951,18 @@ hash = "9d5fe87411e96d180a82f8da60ca8d2020e7bba269b5a5ea084345e211da2bd6"
 metafile = true
 
 [[files]]
+file = "mods/create-oxidized.pw.toml"
+hash = "701f13fb117a318e80885994e81503f2d52a4492f4ef95143c8e0d246e4996b8"
+metafile = true
+
+[[files]]
 file = "mods/create-steam-n-rails.pw.toml"
 hash = "4c091982c192238cc7b2cefbb3a6e634edc6d7a780e547d693df7f4e3e1b04be"
 metafile = true
 
 [[files]]
 file = "mods/create.pw.toml"
-hash = "fb5c251cf4997fa65ca043bab7c9ecbd02e108031584a3e26276b77d212de23c"
+hash = "9d7971a7af2ff4a96a0e5aede76f9cf8dc978da601e2754f79d6ec8631125bb9"
 metafile = true
 
 [[files]]
@@ -830,7 +972,7 @@ metafile = true
 
 [[files]]
 file = "mods/curios.pw.toml"
-hash = "9eefd607e0d54ec444e798ccdeede1a09a3939440bd1e11c11b84c07a5134be2"
+hash = "55d77d596c2d805f28b47ea53725ccaa220d2857177cad3909e48d8c12b2a2cb"
 metafile = true
 
 [[files]]
@@ -889,6 +1031,21 @@ hash = "2a2f2168bf03bfa3034ad9583588676c5d66b6f7c767df9fe259ab55350792d2"
 metafile = true
 
 [[files]]
+file = "mods/ftb-library-forge.pw.toml"
+hash = "efa75ee4aae90dea11316b6e61aecaf9433eeb3d0821f78b4eca41acbbd73e8f"
+metafile = true
+
+[[files]]
+file = "mods/ftb-quests-forge.pw.toml"
+hash = "7b2cc450f553b82439ae9422b8c2b4406dae1af3c48f7ce791a3576acff1d122"
+metafile = true
+
+[[files]]
+file = "mods/ftb-teams-forge.pw.toml"
+hash = "efda76423b21f9bfab4ad8d0411f0b06a199ab7e3e12ca16dc0586c1828b8f07"
+metafile = true
+
+[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "898fd2704dd260ae8f3dc20b4416439751f0a9e76367c4f0bbdac886b6987802"
 metafile = true
@@ -939,6 +1096,11 @@ hash = "d6fc65cc3bdf40030945cb3a42d96382906dd2453a4f32ec121e21ccb1119389"
 metafile = true
 
 [[files]]
+file = "mods/integrated-cataclysm.pw.toml"
+hash = "f27119e6d95e46b4943ec7af13ff5a68f8344c6f0344e86a22fe686512c754f7"
+metafile = true
+
+[[files]]
 file = "mods/integrated-stronghold.pw.toml"
 hash = "1755530acc84b0e9152cbf68da07fc239b78ac5357e552d1fbb99483bcb6c24e"
 metafile = true
@@ -966,6 +1128,16 @@ metafile = true
 [[files]]
 file = "mods/kubejs.pw.toml"
 hash = "ed086cdfde6ba4bb175468a76f3df3b9517aea3fe95b09bed0f1fa70f7caeb6a"
+metafile = true
+
+[[files]]
+file = "mods/lendercataclysm.pw.toml"
+hash = "fbf967b492d575d65f066941652400dc32b998a16ac477a4b8f0efc2f681296a"
+metafile = true
+
+[[files]]
+file = "mods/lionfish-api.pw.toml"
+hash = "300eb043e53e956e58c9ff56d261d2473b473a387eef3dcfec44324c8d330a39"
 metafile = true
 
 [[files]]
@@ -1024,6 +1196,11 @@ hash = "438b714a5d32476fe4958d18067999affa297aefd460646dbd81ad968b90a4f4"
 metafile = true
 
 [[files]]
+file = "mods/playeranimator.pw.toml"
+hash = "765987a78e5d8c782d0da2de99998b43b5907d6c41347d3804045ad109e4a586"
+metafile = true
+
+[[files]]
 file = "mods/quark.pw.toml"
 hash = "4eb683644ee4e38e00b06df946b71ad8fedaa860fcabbd91ec6ceb71c65b8d81"
 metafile = true
@@ -1051,6 +1228,11 @@ metafile = true
 [[files]]
 file = "mods/serene-seasons.pw.toml"
 hash = "23ef0c67ed600fb75d47161cdbe43b860837afe9d1f3012c44f3e7eb13bdd1e5"
+metafile = true
+
+[[files]]
+file = "mods/shield-expansion.pw.toml"
+hash = "6e5b575ffd8552257fd4d5ce5ba14d58a5ad9a237892746892a839f57b36194a"
 metafile = true
 
 [[files]]
@@ -1131,6 +1313,11 @@ metafile = true
 [[files]]
 file = "mods/yungs-better-dungeons.pw.toml"
 hash = "3b896ddf7389ad7d403b354cd94966c65f4989c9675ec245681b5c78d5208317"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-end-island.pw.toml"
+hash = "d9e05e164bb61c2bcecc58702c46e59c2721928a3b355050d1e84736d74fe6fc"
 metafile = true
 
 [[files]]
