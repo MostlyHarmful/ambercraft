@@ -3,7 +3,7 @@ _version = 4
 [server]
 	#
 	# Defines the distance the player will receive updates around.
-	realTimeUpdateDistanceRadiusInChunks = 128
+	realTimeUpdateDistanceRadiusInChunks = 64
 	#
 	# Prefix of the level keys sent to the clients.
 	# If the mod is running behind a proxy, each backend should use a unique value.
@@ -12,7 +12,7 @@ _version = 4
 	#
 	# Defines the distance allowed to be synchronized around the player. 
 	# Should be the same or larger than maxGenerationRequestDistance in most cases.
-	maxSyncOnLoadRequestDistance = 4096
+	maxSyncOnLoadRequestDistance = 512
 	#
 	# If true, clients will receive updated LODs when joining or loading new LODs.
 	synchronizeOnLoad = true
@@ -24,7 +24,7 @@ _version = 4
 	serverKey = ""
 	#
 	# Defines the distance allowed to generate around the player.
-	maxGenerationRequestDistance = 4096
+	maxGenerationRequestDistance = 512
 	#
 	# When enabled, Distant Horizons will attempt to download missing LODs from the server.
 	# 
@@ -53,11 +53,11 @@ _version = 4
 	#
 	# Maximum global speed for uploading LODs to the clients, in KB/s.
 	# Value of 0 disables the limit.
-	globalBandwidthLimit = 0
+	globalBandwidthLimit = 1500
 	#
 	# Maximum per-player speed for uploading LODs to the clients, in KB/s.
 	# Value of 0 disables the limit.
-	playerBandwidthLimit = 500
+	playerBandwidthLimit = 400
 	#
 	# Enables adaptive transfer speed based on client performance.
 	# If true, DH will automatically adjust transfer rate to minimize connection lag.
@@ -126,7 +126,7 @@ _version = 4
 		# This can be used to reduce CPU usage if the thread count 
 		# is already set to 1 for the given option, or more finely 
 		# tune CPU performance.
-		threadRunTimeRatio = "0.10"
+		threadRunTimeRatio = "0.25"
 		#
 		# What Java thread priority should DH's primary thread pools run with? 
 		# 
@@ -138,11 +138,11 @@ _version = 4
 		#
 		# If enabled, the mod will log information about the renderer setup, cleanup, and any issues it may encounter. 
 		# This can be useful for debugging.
-		logRendererEventToFile = "INFO"
+		logRendererEventToFile = "WARN"
 		#
 		# If enabled, the mod will log information about the world generation process. 
 		# This can be useful for debugging.
-		logWorldGenEventToFile = "INFO"
+		logWorldGenEventToFile = "WARN"
 		#
 		# If enabled, the mod will log information about the renderer OpenGL process. 
 		# This can be useful for debugging.
@@ -153,15 +153,15 @@ _version = 4
 		#
 		# If enabled, the mod will log information about the world generation process. 
 		# This can be useful for debugging.
-		logWorldGenChunkLoadEventToFile = "INFO"
+		logWorldGenChunkLoadEventToFile = "WARN"
 		#
 		# If enabled, the mod will log information about the renderer OpenGL process. 
 		# This can be useful for debugging.
-		logRendererGLEventToFile = "INFO"
+		logRendererGLEventToFile = "WARN"
 		#
 		# If enabled, the mod will log information about network operations. 
 		# This can be useful for debugging.
-		logNetworkEventToFile = "INFO"
+		logNetworkEventToFile = "WARN"
 		#
 		# If enabled, config changes sent by the server will be logged.
 		logConnectionConfigChangesToFile = "WARN"
@@ -303,7 +303,7 @@ _version = 4
 			updateBranch = "AUTO"
 			#
 			# Automatically check for updates on game launch?
-			enableAutoUpdater = true
+			enableAutoUpdater = false
 			#
 			# Should Distant Horizons silently, automatically download and install new versions? 
 			# This setting is force disabled on dedicated servers for stability reasons.
@@ -741,7 +741,7 @@ _version = 4
 				# but will increase memory and GPU usage while zoomed in. 
 				#  
 				# A vanilla spyglass needs 4 detail levels to reach its full quality.
-				maxZoomQualityIncrease = 4
+				maxZoomQualityIncrease = 2
 				#
 				# How should LODs be shaded? 
 				# 
@@ -771,7 +771,7 @@ _version = 4
 				# Note: this is a best effort number. 
 				# The actual render distance may be above or below this number 
 				# depending on your other graphic settings.
-				lodChunkRenderDistanceRadius = 256
+				lodChunkRenderDistanceRadius = 128
 				#
 				# How should the sides and bottom of grass block LODs render? 
 				# 
@@ -798,14 +798,14 @@ _version = 4
 				#     '0' equals to Vanilla Biome Blending of '1x1' or 'OFF', 
 				#     '1' equals to Vanilla Biome Blending of '3x3', 
 				#     '2' equals to Vanilla Biome Blending of '5x5'...
-				lodBiomeBlending = 3
+				lodBiomeBlending = 1
 				#
 				# How should vanilla Minecraft fade into Distant Horizons LODs? 
 				# 
 				# NONE: Fastest, there will be a pronounced border between DH and MC rendering. 
 				# SINGLE_PASS: Fades after MC's transparent pass, opaque blocks underwater won't be faded. 
 				# DOUBLE_PASS: Slowest, fades after both MC's opaque and transparent passes, provides the smoothest transition.
-				vanillaFadeMode = "DOUBLE_PASS"
+				vanillaFadeMode = "SINGLE_PASS"
 				#
 				# If true LOD quality will increase when the camera is zoomed in, 
 				# IE when using a spyglass or zoom mod. 
