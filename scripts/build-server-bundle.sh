@@ -49,6 +49,10 @@ fi
   java -jar "$BOOTSTRAP" -g -s server "http://127.0.0.1:$PORT/pack.toml"
 )
 
+# The shared DH config is preserved on clients so Packwiz never replaces their
+# personal rendering settings. Apply only the dedicated-server tuning here.
+patch -d "$STAGE_DIR" -p0 <"$ROOT/server-overrides/DistantHorizons-server.patch"
+
 VERSION=$(sed -n 's/^version = "\([^"]*\)"/\1/p' pack.toml)
 BUNDLE="$BUILD_DIR/ambercraft-server-$VERSION.tar.gz"
 CONTENTS="mods packwiz.json"
