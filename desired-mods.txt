@@ -77,7 +77,6 @@ playerAnimator
 Quark
 Resourceful Lib
 Serene Seasons
-Shield Expansion
 Sinytra Connector
 Sodium/Embeddium Options API
 Sound Physics Remastered

@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "d2874b5116c0d75c097da093164129004ce251b4e8f3a612c753e850872843de"
+hash = "8c3e7be657b75e256524f90306b86a6da6d4e9d277ff2c96f14201285f8ffb85"
 
 [[files]]
 file = "config/alexscaves-client.toml"
@@ -167,10 +167,6 @@ hash = "98fba5c29f1c6daa63996b30fd2e84c74f504e3d057cef064d1bda032302e1ae"
 [[files]]
 file = "kubejs/client_scripts/living_world_tooltips.js"
 hash = "33c1e776456a91ce95674bafbdab18449b834dce91ef885ea4a2898929d1d606"
-
-[[files]]
-file = "kubejs/data/alexscaves/shields/resistor_shield.json"
-hash = "266ad355f069cf1d7c03477131598e45dc829eebe29ed554c5f59a35e613774e"
 
 [[files]]
 file = "kubejs/data/alexscaves/weapon_attributes/desolate_dagger.json"
@@ -483,10 +479,6 @@ hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
 [[files]]
 file = "kubejs/data/farmersdelight/weapon_attributes/netherite_knife.json"
 hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
-
-[[files]]
-file = "kubejs/data/forge/tags/items/shields.json"
-hash = "5dddb40f94ba43b7bb495527b88403668fcc41053030703391f344729e846c7b"
 
 [[files]]
 file = "kubejs/data/idas/advancements/ancient_mines.json"
@@ -807,10 +799,6 @@ hash = "3040901c6c74b67c2182bfc63ef29609ba4200890b9ff23892f27294d048cd5e"
 [[files]]
 file = "kubejs/server_scripts/guard_recruitment.js"
 hash = "50f01e326096ba6ea345daad576a4b970f84801f5efca5f4ec99cb091d3573db"
-
-[[files]]
-file = "kubejs/server_scripts/legacy_guard_migration.js.disabled.js"
-hash = "4fb4297ac61e77128d948dfd179cd039762cca5897c009d89e3808ef510392f2"
 
 [[files]]
 file = "kubejs/server_scripts/living_world_progression.js"
@@ -1213,11 +1201,6 @@ metafile = true
 [[files]]
 file = "mods/selene.pw.toml"
 hash = "2720aee58db6299559f89ea9dc8b1d573b8324f2b4af1e594c5239607585487b"
-metafile = true
-
-[[files]]
-file = "mods/shield-expansion.pw.toml"
-hash = "6e5b575ffd8552257fd4d5ce5ba14d58a5ad9a237892746892a839f57b36194a"
 metafile = true
 
 [[files]]
