@@ -809,7 +809,7 @@ file = "kubejs/server_scripts/guard_recruitment.js"
 hash = "50f01e326096ba6ea345daad576a4b970f84801f5efca5f4ec99cb091d3573db"
 
 [[files]]
-file = "kubejs/server_scripts/legacy_guard_migration.js"
+file = "kubejs/server_scripts/legacy_guard_migration.js.disabled.js"
 hash = "4fb4297ac61e77128d948dfd179cd039762cca5897c009d89e3808ef510392f2"
 
 [[files]]
@@ -873,11 +873,6 @@ metafile = true
 [[files]]
 file = "mods/better-combat.pw.toml"
 hash = "52b4f29eb4a4392ef085617292842dc9fc84d86c318da5ce470b24eab77f6bdc"
-metafile = true
-
-[[files]]
-file = "mods/betterdays.pw.toml"
-hash = "7f1f331dfd9739c82ffcc4a40675370a3eaa623cc91c12d0d1de944afca1cd15"
 metafile = true
 
 [[files]]
@@ -1051,11 +1046,6 @@ hash = "898fd2704dd260ae8f3dc20b4416439751f0a9e76367c4f0bbdac886b6987802"
 metafile = true
 
 [[files]]
-file = "mods/glitchcore.pw.toml"
-hash = "71f185e62d546881244d4b5a213ebc3d2d6df14b0218c0e5dd6426fcb22cb55f"
-metafile = true
-
-[[files]]
 file = "mods/guard-villagers.pw.toml"
 hash = "c9e3e454a15112ffdac796ade3bd347c31cad6b86f2de4e355f39489f0d2d6c1"
 metafile = true
@@ -1223,11 +1213,6 @@ metafile = true
 [[files]]
 file = "mods/selene.pw.toml"
 hash = "2720aee58db6299559f89ea9dc8b1d573b8324f2b4af1e594c5239607585487b"
-metafile = true
-
-[[files]]
-file = "mods/serene-seasons.pw.toml"
-hash = "23ef0c67ed600fb75d47161cdbe43b860837afe9d1f3012c44f3e7eb13bdd1e5"
 metafile = true
 
 [[files]]
