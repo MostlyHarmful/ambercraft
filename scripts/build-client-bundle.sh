@@ -44,41 +44,6 @@ sed -i.bak \
   "$STAGE_DIR/instance.cfg"
 rm "$STAGE_DIR/instance.cfg.bak"
 
-PORT=$(python3 -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1", 0)); print(s.getsockname()[1]); s.close()')
-./tools/packwiz serve --port "$PORT" >"$BUILD_DIR/packwiz-serve.log" 2>&1 &
-SERVE_PID=$!
-trap 'kill "$SERVE_PID" 2>/dev/null || true' EXIT INT TERM
-
-READY=0
-for _attempt in 1 2 3 4 5 6 7 8 9 10; do
-  if curl -fsS "http://127.0.0.1:$PORT/pack.toml" >/dev/null; then
-    READY=1
-    break
-  fi
-  sleep 1
-done
-if [ "$READY" -ne 1 ]; then
-  echo "Local Packwiz server did not become ready" >&2
-  exit 1
-fi
-
-INSTALL_OK=0
-for _attempt in 1 2 3; do
-  if (
-    cd "$STAGE_DIR/.minecraft"
-    java -jar packwiz-installer-bootstrap.jar \
-      -g -s client "http://127.0.0.1:$PORT/pack.toml"
-  ); then
-    INSTALL_OK=1
-    break
-  fi
-  echo "Client download attempt $_attempt failed; retrying..." >&2
-done
-if [ "$INSTALL_OK" -ne 1 ]; then
-  echo "Packwiz Installer failed after three attempts" >&2
-  exit 1
-fi
-
 rm -f "$ARCHIVE"
 (
   cd "$STAGE_DIR"
@@ -88,6 +53,11 @@ rm -f "$ARCHIVE"
 )
 
 unzip -t "$ARCHIVE" >/dev/null
+unzip -p "$ARCHIVE" instance.cfg | grep -F \
+  'https://raw.githubusercontent.com/amberuhls/ambercraft/main/pack.toml' \
+  >/dev/null
+unzip -l "$ARCHIVE" | grep -F \
+  '.minecraft/packwiz-installer-bootstrap.jar' >/dev/null
 CHECKSUM=$(shasum -a 256 "$ARCHIVE" | awk '{print $1}')
 
 echo "$ARCHIVE"

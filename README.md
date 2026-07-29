@@ -55,7 +55,7 @@ packwiz-compatible launcher can install the client directly from a hosted
 Prism archive:
 
 ```sh
-unzip -t exports/Ambercraft-0.3.0-Prism.zip
+unzip -t exports/Ambercraft-0.4.0-Prism.zip
 ```
 
 Import that ZIP in Prism Launcher. It contains the exact side-filtered client,

@@ -22,6 +22,10 @@ file = "config/carryon-common.toml"
 hash = "c4922f22a3780fa47888d9702c83d7a2a78c0b2b8c3469e1814875c33373dc89"
 
 [[files]]
+file = "config/craftingtweaks-common.toml"
+hash = "70656e1e46b80b173e8d5898d4e7f068aaa69e8ff2bb49e824bf5e201bb1ad8c"
+
+[[files]]
 file = "config/endrem.toml"
 hash = "e096c28508fdada91e664872139d645e1563557e922299cc5f9ba417495296f6"
 
@@ -51,7 +55,7 @@ hash = "8f3528d3d5c17bb07826082465ec060e9d21380ab3afc77d91c1cb4802e43a7f"
 
 [[files]]
 file = "config/quark-common.toml"
-hash = "478b1fe108a1ea875f6c1f438c745b9645604477b2841a1d883652b24e37df63"
+hash = "2e5495ab4dd57f471e02ee682b30c80be5dd3f850b66c24eff0fe7cd30e05bd7"
 
 [[files]]
 file = "config/sereneseasons/fertility.toml"
@@ -83,7 +87,7 @@ hash = "ca43a5a5a6ab75a98219a106fbfff858954ffaf112f42d6215742ff97749f7dd"
 
 [[files]]
 file = "defaultconfigs/sophisticatedstorage-server.toml"
-hash = "fa59b321e1a43228c5565651883b81b2436361006801033b203b1ac1a95d8808"
+hash = "da3659971a1c22e846d941b7fc8df39e0a63bff6c3189e7fa8fde3b5cfacf640"
 
 [[files]]
 file = "kubejs/assets/cavedelight/models/block/boiled_trilocaris.json"
@@ -851,7 +855,7 @@ hash = "50f01e326096ba6ea345daad576a4b970f84801f5efca5f4ec99cb091d3573db"
 
 [[files]]
 file = "kubejs/server_scripts/living_world_progression.js"
-hash = "2c73e6e163f47c521a2ca38dbe64c2fecab5ed399c5139996b2dd1b81b2bf12a"
+hash = "efc70d0fe7195e6701b6bca996233996f8bbe95bf18b5c7ef5928684292054de"
 
 [[files]]
 file = "kubejs/startup_scripts/living_world_items.js"
@@ -905,6 +909,11 @@ metafile = true
 [[files]]
 file = "mods/baguettelib.pw.toml"
 hash = "724fe40135f0ed7f2614cd14116706686df7b092052af048dfbd109dad0c6863"
+metafile = true
+
+[[files]]
+file = "mods/balm.pw.toml"
+hash = "ed4ccdb13c738b7f70df056df84a1b977fb256a53c2921610c565069c15912c7"
 metafile = true
 
 [[files]]
@@ -975,6 +984,11 @@ metafile = true
 [[files]]
 file = "mods/countereds-floating-tree-decay.pw.toml"
 hash = "cb4590459d2343a13e8b79441e517081f8baeeb5da411112ce0e42993449471b"
+metafile = true
+
+[[files]]
+file = "mods/crafting-tweaks.pw.toml"
+hash = "71b6267e2c7f91e6dae89aaea6fefdb36e8fcc15db9ee180d10b5d706d4a657b"
 metafile = true
 
 [[files]]
@@ -1225,6 +1239,11 @@ metafile = true
 [[files]]
 file = "mods/playeranimator.pw.toml"
 hash = "765987a78e5d8c782d0da2de99998b43b5907d6c41347d3804045ad109e4a586"
+metafile = true
+
+[[files]]
+file = "mods/polymorph.pw.toml"
+hash = "4ab869d8784f4ac318b5c92fa3d9e65f997352b8b57f34b409ca6f171637f0fe"
 metafile = true
 
 [[files]]

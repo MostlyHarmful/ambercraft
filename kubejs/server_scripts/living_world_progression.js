@@ -266,9 +266,10 @@ ServerEvents.recipes(event => {
     'farmersdelight:safety_net'
   ].forEach(id => event.remove({ id: id }))
 
-  event.shaped('4x supplementaries:rope', [
-    'SS',
-    'SS'
+  event.shaped('3x supplementaries:rope', [
+    'S',
+    'S',
+    'S'
   ], {
     S: 'farmersdelight:straw'
   }).id('kubejs:living_world/supplementaries_rope_from_straw')
@@ -276,6 +277,36 @@ ServerEvents.recipes(event => {
   event.shapeless('4x supplementaries:rope', [
     'farmersdelight:safety_net'
   ]).id('kubejs:living_world/rope_from_safety_net')
+
+  // Resolve content collisions that represent the same role rather than a
+  // meaningful player choice. Farmer's Delight owns crop storage; Cataclysm's
+  // structure blocks remain obtainable through its stonecutter recipes; and
+  // the Alex's Caves barrel now uses material recovered from its own biome.
+  ;[
+    'quark:building/crafting/compressed/potato_crate',
+    'quark:building/crafting/compressed/carrot_crate',
+    'quark:building/crafting/compressed/beetroot_crate',
+    'cataclysm:new/blackstone_pillar',
+    'cataclysm:purpur_wall',
+    'cataclysm:chiseled_purpur_block',
+    'cataclysm:prismarine_brick_wall',
+    'cataclysm:stone_tiles',
+    'alexscaves:metal_barrel_from_iron'
+  ].forEach(id => event.remove({ id: id }))
+
+  event.shaped('alexscaves:metal_barrel', [
+    'SSS',
+    'SBS',
+    'SSS'
+  ], {
+    S: 'alexscaves:scrap_metal_plate',
+    B: '#forge:barrels/wooden'
+  }).id('kubejs:living_world/alexs_caves_metal_barrel')
+
+  event.stonecutting(
+    'cataclysm:prismarine_brick_wall',
+    'minecraft:prismarine_bricks'
+  ).id('kubejs:living_world/cataclysm_prismarine_wall_stonecutting')
 
   event.shaped('3x farmersdelight:rope_fence', [
     'RSR',

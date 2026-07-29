@@ -1,0 +1,14 @@
+[common]
+	# Keep compression inside an actual crafting interface so this convenience
+	# cannot silently convert materials while players manage inventories.
+	compressRequiresCraftingGrid = true
+	compressDenylist = ["minecraft:sandstone", "minecraft:iron_trapdoor"]
+
+[client]
+	# JEI is Ambercraft's recipe browser. Hiding the vanilla guide leaves room
+	# for Crafting Tweaks and Polymorph without covering the crafting screen.
+	rightClickCraftsStack = true
+	hideVanillaCraftingGuide = true
+	hyperOptimizedClientsideBalancing = false
+	mode = "DEFAULT"
+	disabledAddons = []

@@ -76,9 +76,6 @@ narrow KubeJS data overrides. Those large content mods are not required.
 
 ### Dynamic world systems
 
-- **Serene Seasons** changes Overworld color, weather, snow, and crop speed.
-  Seasons no longer advance while the server is empty; out-of-season crops
-  grow slowly instead of becoming impossible.
 - **Enhanced Celestials** supplies rare global lunar conditions.
 - **Immersive Weathering** supplies rust, moss, cracking, soot, leaf piles,
   icicles, and environmental aging. Rust and leaf-pile intensity are reduced.
@@ -87,9 +84,11 @@ narrow KubeJS data overrides. Those large content mods are not required.
 - **Better Caravans was removed** after its caravan manager crashed the
   dedicated server while unloading caravans. Vanilla wandering traders remain.
 
-These systems remain intentionally independent: calendar, sky event, physical
-aging, player trace, traveling NPC activity, and hostile reaction. Their rates
-are conservative so several systems can overlap without constant interruption.
+These systems remain intentionally independent: sky events, physical aging,
+player trace, and village activity. Serene Seasons was removed because its
+delayed surface updates disagreed visibly with distant terrain and made
+returning players inherit a calendar they had not experienced. Their rates are
+conservative so several systems can overlap without constant interruption.
 Ordinary blood moons now have a 10% eligible-night chance after a seven-night
 minimum gap and raise hostile spawning to 1.75x. Super blood moons are
 deliberately exceptional: 2% on a valid full moon
@@ -129,7 +128,7 @@ justify the catalogue and loading cost.
   upgrades are removed so expeditions still consume prepared food.
 - **Sophisticated Storage** supplies compact stationary warehouses, with its
   Create integration allowing those inventories to remain part of contraptions
-  and factory logistics. Each block accepts at most one stack upgrade. The 4x,
+  and factory logistics. Each block accepts at most three stack upgrades. The 4x,
   8x, and 16x tiers require the same Nether, Alex's Caves, and post-dragon
   milestones as backpack upgrades; 32x and infinite tiers are unavailable.
   Upgraded shulker boxes are removed so backpacks retain the portable-storage
@@ -169,6 +168,45 @@ justify the catalogue and loading cost.
   Oculus, AmbientSounds, Sound Physics, AppleSkin, Mouse Tweaks,
   and JEI are client experience or performance tools. Expensive visual features
   remain individually disableable.
+- **Crafting Tweaks** owns rotate, balance, and clear actions in supported
+  crafting grids. **Mouse Tweaks** owns drag and scroll gestures. **Quark**
+  retains general inventory sorting and transfer controls, but its injected
+  buttons are blacklisted from Sophisticated Backpacks and Storage screens,
+  where the native search, sorting, transfer, memory, and no-sort controls are
+  more capable.
+- **Polymorph** is retained as a recipe-conflict diagnostic and safety valve.
+  Ambercraft still resolves known semantic conflicts through KubeJS so recipes
+  used by automation have one intentional result; Polymorph's selector is for
+  unforeseen or player-chosen collisions rather than pack progression.
+
+## Recipe-conflict audit
+
+Polymorph's runtime scanner inspected 9,645 loaded recipes across crafting,
+smelting, blasting, smoking, and smithing. It initially reported 59 crafting
+signatures and no furnace or smithing conflicts. Most were benign: alternate
+recipes for the same vanilla output, Sophisticated Storage's generic versus
+wood-specific containers, or deliberate decorative choices such as Quark
+vertical planks versus Handcrafted trim.
+
+Ambercraft centrally resolves the collisions that otherwise give two systems
+the same gameplay role:
+
+- Farmer's Delight owns potato, carrot, and beetroot crates; Quark's matching
+  recipes are removed while its blocks remain registered for existing
+  structures.
+- Supplementaries rope made from Farmer's Delight straw uses a vertical
+  recipe, leaving Farmer's Delight's 2x2 canvas recipe unambiguous.
+- The Alex's Caves metal barrel uses its own scrap-metal plates instead of the
+  same eight-ingot recipe as Sophisticated Storage's iron barrel.
+- Cataclysm's duplicate wall, tile, and pillar shaped recipes are removed where
+  equivalent Minecraft, Phantasm, Immersive Weathering, or Supplementaries
+  blocks already own that pattern. Cataclysm's structure palette remains
+  registered and its distinctive variants remain available through the
+  stonecutter.
+
+The remaining selector cases are genuine aesthetic choices or harmless
+same-output alternatives. They should not be arbitrarily deleted, and
+Polymorph makes them explicit to players without changing automated recipes.
 - Distant Horizons runs on both sides and can stream server-owned LOD data.
   Hoofprint is the client map, backed by Surveyor on both sides. It records the
   explored surface without supplying entity radar or a cave-map mode, so the
@@ -190,14 +228,13 @@ sandstone bricks, spruce chests, thatch, and vertical oak planks.
 Consequently, broad Quark categories cannot be disabled without hollowing out
 generated structures. The safe release-one overrides are:
 
-- disabled: crab, Hollow Logs, Totem of Holding, pipes;
+- disabled: crab, Hollow Logs, Totem of Holding, pipes, Backpack, and Matrix
+  Enchanting;
 - disabled world placement: Big Stone Clusters, Fallen Logs, Nether Obsidian
   Spikes, New Stone Types, Spiral Spires, Chorus Vegetation;
-- enabled: Backpack as the pack's deliberately limited expedition-storage
-  system;
 - retained: required blocks, tools, mobs, and biome resources;
-- retained pending play: inventory conveniences, Matrix Enchanting, crate,
-  magnet, and the remaining small tweaks.
+- retained pending play: general inventory conveniences, crate, magnet, and
+  the remaining small tweaks.
 
 ## Loot audit and campaign use
 

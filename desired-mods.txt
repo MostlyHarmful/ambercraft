@@ -7,6 +7,7 @@ AppleSkin
 Artifacts
 Athena
 BaguetteLib
+Balm
 Better Combat
 Better Days
 Caelus API
@@ -20,6 +21,7 @@ CorgiLib
 Corpse
 Corpse Curios Compatibility
 Countered's Floating Tree Decay
+Crafting Tweaks
 Create
 Create: Copycats+
 Create: Enchantment Industry
@@ -44,7 +46,6 @@ FTB Quests
 FTB Teams
 Forgified Fabric API
 GeckoLib 4
-GlitchCore
 Guard Villagers
 Handcrafted
 Hoofprint
@@ -74,15 +75,17 @@ Noisiumed
 Nullscape
 Oculus
 playerAnimator
+Polymorph
 Quark
 Resourceful Lib
-Serene Seasons
 Sinytra Connector
 Sodium/Embeddium Options API
 Sound Physics Remastered
 Sophisticated Backpacks
 Sophisticated Backpacks Create Integration
 Sophisticated Core
+Sophisticated Storage
+Sophisticated Storage Create Integration
 Sodium/Embeddium Dynamic Lights
 Supplementaries
 Surveyor Map Framework
