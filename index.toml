@@ -79,7 +79,7 @@ hash = "e5ec25ce2113b12980ed9834987c9ccebd2f859aba1272f77f47af424c076a5b"
 
 [[files]]
 file = "defaultconfigs/create_enchantment_industry-server.toml"
-hash = "2690504646adabb40b37ea77539227f2a581fb9b09d5c4ba5e72cb15d8e05e42"
+hash = "f3f381f2d79b01a542c6ec89a0d4b9fe9aba7782c6955c434562cf51cc35b90a"
 
 [[files]]
 file = "defaultconfigs/sophisticatedbackpacks-server.toml"
@@ -855,11 +855,11 @@ hash = "50f01e326096ba6ea345daad576a4b970f84801f5efca5f4ec99cb091d3573db"
 
 [[files]]
 file = "kubejs/server_scripts/living_world_progression.js"
-hash = "efc70d0fe7195e6701b6bca996233996f8bbe95bf18b5c7ef5928684292054de"
+hash = "e57f20fb6b98e9d8a39a56dc63ecc1acf0fd1d2aa7cab99a31cbf1cdc99ca067"
 
 [[files]]
 file = "kubejs/startup_scripts/living_world_items.js"
-hash = "8815108b0d38111a5716011b9f336d8b3ea01148eefe9590a3232d36a504f370"
+hash = "61e3f3dd6cdb8950317cfa620d9aece78ea4d8b4554a794d940ed44002c4a938"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"

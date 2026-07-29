@@ -16,9 +16,9 @@ blazeEnchanterTankCapacity = 2000
 #.
 #The Maximum Extended Levels beyond Enchantment's Max Level that can be reached through Hyper-Enchanting
 #Range: > 0
-maxHyperEnchantingLevelExtension = 0
+maxHyperEnchantingLevelExtension = 1
 #.
-enableHyperEnchant = false
+enableHyperEnchant = true
 #.
 #The Chance of whether Deployer-killed entities will drop Experience Nugget
 #Range: 0.0 ~ 1.0
@@ -36,13 +36,13 @@ crushingWheelDropExpScale = 0.34
 enchantByBlazeEnchanterCostCoefficient = 1.5
 #.
 #Range: 0.009999999776482582 ~ 100.0
-hyperEnchantByBlazeEnchanterCostCoefficient = 100.0
+hyperEnchantByBlazeEnchanterCostCoefficient = 8.0
 #.
 #Range: 0.009999999776482582 ~ 100.0
-copyEnchantedBookCostCoefficient = 100.0
+copyEnchantedBookCostCoefficient = 8.0
 #.
 #Range: 0.009999999776482582 ~ 100.0
-copyEnchantedBookWithHyperExperienceCostCoefficient = 100.0
+copyEnchantedBookWithHyperExperienceCostCoefficient = 12.0
 #.
 #The amount of ink needed to be consumed by Copying one page of Written Book
 #Range: 1 ~ 100
@@ -63,4 +63,4 @@ copyClipboardCost = 10
 #Whether or not copying a written book always get original version. Setting it to false let you always get copy version of the book.
 copyingWrittenBookAlwaysGetOriginalVersion = true
 #Per-enchantment hard level caps. Format: "modid:enchantment=level". Entries override maxHyperEnchantingLevelExtension and also prevent Printer from copying books above the cap.
-enchantmentLevelCaps = []
+enchantmentLevelCaps = ["minecraft:protection=4", "minecraft:fire_protection=4", "minecraft:blast_protection=4", "minecraft:projectile_protection=4", "minecraft:thorns=3", "minecraft:sweeping=3", "minecraft:quick_charge=3", "minecraft:piercing=4"]

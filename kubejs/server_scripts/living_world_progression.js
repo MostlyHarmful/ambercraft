@@ -112,10 +112,55 @@ ServerEvents.recipes(event => {
   // infinitely craftable early substitute for expedition storage.
   event.remove({ id: 'create:crafting/curiosities/brown_toolbox' })
 
-  // Enchantment Industry is a shared workshop, not a treasure-duplication
-  // machine. Hyper Experience is the route used for above-cap enchanting and
-  // Quark Ancient Tome printing, so Ambercraft removes its production recipe.
+  // Enchantment Industry becomes a communal progression payoff. One recovered
+  // book can be reproduced for the group, while hyper-enchanting requires a
+  // reusable rotor assembled from Create engineering and major expeditions.
+  event.remove({ id: 'create_enchantment_industry:crafting/printer' })
+  event.shaped('create_enchantment_industry:printer', [
+    'EPE',
+    ' C ',
+    ' I '
+  ], {
+    E: 'minecraft:echo_shard',
+    P: 'create:precision_mechanism',
+    C: 'create:copper_casing',
+    I: '#forge:plates/iron'
+  }).id('kubejs:living_world/expedition_printer')
+
+  event.shaped('kubejs:resonant_experience_rotor', [
+    ' DB',
+    'RNP',
+    ' T '
+  ], {
+    D: 'minecraft:dragon_breath',
+    B: 'minecraft:blaze_powder',
+    R: 'create_enchantment_industry:experience_rotor',
+    N: 'minecraft:nether_star',
+    P: 'create:precision_mechanism',
+    T: 'alexscaves:telecore'
+  }).id('kubejs:living_world/resonant_experience_rotor')
+
   event.remove({ id: 'create_enchantment_industry:mixing/hyper_experience' })
+  event.custom({
+    type: 'create:mixing',
+    ingredients: [
+      { item: 'kubejs:resonant_experience_rotor' },
+      { item: 'minecraft:glow_ink_sac' },
+      { item: 'minecraft:lapis_lazuli' },
+      {
+        fluid: 'create_enchantment_industry:experience',
+        amount: 100
+      }
+    ],
+    results: [
+      { item: 'kubejs:resonant_experience_rotor' },
+      {
+        fluid: 'create_enchantment_industry:hyper_experience',
+        amount: 10
+      }
+    ],
+    heatRequirement: 'superheated'
+  }).id('create_enchantment_industry:mixing/hyper_experience')
 
   // Sophisticated Backpacks supports expeditions and Create contraptions, but
   // it should not become nested, near-limitless portable storage. Inception

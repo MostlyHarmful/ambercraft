@@ -19,4 +19,13 @@ StartupEvents.registry('item', event => {
   .rarity('rare')
   .glow(true)
   .texture('minecraft:item/echo_shard')
+
+  event.create('resonant_experience_rotor')
+  .displayName('Resonant Experience Rotor')
+  .rarity('epic')
+  .maxStackSize(1)
+  .glow(true)
+  .texture('create_enchantment_industry:item/experience_rotor')
+  .tooltip(Text.gray('A reusable heart for producing liquid hyper experience.'))
+  .tooltip(Text.darkPurple('The mixer returns it after every batch.'))
 })

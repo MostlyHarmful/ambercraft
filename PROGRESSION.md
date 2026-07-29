@@ -258,6 +258,20 @@ Create: Enchantment Industry gives engineering-focused players a useful
 midgame contribution without making an enchanting factory an eye prerequisite.
 The workshop can collect liquid experience, enchant ordinary equipment, mend
 gear that has already earned Mending, and print schedules or written records
-for the group. Hyper-enchanting is disabled and enchanted books cannot be
-practically copied, so explorers still bring home the rare enchantments and
-Ancient Tomes that make the workshop valuable.
+for the group.
+
+Its advanced workshop follows a prototype-and-production model. A Printer
+requires Echo Shards and a Precision Mechanism, but can thereafter reproduce a
+recovered enchanted book at a substantial renewable experience cost. The
+factory cannot invent treasure enchantments: an explorer must still recover
+the original book before engineering can make it communal.
+
+Hyper-enchanting is a post-dragon infrastructure reward. Its reusable Resonant
+Experience Rotor combines a Nether Star, Alex's Caves Telecore, Dragon's
+Breath, an Experience Rotor, and a Precision Mechanism. The superheated mixer
+returns the rotor after every batch, so routine Hyper Experience production
+uses renewable lapis, glow ink, and liquid experience rather than repeatedly
+consuming expedition trophies. Hyper-enchanting extends eligible enchantments
+by at most one level. Protection, Thorns, Sweeping Edge, Quick Charge, and
+Piercing retain their ordinary caps so the workshop improves equipment without
+erasing Cataclysm's late combat.

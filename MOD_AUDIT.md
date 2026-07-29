@@ -155,12 +155,14 @@ justify the catalogue and loading cost.
   rope entry.
 - **Create: Enchantment Industry** gives factory-minded players a communal
   enchanting, repair, and experience-processing project. Quark Matrix
-  Enchanting is disabled to avoid two competing enchanting overhauls. Hyper
-  Experience production and hyper-enchanting are disabled, and enchanted-book
-  copying is priced beyond the printer's practical capacity; discovered
-  Mending books, treasure enchantments, and Ancient Tomes therefore remain
-  meaningful finds. Written books, name tags, schedules, and clipboards remain
-  printable.
+  Enchanting is disabled to avoid two competing enchanting overhauls. A
+  recovered enchanted book can be copied at a substantial renewable experience
+  cost after engineers build an Echo-Shard Printer. Hyper Experience requires
+  a reusable post-dragon rotor joining Create engineering to Wither, Alex's
+  Caves, and End progression. Eligible enchantments can exceed their ordinary
+  maximum by only one level, while the strongest defensive and rapid-fire
+  interactions retain vanilla caps. Written books, name tags, schedules, and
+  clipboards remain printable.
 
 ### Client and administration
 
