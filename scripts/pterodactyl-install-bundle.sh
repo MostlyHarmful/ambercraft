@@ -20,9 +20,30 @@ if [ "$#" -gt 0 ]; then
   tar -czf "backups/ambercraft-pack-before-$STAMP.tar.gz" "$@"
 fi
 
-rm -rf "$SERVER_DIR/mods"
+# Pack-managed code and defaults must exactly match the canonical bundle.
+# Overlaying these directories leaves removed scripts and recipes active.
+rm -rf "$SERVER_DIR/mods" "$SERVER_DIR/kubejs" "$SERVER_DIR/defaultconfigs"
 mkdir -p "$SERVER_DIR/mods"
 tar -xzf "$TRANSFER_DIR/$ARCHIVE" -C "$SERVER_DIR"
+
+# Retain only the five newest pack-only deployment snapshots. Full world
+# backups use different names and are never touched by this retention pass.
+find "$SERVER_DIR/backups" -maxdepth 1 -type f -name 'ambercraft-pack-before-*.tar.gz' -print \
+  | sort -r \
+  | awk 'NR > 5' \
+  | while IFS= read -r old_backup; do
+      rm -f -- "$old_backup"
+    done
+
+# Remove known leftovers from mods and one-off troubleshooting profiles that
+# are no longer part of Ambercraft. Active generated configs remain intact.
+rm -rf \
+  "$SERVER_DIR/config/bettercaravans-common.toml" \
+  "$SERVER_DIR/config/betterdays-common.toml" \
+  "$SERVER_DIR/config/maplink" \
+  "$SERVER_DIR/config/zombieawareness" \
+  "$SERVER_DIR/config/DistantHorizons-rapid.toml.disabled" \
+  "$SERVER_DIR/config/spark/tmp"
 
 # Forge copies default server configs when it creates a world, but this pack is
 # also deployed onto retained test worlds. Seed Ambercraft's managed backpack
