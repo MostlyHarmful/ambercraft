@@ -66,7 +66,7 @@ JVM_TMP="$FORGE_ARGS.ambercraft"
 {
   echo "-Xms1G"
   echo "-Xmx10G"
-  echo "-XX:+UseZGC"
+  echo "-XX:+UseG1GC"
   grep -v -E '^-Xms|^-Xmx|^-XX:\+Use(G1GC|ZGC)|^-XX:\+ZGenerational$' "$FORGE_ARGS"
 } > "$JVM_TMP"
 mv "$JVM_TMP" "$FORGE_ARGS"
