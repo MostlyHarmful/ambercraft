@@ -19,7 +19,7 @@ hash = "6bc17a0af84f6453920b84bcfc3d4a9b25a6eb0af57547ff6547cbe4d0ec502e"
 
 [[files]]
 file = "config/carryon-common.toml"
-hash = "731acc1c17d5faeb6d861b4bb882cec84a8023ffa788a679285a0b52d8d9df22"
+hash = "c4922f22a3780fa47888d9702c83d7a2a78c0b2b8c3469e1814875c33373dc89"
 
 [[files]]
 file = "config/endrem.toml"
@@ -80,6 +80,10 @@ hash = "2690504646adabb40b37ea77539227f2a581fb9b09d5c4ba5e72cb15d8e05e42"
 [[files]]
 file = "defaultconfigs/sophisticatedbackpacks-server.toml"
 hash = "ca43a5a5a6ab75a98219a106fbfff858954ffaf112f42d6215742ff97749f7dd"
+
+[[files]]
+file = "defaultconfigs/sophisticatedstorage-server.toml"
+hash = "fa59b321e1a43228c5565651883b81b2436361006801033b203b1ac1a95d8808"
 
 [[files]]
 file = "kubejs/assets/cavedelight/models/block/boiled_trilocaris.json"
@@ -163,7 +167,7 @@ hash = "f74a42f0204d7b16d5c7a20e0f179d7d5d8d9f4e9c2d3393c50a5ac1c9e44751"
 
 [[files]]
 file = "kubejs/client_scripts/jei_declutter.js"
-hash = "98fba5c29f1c6daa63996b30fd2e84c74f504e3d057cef064d1bda032302e1ae"
+hash = "e8075db9ff31ada900e9a68521a06a53656410001e9daa2a6596059b7a409810"
 
 [[files]]
 file = "kubejs/client_scripts/living_world_tooltips.js"
@@ -794,6 +798,50 @@ file = "kubejs/data/phantasm/weapon_attributes/crystalline_knife.json"
 hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
 
 [[files]]
+file = "kubejs/data/sophisticatedstorage/recipes/acacia_chest_from_quark_acacia_chest.json"
+hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+
+[[files]]
+file = "kubejs/data/sophisticatedstorage/recipes/bamboo_chest_from_quark_bamboo_chest.json"
+hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+
+[[files]]
+file = "kubejs/data/sophisticatedstorage/recipes/birch_chest_from_quark_birch_chest.json"
+hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+
+[[files]]
+file = "kubejs/data/sophisticatedstorage/recipes/cherry_chest_from_quark_cherry_chest.json"
+hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+
+[[files]]
+file = "kubejs/data/sophisticatedstorage/recipes/crimson_chest_from_quark_crimson_chest.json"
+hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+
+[[files]]
+file = "kubejs/data/sophisticatedstorage/recipes/dark_oak_chest_from_quark_dark_oak_chest.json"
+hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+
+[[files]]
+file = "kubejs/data/sophisticatedstorage/recipes/jungle_chest_from_quark_jungle_chest.json"
+hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+
+[[files]]
+file = "kubejs/data/sophisticatedstorage/recipes/mangrove_chest_from_quark_mangrove_chest.json"
+hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+
+[[files]]
+file = "kubejs/data/sophisticatedstorage/recipes/oak_chest_from_quark_oak_chest.json"
+hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+
+[[files]]
+file = "kubejs/data/sophisticatedstorage/recipes/spruce_chest_from_quark_spruce_chest.json"
+hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+
+[[files]]
+file = "kubejs/data/sophisticatedstorage/recipes/warped_chest_from_quark_warped_chest.json"
+hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+
+[[files]]
 file = "kubejs/data/supplementaries/advancements/recipes/planter_rich.json"
 hash = "3040901c6c74b67c2182bfc63ef29609ba4200890b9ff23892f27294d048cd5e"
 
@@ -803,7 +851,7 @@ hash = "50f01e326096ba6ea345daad576a4b970f84801f5efca5f4ec99cb091d3573db"
 
 [[files]]
 file = "kubejs/server_scripts/living_world_progression.js"
-hash = "d26fbd1eea910aac6e89d25cde73931c8b9a945a2ec2569eaa0aa081c4c3a53e"
+hash = "2c73e6e163f47c521a2ca38dbe64c2fecab5ed399c5139996b2dd1b81b2bf12a"
 
 [[files]]
 file = "kubejs/startup_scripts/living_world_items.js"
@@ -1226,7 +1274,17 @@ metafile = true
 
 [[files]]
 file = "mods/sophisticated-core.pw.toml"
-hash = "5daf8d7d250b491e172fd178a9cc66c9e0dedf462fa0d9e79635026807c3d053"
+hash = "39e6fa7a70ee97cfb07967e8464a468a11f7b61b272cb00e62570334106adf27"
+metafile = true
+
+[[files]]
+file = "mods/sophisticated-storage-create-integration.pw.toml"
+hash = "0e57f070b0cf924e575f009fdc99faaf9d1d32c7cc3e4d4d2d4a35fe53a1ea69"
+metafile = true
+
+[[files]]
+file = "mods/sophisticated-storage.pw.toml"
+hash = "76cc84aeda8d3a4f6144f0c4d187d51bfba88eef2c18d92a0d9326ab27075b05"
 metafile = true
 
 [[files]]

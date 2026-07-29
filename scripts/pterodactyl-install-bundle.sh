@@ -44,6 +44,15 @@ if [ -f "$BACKPACK_WORLD_CONFIG" ]; then
     "$BACKPACK_WORLD_CONFIG"
 fi
 
+# Sophisticated Storage was added after the live world was created. Seed its
+# stationary-storage limits once; Forge will fill any omitted upstream options.
+STORAGE_DEFAULT="$SERVER_DIR/defaultconfigs/sophisticatedstorage-server.toml"
+STORAGE_WORLD_CONFIG="$SERVER_DIR/world/serverconfig/sophisticatedstorage-server.toml"
+if [ -f "$STORAGE_DEFAULT" ] && [ -d "$SERVER_DIR/world" ] && [ ! -f "$STORAGE_WORLD_CONFIG" ]; then
+  mkdir -p "$SERVER_DIR/world/serverconfig"
+  cp "$STORAGE_DEFAULT" "$STORAGE_WORLD_CONFIG"
+fi
+
 # macOS can attach AppleDouble metadata to archives. These files are never pack
 # content and may otherwise be mistaken for JARs by Forge.
 for path in mods config defaultconfigs kubejs; do

@@ -35,7 +35,7 @@
 [blacklist]
 	# Lootr containers own per-player treasure state. Create contraptions,
 	# portals, spawners, and campaign infrastructure must also stay put.
-	forbiddenTiles = ["#forge:immovable", "#forge:relocation_not_supported", "minecraft:spawner", "minecraft:end_portal", "minecraft:end_gateway", "minecraft:nether_portal", "minecraft:piston_head", "minecraft:ender_chest", "minecraft:enchanting_table", "minecraft:*_bed", "minecraft:*_door", "lootr:*", "create:*", "integrated_stronghold:*"]
+	forbiddenTiles = ["#forge:immovable", "#forge:relocation_not_supported", "minecraft:spawner", "minecraft:end_portal", "minecraft:end_gateway", "minecraft:nether_portal", "minecraft:piston_head", "minecraft:ender_chest", "minecraft:enchanting_table", "minecraft:*_bed", "minecraft:*_door", "lootr:*", "create:*", "sophisticatedstorage:*", "integrated_stronghold:*"]
 	forbiddenEntities = ["minecraft:end_crystal", "minecraft:ender_dragon", "minecraft:ghast", "minecraft:shulker", "minecraft:leash_knot", "minecraft:armor_stand", "minecraft:item_frame", "minecraft:painting", "minecraft:shulker_bullet", "corpse:corpse", "artifacts:mimic", "mowziesmobs:*", "quark:totem"]
 	forbiddenStacking = ["minecraft:*"]
 

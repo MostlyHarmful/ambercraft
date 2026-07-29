@@ -1,0 +1,25 @@
+# Ambercraft uses Sophisticated Storage for compact, stationary warehouses.
+# A single stack upgrade per block prevents multiplicative capacity from
+# replacing the physical scale and logistics of Create factories.
+[server]
+	maxUpgradesPerStorage = ["chest|stack_upgrades|1", "chest|cooking_upgrades|1", "chest|jukebox_upgrades|1", "barrel|stack_upgrades|1", "barrel|cooking_upgrades|1", "barrel|jukebox_upgrades|1", "shulker_box|stack_upgrades|0", "shulker_box|cooking_upgrades|0", "shulker_box|jukebox_upgrades|0", "limited_barrel|stack_upgrades|1", "limited_barrel|cooking_upgrades|1", "limited_barrel|jukebox_upgrades|1"]
+
+	# Sophisticated shulker recipes are removed, but zero upgrade slots keep any
+	# creative/admin-created examples from becoming superior portable backpacks.
+	[server.ShulkerBox]
+		upgradeSlotCount = 0
+
+	[server.CopperShulkerBox]
+		upgradeSlotCount = 0
+
+	[server.IronShulkerBox]
+		upgradeSlotCount = 0
+
+	[server.GoldShulkerBox]
+		upgradeSlotCount = 0
+
+	[server.DiamondShulkerBox]
+		upgradeSlotCount = 0
+
+	[server.NetheriteShulkerBox]
+		upgradeSlotCount = 0

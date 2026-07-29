@@ -43,4 +43,48 @@ JEIEvents.hideItems(event => {
   event.hide('sophisticatedbackpacks:advanced_mob_catcher_upgrade')
   event.hide('sophisticatedbackpacks:feeding_upgrade')
   event.hide('sophisticatedbackpacks:advanced_feeding_upgrade')
+
+  // Stationary storage keeps its manual, organizational, compression, and
+  // Create-integration tools. Portable storage variants and autonomous
+  // machine upgrades are outside Ambercraft's storage progression.
+  ;[
+    'sophisticatedstorage:shulker_box',
+    'sophisticatedstorage:copper_shulker_box',
+    'sophisticatedstorage:iron_shulker_box',
+    'sophisticatedstorage:gold_shulker_box',
+    'sophisticatedstorage:diamond_shulker_box',
+    'sophisticatedstorage:netherite_shulker_box',
+    'sophisticatedstorage:stack_upgrade_tier_1_plus',
+    'sophisticatedstorage:stack_upgrade_tier_5',
+    'sophisticatedstorage:stack_upgrade_omega_tier',
+    'sophisticatedstorage:infinity_upgrade',
+    'sophisticatedstorage:survival_infinity_upgrade',
+    'sophisticatedstorage:feeding_upgrade',
+    'sophisticatedstorage:advanced_feeding_upgrade',
+    'sophisticatedstorage:magnet_upgrade',
+    'sophisticatedstorage:advanced_magnet_upgrade',
+    'sophisticatedstorage:pickup_upgrade',
+    'sophisticatedstorage:advanced_pickup_upgrade',
+    'sophisticatedstorage:void_upgrade',
+    'sophisticatedstorage:advanced_void_upgrade',
+    'sophisticatedstorage:smelting_upgrade',
+    'sophisticatedstorage:auto_smelting_upgrade',
+    'sophisticatedstorage:smoking_upgrade',
+    'sophisticatedstorage:auto_smoking_upgrade',
+    'sophisticatedstorage:blasting_upgrade',
+    'sophisticatedstorage:auto_blasting_upgrade',
+    'sophisticatedstorage:pump_upgrade',
+    'sophisticatedstorage:advanced_pump_upgrade',
+    'sophisticatedstorage:xp_pump_upgrade',
+    'sophisticatedstorage:alchemy_upgrade',
+    'sophisticatedstorage:advanced_alchemy_upgrade'
+  ].forEach(item => event.hide(item))
+  ;[
+    'sophisticatedstorage:controller',
+    'sophisticatedstorage:storage_link',
+    'sophisticatedstorage:storage_io',
+    'sophisticatedstorage:storage_input',
+    'sophisticatedstorage:storage_output'
+  ].forEach(item => event.hide(item))
+  event.hide(/sophisticatedstorage:.*storage_connector/)
 })

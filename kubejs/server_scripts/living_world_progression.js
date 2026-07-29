@@ -164,6 +164,97 @@ ServerEvents.recipes(event => {
     S: 'sophisticatedbackpacks:stack_upgrade_tier_3'
   }).id('kubejs:living_world/end_stack_upgrade')
 
+  // Sophisticated Storage is Ambercraft's stationary bulk-storage layer.
+  // Its useful stack compression follows the same expedition milestones as
+  // backpacks, but each storage block accepts only one stack upgrade through
+  // the managed server config. The 32x and infinite tiers would erase the
+  // practical scale of warehouses and Create logistics.
+  ;[
+    'sophisticatedstorage:stack_upgrade_tier_1_plus',
+    'sophisticatedstorage:stack_upgrade_tier_2',
+    'sophisticatedstorage:stack_upgrade_tier_3',
+    'sophisticatedstorage:stack_upgrade_tier_4',
+    'sophisticatedstorage:stack_upgrade_tier_5',
+    'sophisticatedstorage:stack_upgrade_omega_tier',
+    'sophisticatedstorage:infinity_upgrade',
+    'sophisticatedstorage:survival_infinity_upgrade'
+  ].forEach(id => event.remove({ output: id }))
+
+  event.shaped('sophisticatedstorage:stack_upgrade_tier_2', [
+    'GBG',
+    'BSB',
+    'GBG'
+  ], {
+    G: '#forge:storage_blocks/gold',
+    B: 'minecraft:blaze_rod',
+    S: 'sophisticatedstorage:stack_upgrade_tier_1'
+  }).id('kubejs:living_world/nether_storage_stack_upgrade')
+
+  event.shaped('sophisticatedstorage:stack_upgrade_tier_3', [
+    'DTD',
+    'TST',
+    'DTD'
+  ], {
+    D: '#forge:storage_blocks/diamond',
+    T: 'alexscaves:telecore',
+    S: 'sophisticatedstorage:stack_upgrade_tier_2'
+  }).id('kubejs:living_world/deep_storage_stack_upgrade')
+
+  event.shaped('sophisticatedstorage:stack_upgrade_tier_4', [
+    'NVN',
+    'VSV',
+    'NBN'
+  ], {
+    N: 'minecraft:netherite_ingot',
+    V: 'phantasm:void_crystal_shard',
+    B: 'minecraft:dragon_breath',
+    S: 'sophisticatedstorage:stack_upgrade_tier_3'
+  }).id('kubejs:living_world/end_storage_stack_upgrade')
+
+  // Upgraded shulker boxes would duplicate the deliberately bounded backpack
+  // progression. Automated cooking, collection, deletion, and fluid/XP
+  // handling also duplicate Farmer's Delight and Create machinery while
+  // adding always-active work to storage blocks.
+  ;[
+    'sophisticatedstorage:shulker_box',
+    'sophisticatedstorage:copper_shulker_box',
+    'sophisticatedstorage:iron_shulker_box',
+    'sophisticatedstorage:gold_shulker_box',
+    'sophisticatedstorage:diamond_shulker_box',
+    'sophisticatedstorage:netherite_shulker_box',
+    'sophisticatedstorage:feeding_upgrade',
+    'sophisticatedstorage:advanced_feeding_upgrade',
+    'sophisticatedstorage:magnet_upgrade',
+    'sophisticatedstorage:advanced_magnet_upgrade',
+    'sophisticatedstorage:pickup_upgrade',
+    'sophisticatedstorage:advanced_pickup_upgrade',
+    'sophisticatedstorage:void_upgrade',
+    'sophisticatedstorage:advanced_void_upgrade',
+    'sophisticatedstorage:smelting_upgrade',
+    'sophisticatedstorage:auto_smelting_upgrade',
+    'sophisticatedstorage:smoking_upgrade',
+    'sophisticatedstorage:auto_smoking_upgrade',
+    'sophisticatedstorage:blasting_upgrade',
+    'sophisticatedstorage:auto_blasting_upgrade',
+    'sophisticatedstorage:pump_upgrade',
+    'sophisticatedstorage:advanced_pump_upgrade',
+    'sophisticatedstorage:xp_pump_upgrade',
+    'sophisticatedstorage:alchemy_upgrade',
+    'sophisticatedstorage:advanced_alchemy_upgrade'
+  ].forEach(id => event.remove({ output: id }))
+
+  // Dense containers still need a logistics system. Remove Sophisticated
+  // Storage's controller network so Create funnels, belts, tunnels, packagers,
+  // stock links, and redstone remain the shared warehouse vocabulary.
+  ;[
+    'sophisticatedstorage:controller',
+    'sophisticatedstorage:storage_link',
+    'sophisticatedstorage:storage_io',
+    'sophisticatedstorage:storage_input',
+    'sophisticatedstorage:storage_output'
+  ].forEach(id => event.remove({ output: id }))
+  event.remove({ output: /sophisticatedstorage:.*storage_connector/ })
+
   // Supplementaries supplies Ambercraft's general-purpose rope. Farmer's
   // Delight keeps its useful rope fences and safety nets, but their recipes
   // now use the same material instead of adding a second interchangeable item.

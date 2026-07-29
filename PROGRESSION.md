@@ -49,6 +49,15 @@ blocking the server.
   that trivializes the stronghold and dragon.
 - Create's basic machinery remains ungated. Only a few advanced communal tools
   may use exploration materials.
+- Sophisticated Storage provides the shared warehouse layer. Ordinary storage
+  tiers remain resource-gated in the familiar copper-to-Netherite sequence.
+  Stack compression advances from 2x locally to 4x after a Nether expedition,
+  8x after recovering an Alex's Caves Telecore, and 16x after the dragon and an
+  outer-End expedition. The same milestones apply to backpacks, but storage
+  blocks remain stationary and connect directly to Create logistics.
+  Sophisticated Storage's controller network is unavailable: engineers still
+  build the belts, funnels, tunnels, stock links, packagers, and redstone that
+  make a warehouse operate.
 
 ## Shared campaign structure
 

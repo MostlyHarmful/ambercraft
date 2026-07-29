@@ -127,6 +127,17 @@ justify the catalogue and loading cost.
   capacity increases into communal campaign rewards. Mob-catcher upgrades are
   removed in favor of Carry On's bounded, hands-occupied transport, and feeding
   upgrades are removed so expeditions still consume prepared food.
+- **Sophisticated Storage** supplies compact stationary warehouses, with its
+  Create integration allowing those inventories to remain part of contraptions
+  and factory logistics. Each block accepts at most one stack upgrade. The 4x,
+  8x, and 16x tiers require the same Nether, Alex's Caves, and post-dragon
+  milestones as backpack upgrades; 32x and infinite tiers are unavailable.
+  Upgraded shulker boxes are removed so backpacks retain the portable-storage
+  role. Autonomous cooking, feeding, collection, deletion, fluid, and XP
+  upgrades are removed in favor of visible Farmer's Delight and Create
+  machinery. The controller, storage I/O, links, and connectors are removed, so
+  Create remains responsible for routing, sorting, stock visibility, and
+  warehouse automation. Carry On cannot lift these inventories.
 - **Lootr** gives players individual structure loot.
 - **Corpse** and its Curios compatibility preserve death retrieval without
   enabling keep-inventory. Quark's duplicate Totem of Holding is disabled.
