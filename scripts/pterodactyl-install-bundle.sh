@@ -92,15 +92,6 @@ if [ ! -f "$FORGE_ARGS" ]; then
   exit 1
 fi
 
-JVM_TMP="$FORGE_ARGS.ambercraft"
-{
-  echo "-Xms1G"
-  echo "-Xmx10G"
-  echo "-XX:+UseG1GC"
-  grep -v -E '^-Xms|^-Xmx|^-XX:\+Use(G1GC|ZGC)|^-XX:\+ZGenerational$' "$FORGE_ARGS"
-} > "$JVM_TMP"
-mv "$JVM_TMP" "$FORGE_ARGS"
-
 # Preserve ordinary Pterodactyl settings while applying the small set of
 # server properties that Ambercraft relies on for a friendly modded SMP.
 PROPERTIES="$SERVER_DIR/server.properties"
