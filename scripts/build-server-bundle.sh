@@ -9,7 +9,7 @@ BOOTSTRAP_URL="https://github.com/packwiz/packwiz-installer-bootstrap/releases/d
 EXPECTED_BOOTSTRAP_SHA256="a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c"
 
 cd "$ROOT"
-./tools/packwiz refresh
+packwiz refresh
 ./scripts/audit-pack.sh
 
 mkdir -p "$BUILD_DIR"
@@ -27,7 +27,7 @@ rm -rf "$STAGE_DIR"
 mkdir -p "$STAGE_DIR"
 
 PORT=$(python3 -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1", 0)); print(s.getsockname()[1]); s.close()')
-./tools/packwiz serve --port "$PORT" >"$BUILD_DIR/packwiz-serve.log" 2>&1 &
+packwiz serve --port "$PORT" >"$BUILD_DIR/packwiz-serve.log" 2>&1 &
 SERVE_PID=$!
 trap 'kill "$SERVE_PID" 2>/dev/null || true' EXIT INT TERM
 
@@ -48,10 +48,6 @@ fi
   cd "$STAGE_DIR"
   java -jar "$BOOTSTRAP" -g -s server "http://127.0.0.1:$PORT/pack.toml"
 )
-
-# The shared DH config is preserved on clients so Packwiz never replaces their
-# personal rendering settings. Apply only the dedicated-server tuning here.
-patch -d "$STAGE_DIR" -p0 <"$ROOT/server-overrides/DistantHorizons-server.patch"
 
 VERSION=$(sed -n 's/^version = "\([^"]*\)"/\1/p' pack.toml)
 BUNDLE="$BUILD_DIR/ambercraft-server-$VERSION.tar.gz"

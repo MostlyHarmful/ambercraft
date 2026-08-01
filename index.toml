@@ -1,11 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "config/DistantHorizons.toml"
-hash = "8c3e7be657b75e256524f90306b86a6da6d4e9d277ff2c96f14201285f8ffb85"
-preserve = true
-
-[[files]]
 file = "config/alexscaves-client.toml"
 hash = "1863ec486ae7385d92900d078bd00aba3a2a767cde6646b8b8601b5633738cb8"
 
@@ -56,14 +51,6 @@ hash = "8f3528d3d5c17bb07826082465ec060e9d21380ab3afc77d91c1cb4802e43a7f"
 [[files]]
 file = "config/quark-common.toml"
 hash = "2e5495ab4dd57f471e02ee682b30c80be5dd3f850b66c24eff0fe7cd30e05bd7"
-
-[[files]]
-file = "config/sereneseasons/fertility.toml"
-hash = "df44f01650966bffa7e769c0109403858d34bbeb366c55dae09588b08eba6ea4"
-
-[[files]]
-file = "config/sereneseasons/seasons.toml"
-hash = "480d0af0ede5ec3a76e184409c125e6bf50ee9cf0518c49e32de1bc7d58a9c92"
 
 [[files]]
 file = "config/sophisticatedbackpacks-common.toml"
@@ -957,11 +944,6 @@ hash = "e3dd03e7fec88831974857e2cdded54dd5c5bdcaa3f6d6248c2800e82db4dd41"
 metafile = true
 
 [[files]]
-file = "mods/connector.pw.toml"
-hash = "28ec0fe825391261f68b2de4f7719f29dbc7b8c5a02876e6acfde975375cf3f4"
-metafile = true
-
-[[files]]
 file = "mods/copycats.pw.toml"
 hash = "d89b1d59b9865cad867c71bbd2bc749b66fe49c307a23e77020b73b3d65b65f1"
 metafile = true
@@ -1072,11 +1054,6 @@ hash = "902bac905b93271f02bd0951a22bac06a3da24f5c237fcaeb469e14a7679e508"
 metafile = true
 
 [[files]]
-file = "mods/forgified-fabric-api.pw.toml"
-hash = "2a2f2168bf03bfa3034ad9583588676c5d66b6f7c767df9fe259ab55350792d2"
-metafile = true
-
-[[files]]
 file = "mods/ftb-library-forge.pw.toml"
 hash = "efa75ee4aae90dea11316b6e61aecaf9433eeb3d0821f78b4eca41acbbd73e8f"
 metafile = true
@@ -1104,11 +1081,6 @@ metafile = true
 [[files]]
 file = "mods/handcrafted.pw.toml"
 hash = "db495b3ac268709a2ba673bfe220b10257fb7dae549f94bfbd539617d571f131"
-metafile = true
-
-[[files]]
-file = "mods/hoofprint.pw.toml"
-hash = "189d433785d954e85b270c47788e0eedec99dfbcc2d6697c230d6d935fe37494"
 metafile = true
 
 [[files]]
@@ -1327,11 +1299,6 @@ hash = "148bc9c5989ac676d91b6f07a5e871d7b5d11c1b7b46fe30c3894c1512069a88"
 metafile = true
 
 [[files]]
-file = "mods/surveyor.pw.toml"
-hash = "fb69c986964628b74a5287f8128f17d1f1fb4aef9c18e610cbb389bfe6dddb47"
-metafile = true
-
-[[files]]
 file = "mods/tectonic.pw.toml"
 hash = "a01449c29314bff0ad2047911d8253641801e01997709f53fa5b3f52954232a3"
 metafile = true
@@ -1349,6 +1316,16 @@ metafile = true
 [[files]]
 file = "mods/the-roads-more-travelled.pw.toml"
 hash = "79590ef35db62ef627af23ea90854230b8b5d403ddfd8df8b8fc4718452552e2"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-minimap.pw.toml"
+hash = "20beda5f9b049a2352334a0f8dd8de122e7399f8a446d8f78aeecba85d99bbdc"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-world-map.pw.toml"
+hash = "d08d445bae50b78091dfe85336456b768c8c29ee807dfea6c65497f1371443ff"
 metafile = true
 
 [[files]]
