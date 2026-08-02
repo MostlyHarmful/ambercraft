@@ -45,10 +45,6 @@ file = "config/immersive_weathering-common.toml"
 hash = "c760b710e6933dcd0fedfe42344c82960c5db53e1e591efd63b6a0f78ce55932"
 
 [[files]]
-file = "config/mobconversion-common.toml"
-hash = "8f3528d3d5c17bb07826082465ec060e9d21380ab3afc77d91c1cb4802e43a7f"
-
-[[files]]
 file = "config/quark-common.toml"
 hash = "2e5495ab4dd57f471e02ee682b30c80be5dd3f850b66c24eff0fe7cd30e05bd7"
 
@@ -191,14 +187,6 @@ hash = "5e41ad5646fb7e2e9112dfbafd6ed32025033c73a06aa66b1b9f4c8ffbd3295c"
 [[files]]
 file = "kubejs/data/ambercraft/functions/graceful_stop.mcfunction"
 hash = "f4d064cfda000657d859735f0718ffa1c4c7427c5bd2898277129794d35a4c52"
-
-[[files]]
-file = "kubejs/data/ambercraft/loot_tables/entities/guard_weapon.json"
-hash = "8de8c9cb2c803b9dc77a0ce531b7fd7312d48e6501cf8a2e9aa3f415f7f6d92c"
-
-[[files]]
-file = "kubejs/data/ambercraft/tags/entity_types/village_threats.json"
-hash = "b24ac0320544f3c77377d93430bb45e702e144c2f2d6f6d1ddd5fff216921a2b"
 
 [[files]]
 file = "kubejs/data/betterdeserttemples/advancements/root.json"
@@ -837,8 +825,8 @@ file = "kubejs/data/supplementaries/advancements/recipes/planter_rich.json"
 hash = "3040901c6c74b67c2182bfc63ef29609ba4200890b9ff23892f27294d048cd5e"
 
 [[files]]
-file = "kubejs/server_scripts/guard_recruitment.js"
-hash = "50f01e326096ba6ea345daad576a4b970f84801f5efca5f4ec99cb091d3573db"
+file = "kubejs/server_scripts/alexs_caves_locator_fix.js"
+hash = "75c895be4f9f49e18bffd35774be4a786143a831ee13afb575448c6395023b71"
 
 [[files]]
 file = "kubejs/server_scripts/living_world_progression.js"
@@ -1171,11 +1159,6 @@ metafile = true
 [[files]]
 file = "mods/lootr.pw.toml"
 hash = "66bcfe786e6bbdee6f7ea0805ec3d2561b41285a5c77f1e465e80f4c2fd9200c"
-metafile = true
-
-[[files]]
-file = "mods/mob-conversion-autonomous-conversion.pw.toml"
-hash = "a011f504c8605e418a11beb06845a5f7fc58df5e1c0b0f103a648c07840bc3a6"
 metafile = true
 
 [[files]]

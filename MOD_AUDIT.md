@@ -347,24 +347,17 @@ the upstream mod contains no dedicated cabin stable foundation template.
   and Integrated Villages use core Quark content, not Oddities' backpack,
   pipes, crates, magnets, or matrix enchanting systems.
 
-## Village defense candidate
+## Village defense
 
-Guard Villagers 1.6.17 and Mob Conversion 1.0.1 restore autonomous village
-defense without adding a settlement-management loop. Integrated Villages keeps
-its authored guards in newly generated villages. Guard Villagers' independent
-group spawner is disabled, while Mob Conversion can turn only unemployed or
-nitwit vanilla villagers into guards when a bell-defined village is threatened.
+Guard Villagers 1.6.17 remains for Integrated Villages' authored guards and its
+ordinary player-controlled recruitment mechanics. Its independent group spawner
+is disabled. Mob Conversion and Ambercraft's periodic automatic recruitment
+script were removed after causing excessive server work and unreliable guard
+population growth.
 
-The conversion system is capped at four guards within a 96-block village area,
-uses a ten-minute shared cooldown, preserves all employed villagers, and never
-creates population from nothing. Regular patrols are enabled so the small force
-can cover Integrated Villages' large footprints. Guards still acquire targets
-locally, do not make every hostile mob target them, and cannot damage villagers,
-iron golems, or other guards with arrows.
-
-Existing generated villages and converted iron golems are intentionally left
-unchanged. Only unexplored Integrated Villages regain their authored guards;
-existing settlements may slowly gain replacement guards through conversion.
+Existing guards are intentionally left unchanged. Newly generated Integrated
+Villages can still include their authored guards, but existing settlements will
+not automatically gain replacement guards.
 
 ## Questions that static analysis cannot answer
 

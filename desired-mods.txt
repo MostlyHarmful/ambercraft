@@ -67,7 +67,6 @@ Lionfish API
 Lootr
 LootJS
 Moonlight Library
-Mob Conversion - Autonomous Mob conversion/spawn
 Mouse Tweaks
 Mowzie's Mobs
 ModernFix
