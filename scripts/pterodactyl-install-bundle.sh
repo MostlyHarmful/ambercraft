@@ -17,7 +17,9 @@ for path in mods config defaultconfigs kubejs packwiz.json; do
   fi
 done
 if [ "$#" -gt 0 ]; then
-  tar -czf "backups/ambercraft-pack-before-$STAMP.tar.gz" "$@"
+  PACK_BACKUP="backups/ambercraft-pack-before-$STAMP.tar.gz"
+  tar -czf "$PACK_BACKUP" "$@"
+  tar -tzf "$PACK_BACKUP" >/dev/null
 fi
 
 # Pack-managed code and defaults must exactly match the canonical bundle.
