@@ -941,6 +941,11 @@ hash = "e3dd03e7fec88831974857e2cdded54dd5c5bdcaa3f6d6248c2800e82db4dd41"
 metafile = true
 
 [[files]]
+file = "mods/colorwheel.pw.toml"
+hash = "a85ba7ba18bb361e24447e4d15aabf988c391a110f77514301636b31397613e5"
+metafile = true
+
+[[files]]
 file = "mods/copycats.pw.toml"
 hash = "d89b1d59b9865cad867c71bbd2bc749b66fe49c307a23e77020b73b3d65b65f1"
 metafile = true

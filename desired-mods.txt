@@ -18,6 +18,7 @@ Chipped
 Chunky
 Citadel
 Cloth Config v10 API
+Colorwheel
 CorgiLib
 Corpse
 Corpse Curios Compatibility

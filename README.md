@@ -2,7 +2,7 @@
 
 A Forge 1.20.1 vanilla-plus exploration and adventure pack managed with
 [packwiz](https://packwiz.infra.link/). The pack currently targets Forge
-47.4.10 and contains 107 Packwiz-managed mod entries. The install index also
+47.4.10 and contains 109 Packwiz-managed mod entries. The install index also
 ships Ambercraft's configuration, compatibility overrides, and campaign data.
 
 Mod selection and configuration are governed by [`DESIGN.md`](DESIGN.md). Read
@@ -104,7 +104,7 @@ Forge argument file that the egg actually launches.
 ## Side rules
 
 The following are intentionally client-only: AmbientSounds, AppleSkin,
-Bookshelf, Enchantment Descriptions, Embeddium, Embeddium Extra,
+Bookshelf, Colorwheel, Enchantment Descriptions, Embeddium, Embeddium Extra,
 Sodium/Embeddium Dynamic Lights
 and its Options API, Entity Culling, ImmediatelyFast, JEI, Mouse Tweaks,
 Oculus, Sound Physics Remastered, and the Hoofprint map interface. Distant
