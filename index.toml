@@ -153,6 +153,10 @@ file = "kubejs/assets/supplementaries/lang/en_us.json"
 hash = "f74a42f0204d7b16d5c7a20e0f179d7d5d8d9f4e9c2d3393c50a5ac1c9e44751"
 
 [[files]]
+file = "kubejs/assets/terralith/lang/en_us.json"
+hash = "988729df3545993e3d0d6cbc8400fd8af3b096417c183d363ed164c39d6d1b3a"
+
+[[files]]
 file = "kubejs/client_scripts/jei_declutter.js"
 hash = "e8075db9ff31ada900e9a68521a06a53656410001e9daa2a6596059b7a409810"
 
