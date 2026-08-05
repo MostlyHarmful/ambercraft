@@ -10,6 +10,7 @@ BaguetteLib
 Balm
 Better Combat
 Better Days
+Bookshelf
 Caelus API
 Carry On
 Cave Delight
@@ -37,6 +38,7 @@ Embeddium (Rubidium) Extra
 Elytra Slot
 End Remastered
 End's Phantasm
+Enchantment Descriptions
 Enhanced Celestials
 EntityCulling
 Farmer's Delight

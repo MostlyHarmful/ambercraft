@@ -8,8 +8,8 @@ metadata_count=$(find mods -maxdepth 1 -name '*.pw.toml' | wc -l | tr -d ' ')
 indexed_mod_count=$(grep '^file = "mods/.*\.pw\.toml"$' index.toml | wc -l | tr -d ' ')
 index_count=$(grep -c '^\[\[files\]\]' index.toml)
 
-if [ "$metadata_count" -ne 106 ]; then
-  echo "Expected 106 mod metadata files; found $metadata_count" >&2
+if [ "$metadata_count" -ne 108 ]; then
+  echo "Expected 108 mod metadata files; found $metadata_count" >&2
   exit 1
 fi
 

@@ -104,7 +104,8 @@ Forge argument file that the egg actually launches.
 ## Side rules
 
 The following are intentionally client-only: AmbientSounds, AppleSkin,
-Embeddium, Embeddium Extra, Sodium/Embeddium Dynamic Lights
+Bookshelf, Enchantment Descriptions, Embeddium, Embeddium Extra,
+Sodium/Embeddium Dynamic Lights
 and its Options API, Entity Culling, ImmediatelyFast, JEI, Mouse Tweaks,
 Oculus, Sound Physics Remastered, and the Hoofprint map interface. Distant
 Horizons runs on both sides for server-backed LOD delivery. Surveyor runs on
