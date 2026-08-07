@@ -1,0 +1,16 @@
+{
+  "block.sophisticatedstorage.chest": "%s%sUpgradeable Chest",
+  "item.sophisticatedstorage.upgrade_base": "Storage Upgrade Base",
+  "item.sophisticatedstorage.filter_upgrade": "Storage Filter Upgrade",
+  "item.sophisticatedstorage.advanced_filter_upgrade": "Advanced Storage Filter Upgrade",
+  "item.sophisticatedstorage.compacting_upgrade": "Storage Compacting Upgrade",
+  "item.sophisticatedstorage.advanced_compacting_upgrade": "Advanced Storage Compacting Upgrade",
+  "item.sophisticatedstorage.crafting_upgrade": "Storage Crafting Upgrade",
+  "item.sophisticatedstorage.stonecutter_upgrade": "Storage Stonecutter Upgrade",
+  "item.sophisticatedstorage.jukebox_upgrade": "Storage Jukebox Upgrade",
+  "item.sophisticatedstorage.advanced_jukebox_upgrade": "Advanced Storage Jukebox Upgrade",
+  "item.sophisticatedstorage.stack_upgrade_tier_1": "Storage Stack Upgrade Tier 1",
+  "item.sophisticatedstorage.stack_upgrade_tier_2": "Storage Stack Upgrade Tier 2",
+  "item.sophisticatedstorage.stack_upgrade_tier_3": "Storage Stack Upgrade Tier 3",
+  "item.sophisticatedstorage.stack_upgrade_tier_4": "Storage Stack Upgrade Tier 4"
+}

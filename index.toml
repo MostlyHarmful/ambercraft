@@ -45,6 +45,25 @@ file = "config/immersive_weathering-common.toml"
 hash = "c760b710e6933dcd0fedfe42344c82960c5db53e1e591efd63b6a0f78ce55932"
 
 [[files]]
+file = "config/paxi/resourcepack_load_order.json"
+hash = "f9b51a3add7f19b8d805cac647e3b3a160948ba48cd71200601967b6f65f356e"
+
+[[files]]
+file = "config/paxi/resourcepacks/fast-better-grass.pw.toml"
+hash = "b9362da7ce0d258d671a6b57177fe4816a326efda27ace533be93ce86c611857"
+metafile = true
+
+[[files]]
+file = "config/paxi/resourcepacks/fusion-connected-glass.pw.toml"
+hash = "cc4c03200baa367d40720320336b692e6c4fe71edbea890e27210bb2cc42408c"
+metafile = true
+
+[[files]]
+file = "config/paxi/resourcepacks/snow-side-texture.pw.toml"
+hash = "9e08b157a64ba97e680c80ee1b9c7938984012eb24848fa1808099745d26084c"
+metafile = true
+
+[[files]]
 file = "config/quark-common.toml"
 hash = "2e5495ab4dd57f471e02ee682b30c80be5dd3f850b66c24eff0fe7cd30e05bd7"
 
@@ -62,7 +81,7 @@ hash = "e5ec25ce2113b12980ed9834987c9ccebd2f859aba1272f77f47af424c076a5b"
 
 [[files]]
 file = "defaultconfigs/create_enchantment_industry-server.toml"
-hash = "f3f381f2d79b01a542c6ec89a0d4b9fe9aba7782c6955c434562cf51cc35b90a"
+hash = "2d3523b57b8e81e8615f63ba2dae85492ad5942792578f77f39e1391efe4b802"
 
 [[files]]
 file = "defaultconfigs/sophisticatedbackpacks-server.toml"
@@ -71,6 +90,10 @@ hash = "ca43a5a5a6ab75a98219a106fbfff858954ffaf112f42d6215742ff97749f7dd"
 [[files]]
 file = "defaultconfigs/sophisticatedstorage-server.toml"
 hash = "da3659971a1c22e846d941b7fc8df39e0a63bff6c3189e7fa8fde3b5cfacf640"
+
+[[files]]
+file = "kubejs/assets/alexscaves/lang/en_us.json"
+hash = "b6c566b62ada7a72bfa86d350a38c02c07896d60b0bf0e726230fc5078ab8eb4"
 
 [[files]]
 file = "kubejs/assets/cavedelight/models/block/boiled_trilocaris.json"
@@ -93,6 +116,10 @@ file = "kubejs/assets/cavedelight/models/block/tectonic_cheesecake_slice3.json"
 hash = "a9f47b622d4a5001606ed9de4d538a25ab12ac1ef5515861b36acbcb5ec6bf22"
 
 [[files]]
+file = "kubejs/assets/create/lang/en_us.json"
+hash = "707c5c49fc58a5bd96c50b4b9af07c430391e613bb8aae6f4d448d56df198f24"
+
+[[files]]
 file = "kubejs/assets/farmersdelight/models/block/pie.json"
 hash = "46bd7a01267fd5b47c905d778dce3dbcba68429f13243b704d6fd5d9583303a1"
 
@@ -107,6 +134,10 @@ hash = "6870a5f19a3b3e58f2e732e92063c1eb3d504c27991871ccb932a75b5941d1db"
 [[files]]
 file = "kubejs/assets/farmersdelight/models/block/pie_slice3.json"
 hash = "13d98c5281973cd7f88e040909abc3461ec1d798d4b9e2eceb81867448a4d01c"
+
+[[files]]
+file = "kubejs/assets/immersive_weathering/lang/en_us.json"
+hash = "f5a353292098c7b7b670b3b4fe955d7bacba4c973c7376771bcc015a17b2cbe5"
 
 [[files]]
 file = "kubejs/assets/minecraft/models/boiled_trilocaris.json"
@@ -146,15 +177,27 @@ hash = "c2873972f09268d8a3ce4cc8c18922165c9fd7431be4afc2ebf3da605e5ebd7f"
 
 [[files]]
 file = "kubejs/assets/quark/lang/en_us.json"
-hash = "d5a21e916429f101499588d4e2f6f716878e55bf05db0861a976aa19ce477a47"
+hash = "aa74722d2da45b87b23019be52822c999c86207b1389a8cec65817ad48f66aa8"
+
+[[files]]
+file = "kubejs/assets/sophisticatedbackpacks/lang/en_us.json"
+hash = "f013b7da0e3b1fcfd819a4ad4acf4b72519e190c55649c7addffea17db1d58f0"
+
+[[files]]
+file = "kubejs/assets/sophisticatedstorage/lang/en_us.json"
+hash = "379bc920802b976b91d153baf8d8de1425aedfeb230a2f5749fcff6fef8791e8"
 
 [[files]]
 file = "kubejs/assets/supplementaries/lang/en_us.json"
-hash = "f74a42f0204d7b16d5c7a20e0f179d7d5d8d9f4e9c2d3393c50a5ac1c9e44751"
+hash = "c229037dfd4f40ad43169edbbc065f6e6a17ced4cb7f2bc4be539e2c5eaeba3d"
 
 [[files]]
 file = "kubejs/assets/terralith/lang/en_us.json"
 hash = "988729df3545993e3d0d6cbc8400fd8af3b096417c183d363ed164c39d6d1b3a"
+
+[[files]]
+file = "kubejs/assets/yungscavebiomes/lang/en_us.json"
+hash = "6407130beaccb2a96ad9dffd8fc9372efef13baa2b0a44b562018b25bc3d1a63"
 
 [[files]]
 file = "kubejs/client_scripts/jei_declutter.js"
@@ -782,47 +825,47 @@ hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
 
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/acacia_chest_from_quark_acacia_chest.json"
-hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+hash = "535e1740c8776e7c6df2ba3982872f5cb1ea970e3b8419bc21dd6a517ae41ef9"
 
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/bamboo_chest_from_quark_bamboo_chest.json"
-hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+hash = "40d2a29ef791a323da1557a494b08085712546ffb407bc84fe25f132c81f4101"
 
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/birch_chest_from_quark_birch_chest.json"
-hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+hash = "c321d0b0dd62f4b690ddd6f651d97bb1034caba7256e37dfa5b505214f3f1bbd"
 
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/cherry_chest_from_quark_cherry_chest.json"
-hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+hash = "92a02a7385ea08ae2d747a6c6c835c724b80e43971ee9cb9d4832c8dbd722bfe"
 
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/crimson_chest_from_quark_crimson_chest.json"
-hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+hash = "a3116f2d5051733366e62ca8f6ccb16ff6e798a0db357f64e7c162e745ea7c0d"
 
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/dark_oak_chest_from_quark_dark_oak_chest.json"
-hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+hash = "09b39c102acbd02180d5b2fae7620165d4ae32d393df9fde05a1d0bb208a7cad"
 
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/jungle_chest_from_quark_jungle_chest.json"
-hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+hash = "f2081e3e941b8bdb8b75bcbcd624d803ba72c75f2d146ad8dea75394daebe2a2"
 
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/mangrove_chest_from_quark_mangrove_chest.json"
-hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+hash = "246755a63e0476d67644e312d0a96377f1a3ec31f3da249b161d97f18c6b98e0"
 
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/oak_chest_from_quark_oak_chest.json"
-hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+hash = "f9a1f98b425075ebdca1400f2c4110a676ae7e64b09f65f006865c1cc8211997"
 
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/spruce_chest_from_quark_spruce_chest.json"
-hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+hash = "7e653040bec2e492cd715fb140fa66771ccf6a53cc197bec10925f73e55ca4aa"
 
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/warped_chest_from_quark_warped_chest.json"
-hash = "d78857789f1e9fcf720905c0720bb3eee994cc397f66b57e3484c0833f63497f"
+hash = "46854929c74fc30d654bd6cd59d379fe91fcc0a455016b832c8980dea1b0cbbc"
 
 [[files]]
 file = "kubejs/data/supplementaries/advancements/recipes/planter_rich.json"
@@ -1076,6 +1119,11 @@ hash = "efda76423b21f9bfab4ad8d0411f0b06a199ab7e3e12ca16dc0586c1828b8f07"
 metafile = true
 
 [[files]]
+file = "mods/fusion-connected-textures.pw.toml"
+hash = "c81353a701cfd393a9ddc090029c2ac811abf210bc77208127715b1ff350a7af"
+metafile = true
+
+[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "898fd2704dd260ae8f3dc20b4416439751f0a9e76367c4f0bbdac886b6987802"
 metafile = true
@@ -1208,6 +1256,11 @@ metafile = true
 [[files]]
 file = "mods/oculus.pw.toml"
 hash = "200f79b635a087841698c85ac7028f0a1fac2cc4ffae1d59ff3f07a94abfe70e"
+metafile = true
+
+[[files]]
+file = "mods/paxi.pw.toml"
+hash = "be48890d990e03c639c5636c79bfa74bbd531c49a80487507984899c386a0bd9"
 metafile = true
 
 [[files]]

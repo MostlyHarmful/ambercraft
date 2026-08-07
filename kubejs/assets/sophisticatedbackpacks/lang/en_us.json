@@ -1,0 +1,15 @@
+{
+  "item.sophisticatedbackpacks.upgrade_base": "Backpack Upgrade Base",
+  "item.sophisticatedbackpacks.filter_upgrade": "Backpack Filter Upgrade",
+  "item.sophisticatedbackpacks.advanced_filter_upgrade": "Advanced Backpack Filter Upgrade",
+  "item.sophisticatedbackpacks.compacting_upgrade": "Backpack Compacting Upgrade",
+  "item.sophisticatedbackpacks.advanced_compacting_upgrade": "Advanced Backpack Compacting Upgrade",
+  "item.sophisticatedbackpacks.crafting_upgrade": "Backpack Crafting Upgrade",
+  "item.sophisticatedbackpacks.stonecutter_upgrade": "Backpack Stonecutter Upgrade",
+  "item.sophisticatedbackpacks.jukebox_upgrade": "Backpack Jukebox Upgrade",
+  "item.sophisticatedbackpacks.advanced_jukebox_upgrade": "Advanced Backpack Jukebox Upgrade",
+  "item.sophisticatedbackpacks.stack_upgrade_tier_1": "Backpack Stack Upgrade Tier 1",
+  "item.sophisticatedbackpacks.stack_upgrade_tier_2": "Backpack Stack Upgrade Tier 2",
+  "item.sophisticatedbackpacks.stack_upgrade_tier_3": "Backpack Stack Upgrade Tier 3",
+  "item.sophisticatedbackpacks.stack_upgrade_tier_4": "Backpack Stack Upgrade Tier 4"
+}

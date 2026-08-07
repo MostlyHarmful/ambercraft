@@ -1,6 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "conditions": [{ "type": "forge:false" }],
-  "ingredients": [{ "item": "minecraft:chest" }],
-  "result": { "item": "sophisticatedstorage:chest" }
+  "ingredients": [
+    { "item": "quark:oak_chest" },
+    { "item": "minecraft:lever" }
+  ],
+  "result": {
+    "item": "sophisticatedstorage:chest",
+    "nbt": "{woodType:\"oak\"}"
+  }
 }

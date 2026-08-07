@@ -11,7 +11,7 @@ cd "$SERVER_DIR"
 mkdir -p backups
 
 set --
-for path in mods config defaultconfigs kubejs packwiz.json; do
+for path in mods config defaultconfigs kubejs packwiz.json world/serverconfig/create_enchantment_industry-server.toml; do
   if [ -e "$path" ]; then
     set -- "$@" "$path"
   fi
@@ -46,6 +46,17 @@ rm -rf \
   "$SERVER_DIR/config/zombieawareness" \
   "$SERVER_DIR/config/DistantHorizons-rapid.toml.disabled" \
   "$SERVER_DIR/config/spark/tmp"
+
+# Enchantment Industry's server config is copied into each world and would
+# otherwise retain stale balance values forever. Its prior live copy is included
+# in the validated pack backup above; synchronize the complete managed default
+# so retained worlds and newly created worlds use the same progression rules.
+CEI_DEFAULT="$SERVER_DIR/defaultconfigs/create_enchantment_industry-server.toml"
+CEI_WORLD_CONFIG="$SERVER_DIR/world/serverconfig/create_enchantment_industry-server.toml"
+if [ -f "$CEI_DEFAULT" ] && [ -d "$SERVER_DIR/world" ]; then
+  mkdir -p "$SERVER_DIR/world/serverconfig"
+  cp "$CEI_DEFAULT" "$CEI_WORLD_CONFIG"
+fi
 
 # Forge copies default server configs when it creates a world, but this pack is
 # also deployed onto retained test worlds. Seed Ambercraft's managed backpack
@@ -126,7 +137,7 @@ set_property simulation-distance 6
 set_property function-permission-level 4
 set_property motd Ambercraft
 
-for path in mods config defaultconfigs kubejs packwiz.json backups server.properties libraries/net/minecraftforge/forge/1.20.1-47.4.10/unix_args.txt; do
+for path in mods config defaultconfigs kubejs packwiz.json backups server.properties world/serverconfig/create_enchantment_industry-server.toml libraries/net/minecraftforge/forge/1.20.1-47.4.10/unix_args.txt; do
   if [ -n "$AMBERCRAFT_OWNER" ] && [ -e "$SERVER_DIR/$path" ]; then
     chown -R "$AMBERCRAFT_OWNER" "$SERVER_DIR/$path"
   fi

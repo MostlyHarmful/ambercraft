@@ -106,6 +106,9 @@ after a forty-night minimum gap, with a 3x rather than 4.5x multiplier.
 - **Quark** supplies blocks directly used by Integrated Villages and IDAS,
   including shingles, thatch, vertical planks, stools, corundum, blossom wood,
   and permafrost content.
+- Similar-looking families retain distinct authored roles but use clearer names:
+  Alex's Caves limestone is Primordial Limestone, Quark's dark-academia glass
+  is Gothic Framed Glass, and Quark's gravity-only chute is a Drop Chute.
 
 **Every Compat was removed.** It generated 1,320 blocks, including 1,049
 Chipped compatibility blocks, without enough non-vanilla wood families to
@@ -170,6 +173,9 @@ justify the catalogue and loading cost.
   Oculus, AmbientSounds, Sound Physics, AppleSkin, Mouse Tweaks,
   and JEI are client experience or performance tools. Expensive visual features
   remain individually disableable.
+- Fusion supplies Embeddium/Oculus-compatible connected textures. Paxi
+  automatically loads the focused connected-glass, better-grass, and snow-side
+  packs without taking ownership of the player's other resource-pack choices.
 - **Crafting Tweaks** owns rotate, balance, and clear actions in supported
   crafting grids. **Mouse Tweaks** owns drag and scroll gestures. **Quark**
   retains general inventory sorting and transfer controls, but its injected

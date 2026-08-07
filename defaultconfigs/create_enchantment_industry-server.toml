@@ -39,7 +39,7 @@ enchantByBlazeEnchanterCostCoefficient = 1.5
 hyperEnchantByBlazeEnchanterCostCoefficient = 8.0
 #.
 #Range: 0.009999999776482582 ~ 100.0
-copyEnchantedBookCostCoefficient = 8.0
+copyEnchantedBookCostCoefficient = 2.0
 #.
 #Range: 0.009999999776482582 ~ 100.0
 copyEnchantedBookWithHyperExperienceCostCoefficient = 12.0

@@ -1,0 +1,17 @@
+{
+  "block.alexscaves.limestone": "Primordial Limestone",
+  "block.alexscaves.limestone_stairs": "Primordial Limestone Stairs",
+  "block.alexscaves.limestone_slab": "Primordial Limestone Slab",
+  "block.alexscaves.limestone_wall": "Primordial Limestone Wall",
+  "block.alexscaves.limestone_pillar": "Primordial Limestone Pillar",
+  "block.alexscaves.limestone_chiseled": "Chiseled Primordial Limestone",
+  "block.alexscaves.smooth_limestone": "Smooth Primordial Limestone",
+  "block.alexscaves.smooth_limestone_stairs": "Smooth Primordial Limestone Stairs",
+  "block.alexscaves.smooth_limestone_slab": "Smooth Primordial Limestone Slab",
+  "block.alexscaves.smooth_limestone_wall": "Smooth Primordial Limestone Wall",
+  "item.alexscaves.limestone_spear": "Primordial Limestone Spear",
+  "item.alexscaves.limestone_spear_inventory": "Primordial Limestone Spear",
+  "entity.alexscaves.limestone_spear": "Primordial Limestone Spear",
+  "item.alexscaves.fertilizer": "Primordial Fertilizer",
+  "advancements.alexscaves.limestone.desc": "Obtain Primordial Limestone"
+}

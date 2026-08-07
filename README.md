@@ -105,10 +105,12 @@ Forge argument file that the egg actually launches.
 
 The following are intentionally client-only: AmbientSounds, AppleSkin,
 Bookshelf, Colorwheel, Enchantment Descriptions, Embeddium, Embeddium Extra,
-Sodium/Embeddium Dynamic Lights
+Fusion Connected Textures, Sodium/Embeddium Dynamic Lights
 and its Options API, Entity Culling, ImmediatelyFast, JEI, Mouse Tweaks,
 Oculus, Sound Physics Remastered, and the Hoofprint map interface. Distant
-Horizons runs on both sides for server-backed LOD delivery. Surveyor runs on
+Horizons runs on both sides for server-backed LOD delivery. Paxi runs on both
+sides but only loads Ambercraft's managed connected-glass, better-grass, and
+snow-overlay resource packs on clients. Surveyor runs on
 both sides so Hoofprint's explored map data is synchronized by the server;
 Hoofprint deliberately has no entity radar or cave-map mode to reveal
 undiscovered content. Spark and Chunky are server-only. FerriteCore and
@@ -160,7 +162,8 @@ Create: Oxidized as one version-locked group when updating. Oxidized is a
 recipe-only building utility: it accelerates copper weathering without adding
 items, power tiers, or world generation. Enchantment Industry is configured as a
 communal midgame alternative to librarian halls: normal enchanting, liquid XP,
-repair, and mundane printing remain useful, while hyper-enchanting and practical
-enchanted-book duplication are disabled. KubeJS Create is intentionally absent
+repair, and ordinary enchanted-book printing reward shared infrastructure, while
+hyper-enchanting and hyper-book duplication require late-game expedition materials
+and substantially more XP. KubeJS Create is intentionally absent
 until Ambercraft uses Create-specific scripted recipes; ordinary custom recipes
 continue to use base KubeJS.
