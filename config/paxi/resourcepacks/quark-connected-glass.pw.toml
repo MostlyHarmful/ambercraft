@@ -1,0 +1,13 @@
+name = "Quark Connected Glass"
+filename = "quarkconnectedfusion.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/i0nmCM7X/versions/sHXmLbHf/quarkconnectedfusion.zip"
+hash-format = "sha512"
+hash = "23f0c73763aa130dcc1f3a568e49823b577e60374cad5aec14e56246efe0d65e7b42df55d374a717376012ec59d9b25de45a7f4ca1990e506702b8dc73795c81"
+
+[update]
+[update.modrinth]
+mod-id = "i0nmCM7X"
+version = "sHXmLbHf"

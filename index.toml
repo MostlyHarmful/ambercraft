@@ -46,11 +46,11 @@ hash = "c760b710e6933dcd0fedfe42344c82960c5db53e1e591efd63b6a0f78ce55932"
 
 [[files]]
 file = "config/paxi/resourcepack_load_order.json"
-hash = "f9b51a3add7f19b8d805cac647e3b3a160948ba48cd71200601967b6f65f356e"
+hash = "3d8c5399c23574a7c752e89cfb3c5628ea859efec59e59eb76220cebd0c4e71f"
 
 [[files]]
-file = "config/paxi/resourcepacks/fast-better-grass.pw.toml"
-hash = "b9362da7ce0d258d671a6b57177fe4816a326efda27ace533be93ce86c611857"
+file = "config/paxi/resourcepacks/fusion-connected-blocks.pw.toml"
+hash = "ebecfb4336542cfabb14f752bdafacdf19cd70c734030e41d1e6d485bd78443b"
 metafile = true
 
 [[files]]
@@ -59,8 +59,13 @@ hash = "cc4c03200baa367d40720320336b692e6c4fe71edbea890e27210bb2cc42408c"
 metafile = true
 
 [[files]]
-file = "config/paxi/resourcepacks/snow-side-texture.pw.toml"
-hash = "9e08b157a64ba97e680c80ee1b9c7938984012eb24848fa1808099745d26084c"
+file = "config/paxi/resourcepacks/immersive-weathering-connected-glass.pw.toml"
+hash = "9ae367f28cb57a04740385fa3f13823257dbb49165606951e202d2edc485e921"
+metafile = true
+
+[[files]]
+file = "config/paxi/resourcepacks/quark-connected-glass.pw.toml"
+hash = "ac87ffb33afce0fd076a7f204a10a9c00fb6726f0464cac3b53db8eb9d35a183"
 metafile = true
 
 [[files]]

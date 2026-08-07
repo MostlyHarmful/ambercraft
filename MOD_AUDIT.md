@@ -174,8 +174,11 @@ justify the catalogue and loading cost.
   and JEI are client experience or performance tools. Expensive visual features
   remain individually disableable.
 - Fusion supplies Embeddium/Oculus-compatible connected textures. Paxi
-  automatically loads the focused connected-glass, better-grass, and snow-side
-  packs without taking ownership of the player's other resource-pack choices.
+  automatically loads vanilla glass and masonry support plus focused Quark and
+  Immersive Weathering glass compatibility without taking ownership of the
+  player's other resource-pack choices. Grass and snow stay vanilla: the static
+  model packs were rejected, and the dynamic Forge alternative requires
+  Forgified Fabric API.
 - **Crafting Tweaks** owns rotate, balance, and clear actions in supported
   crafting grids. **Mouse Tweaks** owns drag and scroll gestures. **Quark**
   retains general inventory sorting and transfer controls, but its injected
