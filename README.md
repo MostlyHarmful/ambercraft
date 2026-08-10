@@ -111,7 +111,9 @@ Oculus, Sound Physics Remastered, and the Hoofprint map interface. Distant
 Horizons runs on both sides for server-backed LOD delivery. Paxi runs on both
 sides but only loads Ambercraft's managed Fusion connected-texture resource
 packs on clients. Grass and snow rendering remain vanilla because the available
-dynamic Forge 1.20.1 alternative requires Forgified Fabric API. Surveyor runs on
+dynamic Forge 1.20.1 alternative requires Forgified Fabric API. Incendium is
+installed on both sides so clients receive its biome and advancement
+translations; its world generation remains server-authoritative. Surveyor runs on
 both sides so Hoofprint's explored map data is synchronized by the server;
 Hoofprint deliberately has no entity radar or cave-map mode to reveal
 undiscovered content. Spark and Chunky are server-only. FerriteCore and

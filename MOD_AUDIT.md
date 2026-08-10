@@ -17,6 +17,9 @@ It deliberately distinguishes static facts from questions that require play.
 - **Alex's Caves** supplies six rare cave regions, specialized hazards,
   vehicles, creatures, resources, structures, and major capability rewards.
 - **Incendium** is the Nether terrain and destination layer.
+  Its low-code JAR is intentionally installed on clients as well as the server:
+  clients need the bundled language assets for biome and advancement names,
+  while the server remains authoritative for world generation.
 - **Nullscape** is the End terrain layer.
 - **End's Phantasm** is the End ecology, blocks, creatures, and structure layer.
 
