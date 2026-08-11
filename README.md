@@ -110,7 +110,9 @@ and its Options API, Entity Culling, ImmediatelyFast, JEI, Mouse Tweaks,
 Oculus, Sound Physics Remastered, and the Hoofprint map interface. Distant
 Horizons runs on both sides for server-backed LOD delivery. Paxi runs on both
 sides but only loads Ambercraft's managed Fusion connected-texture resource
-packs on clients. Grass and snow rendering remain vanilla because the available
+packs on clients, including a Phantasm compatibility layer for its Farmer's
+Delight artwork and Fusion-native Crystal Glass families. Grass and snow
+rendering remain vanilla because the available
 dynamic Forge 1.20.1 alternative requires Forgified Fabric API. Incendium is
 installed on both sides so clients receive its biome and advancement
 translations; its world generation remains server-authoritative. Surveyor runs on

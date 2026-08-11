@@ -46,7 +46,163 @@ hash = "c760b710e6933dcd0fedfe42344c82960c5db53e1e591efd63b6a0f78ce55932"
 
 [[files]]
 file = "config/paxi/resourcepack_load_order.json"
-hash = "3d8c5399c23574a7c752e89cfb3c5628ea859efec59e59eb76220cebd0c4e71f"
+hash = "86070b264d9d244b281a42ec2c2df4e91eb7a796ed74569c175f9d7736a6a1d2"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/crystal_glass_pane_noside.json"
+hash = "0b9a3c4abf2dc7f01f9b2f36bb9a98086728b3dc6e0567c171c2f5c4a650a85b"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/crystal_glass_pane_noside_alt.json"
+hash = "06b2e3d51e3ce126bdf26795de02fc7c4ac1ae343d555c730c35247a7a9947af"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/crystal_glass_pane_post.json"
+hash = "f6d4866ae71e5ef3da69079d8d74345de3cd2ae3f4ee6343f81c4136976adb41"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/crystal_glass_pane_side_east.json"
+hash = "396f2530c481485fc94ce13ae494dceba155297f5da4aa34437f7ecdaf4da237"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/crystal_glass_pane_side_north.json"
+hash = "7598b6f6774e180775cda2d8711dcbc63275e03cb3c0bdeb4deb27f671e8704c"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/crystal_glass_pane_side_south.json"
+hash = "b4bfe1867eddb9baa8d1fa660c64121fd989916ae71087952926583e272c0894"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/crystal_glass_pane_side_west.json"
+hash = "e8ef702e07a3e10f9f9f69d7145b2a3c6f43805c35912f561141cefd52156626"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/void_crystal_glass_pane_noside.json"
+hash = "28e7309bdb501eb6f7f7623665be69aa7a8e335c2f3a728bbd78cd33c2199f51"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/void_crystal_glass_pane_noside_alt.json"
+hash = "a31633a7e8493fd8d937943d83343957a1f7129407b84ed27583dc97db4964a3"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/void_crystal_glass_pane_post.json"
+hash = "f2dbcc6f3329561e4d65d1ff8804498c8746106d8c764f28a977c48cdeefcc04"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/void_crystal_glass_pane_side_east.json"
+hash = "5e07adc89cbe4e1547109a675b57ea09ae02534a4cfabf1d328708bb4335cf9e"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/void_crystal_glass_pane_side_north.json"
+hash = "f91b73ba41ff10c9bbab5a510af97bf1cbe0e50135678e1e20dc0d80f00c203b"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/void_crystal_glass_pane_side_south.json"
+hash = "fbc428f376f88c67eae1a48d511955f3fde24d886a4417ff01ee079c2967d0eb"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/panes/void_crystal_glass_pane_side_west.json"
+hash = "b6e045baf4167f4736fae8d647a82d31ae3123a47b2eb5c87a4f9a827a1a7219"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/template_glass_pane_noside.json"
+hash = "6ed5e36ba4bc326b9471389cdaa4bd052e0a73e87a4e9b2fc1e6c2c124bbd15e"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/template_glass_pane_noside_alt.json"
+hash = "c66be5bac291b08812f2af7964a780ec38c5a9b655bc05e760642b780835a120"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/template_glass_pane_post.json"
+hash = "88da5444f68162caedbb0abb3d2e26d92b1f359a5b264632a68002527eafb704"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/template_glass_pane_side.json"
+hash = "1198eb98325bf498ad113bfc60b5f74cdb54cc0eb88a8d12b00a240157c07f84"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/models/block/template_glass_pane_side_alt.json"
+hash = "8d564a5dd671db7b3e875b364a490d59bc311b1edf81fec009ee2184ca71a0d2"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/textures/block/crystal_glass_connected.png"
+hash = "3becde0801289e07dd7ddc384ff9ea5adc649d5a697c68e7f479cd2d0f72b4e9"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/textures/block/crystal_glass_connected.png.mcmeta"
+hash = "2708e46e4508620f5a36e0c8979db01fa2d318774b85a402623e67bc4591e7f9"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/textures/block/void_crystal_glass_connected.png"
+hash = "79c3574316af82f05185a2124eaf8ed5e3dd9e987ad1c5a3fbf2f894348bd6c2"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/ambercraft_phantasm_fusion/textures/block/void_crystal_glass_connected.png.mcmeta"
+hash = "2708e46e4508620f5a36e0c8979db01fa2d318774b85a402623e67bc4591e7f9"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/blockstates/crystal_glass_pane.json"
+hash = "37f9701b908fb988e41f75f7283ebf1b1c4c8ddd7ca2a783ef603815c8265fbe"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/blockstates/pream_cabinet.json"
+hash = "90013734cbd8da6f8d550957e7adbe36e5e2df346fabaa636052cd1d749e4984"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/blockstates/void_crystal_glass_pane.json"
+hash = "60035cc55d03e1a0b038f1a033fdb3b669c63e83852d6723527c790793593b14"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/models/block/crystal_glass.json"
+hash = "297d7a81be4c2b713f12db0306580d9ce642712fc553e402bb45a47d19897fdf"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/models/block/pream_cabinet.json"
+hash = "f3fd84b63575e37e15908deb6edbdb1a6815ece350a71b480834c8fd4c463110"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/models/block/pream_cabinet_open.json"
+hash = "61b7c620c433e803b5ac04ddffbe1e65e05521888ecd79115144190d3d6bceb1"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/models/block/void_crystal_glass.json"
+hash = "c928878bf568345c2f3d7776a8d96dcd65012a450800b06ca2f7f182648cd5e3"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/models/item/crystalline_knife.json"
+hash = "2ff32416a3a8be3893717d2c2f347da38e71fef4b9fff83acca1b65c3f1bd840"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/models/item/crystalline_knife_throwing.json"
+hash = "e6aef5892cdc7dc83765b91d15f9cb28288668f30b748f0e18de91d3a6a5cfd8"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/models/item/pream_cabinet.json"
+hash = "485193dc03f32c4149728c5924575ca1d29824f7b789774bde5f5bf5fe653972"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/textures/block/pream_cabinet_front.png"
+hash = "d762ee22710bbedaf2857515f06fffe8e5a580f1dc5e32c41dc2cb5b4805cabf"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/textures/block/pream_cabinet_front_open.png"
+hash = "ba78cf0e69d30b44a7c206ff89cfc52c505585abedc178fee7e647191d14e145"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/textures/block/pream_cabinet_side.png"
+hash = "99fff1a57ff7b0806f734ad377e6f5f440d28b6ef48a36aca55853fd1919f8a8"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/textures/block/pream_cabinet_top.png"
+hash = "70c65e50b389761e0024eb183c4408c7a974b7ded596bb8be608e80a4c9f939a"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/assets/phantasm/textures/item/crystalline_knife.png"
+hash = "58e2084ee320a221168f645ed1489755fbbdbe43b51d6d2bad8e06943d2b6d12"
+
+[[files]]
+file = "config/paxi/resourcepacks/ambercraft-phantasm-compat/pack.mcmeta"
+hash = "879d3ef18f640de4bc7f7c775bca0eee04a6a45155823cb105b37987334bbb68"
 
 [[files]]
 file = "config/paxi/resourcepacks/fusion-connected-blocks.pw.toml"
@@ -157,28 +313,8 @@ file = "kubejs/assets/mowziesmobs/models/block/diamond_grottol.json"
 hash = "126e83b03152a9da019de2e36555ce2cd57c37f8872a7f64a05d3428fd26a124"
 
 [[files]]
-file = "kubejs/assets/phantasm/blockstates/pream_cabinet.json"
-hash = "e348710493bc635c5f5b965600f93dbc2e363e869ccd6aeea8516caab7bae6c5"
-
-[[files]]
-file = "kubejs/assets/phantasm/models/block/pream_cabinet.json"
-hash = "b01656d6b615e423e58a8c290335e15f1f878d2e7769e4081ba922c7b25773d3"
-
-[[files]]
-file = "kubejs/assets/phantasm/models/block/pream_cabinet_open.json"
-hash = "c2873972f09268d8a3ce4cc8c18922165c9fd7431be4afc2ebf3da605e5ebd7f"
-
-[[files]]
-file = "kubejs/assets/phantasm/models/item/crystalline_knife.json"
-hash = "deb1ec9c6a30b1096a4bb6497a82abcee714ce21da62a48e0f4775e4fa0a6dd9"
-
-[[files]]
 file = "kubejs/assets/phantasm/models/item/potted_pream_sapling.json"
 hash = "b069e3bdf8a74b1e5e7aa3ac5a412f01442221cbb98de342811fd9ba07b66b26"
-
-[[files]]
-file = "kubejs/assets/phantasm/models/item/pream_cabinet.json"
-hash = "c2873972f09268d8a3ce4cc8c18922165c9fd7431be4afc2ebf3da605e5ebd7f"
 
 [[files]]
 file = "kubejs/assets/quark/lang/en_us.json"

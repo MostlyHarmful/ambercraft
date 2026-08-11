@@ -1,0 +1,13 @@
+{
+  "loader": "fusion:model",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "fusion:is_same_block"
+    }
+  ],
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ambercraft_phantasm_fusion:block/crystal_glass_connected"
+  }
+}

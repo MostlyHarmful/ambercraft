@@ -1,0 +1,17 @@
+{
+  "type": "fusion:connecting",
+  "parent": "ambercraft_phantasm_fusion:block/template_glass_pane_noside",
+  "connections": {
+    "type": "fusion:or",
+    "predicates": [
+      {
+        "type": "fusion:is_same_block"
+      }
+    ]
+  },
+  "loader": "fusion:model",
+  "textures": {
+    "edge": "phantasm:block/crystal_glass_pane_top",
+    "pane": "ambercraft_phantasm_fusion:block/crystal_glass_connected"
+  }
+}

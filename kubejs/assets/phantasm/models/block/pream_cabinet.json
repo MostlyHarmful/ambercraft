@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "phantasm:block/pream_planks",
-    "side": "phantasm:block/pream_planks",
-    "top": "phantasm:block/pream_planks"
-  }
-}

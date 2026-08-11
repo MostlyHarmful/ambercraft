@@ -178,8 +178,11 @@ justify the catalogue and loading cost.
   remain individually disableable.
 - Fusion supplies Embeddium/Oculus-compatible connected textures. Paxi
   automatically loads vanilla glass and masonry support plus focused Quark and
-  Immersive Weathering glass compatibility without taking ownership of the
-  player's other resource-pack choices. Grass and snow stay vanilla: the static
+  Immersive Weathering glass compatibility. Ambercraft's Phantasm compatibility
+  pack activates Phantasm's intended Farmer's Delight artwork and ports its
+  Crystal Glass and Void Crystal Glass CTM families to Fusion, including panes,
+  without taking ownership of the player's other resource-pack choices. Grass
+  and snow stay vanilla: the static
   model packs were rejected, and the dynamic Forge alternative requires
   Forgified Fabric API.
 - **Crafting Tweaks** owns rotate, balance, and clear actions in supported
